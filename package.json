@@ -1,0 +1,31 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "npm run build && gh-pages -d docs/.vuepress/dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.2",
+    "@vuepress/plugin-medium-zoom": "^1.5.2",
+    "gh-pages": "^3.1.0",
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-catalog-graph": "^0.2.5",
+    "vuepress-plugin-minimal-analytics": "^0.1.4",
+    "vuepress-plugin-zooming": "^1.1.7"
+  },
+  "dependencies": {
+    "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
+    "@vssue/api-github-v3": "^1.4.4",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6",
+    "markdown-it-disable-url-encode": "^1.0.1",
+    "medium-zoom": "^1.0.6",
+    "vssue": "^1.4.6"
+  }
+}

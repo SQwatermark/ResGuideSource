@@ -1,0 +1,7 @@
+{
+    "parent": "block/flower_pot_butterfly",
+    "textures": {
+        "plant": "block/blue_orchid",
+		"butterfly": "block/butterfly_blue"
+    }
+}

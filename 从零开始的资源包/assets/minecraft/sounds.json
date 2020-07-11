@@ -1,0 +1,10 @@
+{
+  "entity.whale.ambient": {
+    "sounds": [
+      "mob/whale/ambient/say1",
+      "mob/whale/ambient/say2",
+      "mob/whale/ambient/say3"
+    ],
+    "subtitle": "subtitles.entity.whale.ambient"
+  }
+}
