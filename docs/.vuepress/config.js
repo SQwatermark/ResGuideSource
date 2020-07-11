@@ -6,6 +6,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
 	  { text: 'OptiFine文档', link: 'https://www.mcbbs.net/thread-896135-1-1.html' },
+	  { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
     ],
     sidebar: [
       '/propaedeutics/',
