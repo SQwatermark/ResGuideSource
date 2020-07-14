@@ -102,7 +102,7 @@ suffix.emissive=_e
 
 ![image-20200710154540432](overlay-variants.assets/image-20200710154540432.png)
 
-::: warning 注意
+::: warning
 
 这种发光没有任何照明效果。
 

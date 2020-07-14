@@ -89,7 +89,13 @@ module.exports = {
 
         ]
       },
-	  ['/optifine/animation/', '动态材质（后篇）'],
+	  {
+        title: '动态材质（后篇）',
+        path: '/optifine/animation/',
+        children: [
+		  '/optifine/animation/inventory',
+        ]
+      },
 	  ['/optifine/sky/', '天空盒'],
 	  {
         title: 'GUI',
@@ -98,7 +104,13 @@ module.exports = {
 		  '/vanilla/texture/gui/panorama',
         ]
       },
-
+	  {
+        title: '附录',
+        path: '/appendix/',
+        children: [
+		  '/appendix/fragments',
+        ]
+      },
     ]
   },
   markdown: {
