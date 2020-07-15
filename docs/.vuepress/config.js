@@ -104,6 +104,7 @@ module.exports = {
 		  '/vanilla/texture/gui/panorama',
         ]
       },
+	  ['/optifine/shader/pbr', 'PBR材质'],
 	  {
         title: '附录',
         path: '/appendix/',

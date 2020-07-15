@@ -48,3 +48,5 @@ biomes.3=雨林
 那序号2就表示wolf2.png，wolf_angry2.png，wolf_collar2.png，wolf_tame2.png。
 
 如果还是觉得不太好理解，接下来将会展示几个例子。
+
+<br/><br/><Vssue/>
