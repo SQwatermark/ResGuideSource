@@ -60,7 +60,7 @@
 1. 打开原版的 assets\minecraft\font 文件夹，里面比1.12 版本多了两个文件：`default.json` 和 `alt.json` ，前者用于控制普通文字的字体，后者用于控制附魔台文字的字体。（点击[这里](default.json.md)查看对这两个文件格式的详解）
 2. 将 tff 字体放到资源包的 assets\minecraft\font 路径下，我从网上下载了一款[丁永康硬笔楷书](http://www.fonts.net.cn/font-38210891255.html)用于演示，并命名为 `name_of_the_font.ttf`
 
-::: warning 注意
+::: warning
 
 文件名不能含有小写英文字母、阿拉伯数字、下划线、横杠、小数点以外的字符（满足正则表达式[a-z0-9/._-]），也就是说不能含有大写字母（这一点对于资源包的所有文件都适用）。
 
