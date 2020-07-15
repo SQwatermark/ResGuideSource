@@ -86,7 +86,7 @@ module.exports = {
         title: 'CEM',
         path: '/optifine/cem/',
         children: [
-
+          '/optifine/cem/random_entities',
         ]
       },
 	  {
