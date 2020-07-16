@@ -55,7 +55,7 @@
  */
 ```
 
-::: warning 提醒
+::: warning
 
 玻璃板使用简化CTM方法会出bug！
 

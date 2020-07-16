@@ -103,6 +103,7 @@ module.exports = {
         path: '/vanilla/texture/gui/',
         children: [
 		  '/vanilla/texture/gui/panorama',
+		  '/vanilla/texture/gui/loading',
         ]
       },
 	  ['/optifine/shader/pbr', 'PBR材质'],
