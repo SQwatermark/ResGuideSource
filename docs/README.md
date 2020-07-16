@@ -45,4 +45,6 @@ Minecraft java版 1.15.2，不适合基岩版，如果你用的是java版但版�
 
 **[掀夏希](https://space.bilibili.com/11576976/)**（提供原版动态材质章节的案例）
 
+**JerryLee**（提供动态GUI的案例）
+
 <br/><br/><Vssue/>

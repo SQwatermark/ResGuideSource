@@ -87,6 +87,7 @@ module.exports = {
         path: '/optifine/cem/',
         children: [
           '/optifine/cem/random_entities',
+		  '/optifine/cem/random_creeper',
         ]
       },
 	  {
