@@ -1,0 +1,60 @@
+######################################################################
+# Add -Dplayer.models.local=true -Dplayer.models.reload=true to your JVM arguments
+# https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/system_properties.txt
+# https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cem_model.txt
+# https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cem_part.txt
+######################################################################
+# Custom Player Model Add-on
+# User Config <user>.cfg
+# Located in ".minecraft/playermodels/users"
+# 
+# Textures can be specified as:
+# 	"texture" - relative to folder ".minecraft/playermodels/"
+# 	"folder/texture" - relative to folder ".minecraft/playermodels/"
+# Models can be specified as:
+# 	"model" - relative to folder ".minecraft/playermodels/"
+# 	"folder/model" - relative to folder ".minecraft/playermodels/"
+# 	
+# If nothing is set for the texture it'll use ".minecraft/playermodels/items/<name set for type>/users/<user.png>"
+# If nothing is set for the model it'll use ".minecraft/playermodels/items/<name set for type>/model.cfg"
+######################################################################
+{
+  "items":
+  [
+    {
+      "type": "<name>",						- Name of folder in ".minecraft/playermodels/items/"
+	  "model": "<model.cfg>",				- Part model file, from which to load the part model definition
+      "texture": "<texture.png>",			- Texture used by the model
+      "active": "<true|false>"				- True: active for user, False: not active for user
+    },
+	...
+  ]
+}
+
+######################################################################
+# Custom Player Model Add-on
+# User Part Model <model>.cfg
+# Located in ".minecraft/playermodels/items/<name set for type>"
+######################################################################
+{
+  "type" : "PlayerItem",
+  "usePlayerTexture": <true|false>,										- Uses player texture if set to true
+  "textureSize": [<width>, <height>],                                   - Texture size in pixels
+  "models":                                                             - List of models
+  [
+    {
+      "baseId": <parent_id>,                                            - Model parent ID, all parent properties are inherited
+      "id": <id>,                                                       - Model ID, can be used to reference the model as parent
+      "type": "ModelBox",
+      "attachTo": "<head|body|leftArm|rightArm|leftLeg|rightLeg>",      - Player part to which the part model is attached
+	  "invertAxis": <axis_to_invert>,                                   - Axis to invert, for example "xyz" inverts all axes
+      "translate": [<x>, <y>, <z>],                                     - Translate (pixels)
+      "rotate": [<angle_x>, <angle_y>, <angle_z>],                      - Rotate (degrees)
+      "mirrorTexture": <axis_to_mirror>,                                - Texture axis to mirror, for example "uv" mirrors both U and V axis
+      "scale": <scale>,                                                 - Render scale, default is 1.0
+      # Part Model definition, see "cem_part.txt" for details           - Part model definition (inline)
+      ...
+    },
+    ...
+  ]
+}
