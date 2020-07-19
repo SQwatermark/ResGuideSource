@@ -98,7 +98,15 @@ module.exports = {
 		  '/optifine/animation/inventory',
         ]
       },
-	  ['/optifine/sky/', '天空盒'],
+	  {
+        title: '天空盒',
+        path: '/optifine/sky/',
+        children: [
+		  '/optifine/sky/sky-color',
+		  '/optifine/sky/skybox',
+		  '/optifine/sky/multiverse-sky',
+        ]
+      },
 	  {
         title: 'GUI',
         path: '/vanilla/texture/gui/',

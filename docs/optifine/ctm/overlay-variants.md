@@ -8,7 +8,7 @@
 
 我打算把卢恩字母随机地印在红砂岩上，卢恩字母透明字形并不难寻找，Minecraft原版就自带了。位于unicode_page_16.png中。
 
-::: tip 提示
+::: tip
 
 有关字体的详细知识参考[这个小节](../../vanilla/font/font.md)。
 

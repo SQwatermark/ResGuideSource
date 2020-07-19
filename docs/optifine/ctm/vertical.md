@@ -29,7 +29,7 @@ tiles=0-3
 matchTiles=minecraft:blue_terracotta
 ```
 
-::: waining 有关matchTiles
+::: warning 有关matchTiles
 
 经测试得出，如果材质在block文件夹的子文件夹下，需要用`block/子文件夹路径/文件名.png`这样的表示方法。
 
