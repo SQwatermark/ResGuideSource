@@ -1,6 +1,6 @@
 # 主菜单全景图
 
-主菜单全景图就是主菜单的背景，其材质位于 assets\minecraft\textures\gui\title\background 文件夹下，共六张。
+主菜单全景图就是主菜单的背景，其材质位于 assets/minecraft/textures/gui/title/background 文件夹下，共六张。
 
 把这六张图片拼接一下，不难看出这是一个盒子的展开图。想象将其折叠成一个盒子，将玩家视角置于盒子正中央，就好似玩家声临其境一样。这就是游戏中常用的 [CubeMapping](https://en.wikipedia.org/wiki/Cube_mapping) 技术。
 

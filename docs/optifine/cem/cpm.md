@@ -184,7 +184,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 ## 附：非官方说明文档
 
-```
+```json
 ######################################################################
 # Add -Dplayer.models.local=true -Dplayer.models.reload=true to your JVM arguments
 # https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/system_properties.txt
