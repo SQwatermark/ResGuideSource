@@ -34,6 +34,7 @@ module.exports = {
 		  '/vanilla/model/opaquecube',
 		  '/vanilla/model/rendertype',
 		  '/vanilla/model/modelpack',
+		  '/vanilla/model/item_tags',
 		  '/vanilla/model/flower_pot',
         ]
       },
@@ -96,6 +97,13 @@ module.exports = {
         path: '/optifine/animation/',
         children: [
 		  '/optifine/animation/inventory',
+        ]
+      },
+	  {
+        title: '光与色',
+        path: '/optifine/colormap/',
+        children: [
+		  '/optifine/colormap/lightmap',
         ]
       },
 	  {
