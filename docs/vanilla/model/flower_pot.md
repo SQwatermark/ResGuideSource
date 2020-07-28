@@ -14,7 +14,7 @@
 
 首先准备好蝴蝶的动态材质：
 
-![image-20200711150919426](flower_pot.assets/image-20200711150919426.png)
+![image-20200711150919426](https://i.loli.net/2020/07/27/QLBfEzKYCu6tJ8R.png)
 
 本节中我们要试着不使用Blockbench，徒手修改一下模型文件，以加深对模型文件本身的理解。
 
@@ -133,7 +133,7 @@
 
 进入游戏查看效果：
 
-![image-20200711151716732](flower_pot.assets/image-20200711151716732.png)
+![image-20200711151716732](https://i.loli.net/2020/07/27/1CfXHK58IY3nEkG.png)
 
 完成！
 

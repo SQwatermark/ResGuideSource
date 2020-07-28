@@ -2,7 +2,7 @@
 
 接下来我们要实现枯山水的另一种方块：
 
-![image-20200708131331382](random.assets/image-20200708131331382.png)
+![image-20200708131331382](https://i.loli.net/2020/07/28/AtsquXQk1dhSjyF.png)
 
 我们希望沙子的材质随机显示这四张材质中的一张，这一点用blockstates的随机模型很容易实现，但这里要介绍另一种连接材质方法：随机材质
 
@@ -46,6 +46,6 @@ tiles=1-4
 
 保存，重载材质包，查看一下效果吧。
 
-![image-20200708132520832](random.assets/image-20200708132520832.png)
+![image-20200708132520832](https://i.loli.net/2020/07/28/xwzfdF9tZaAYPKp.png)
 
 <br/><br/><Vssue/>

@@ -8,13 +8,13 @@
 
 覆盖方法乍一看并不容易有直观理解，我们首先以官方的范本为例，制作一个覆盖材质，看看效果是什么样的。
 
-![img](https://attachment.mcbbs.net/forum/201909/12/201957oug1gtbufnbuo7kf.png)
+![img](https://i.loli.net/2020/07/28/migUf95u2pIx3qv.png)
 
 ## 为砂砾制作覆盖材质
 
 我们要为之前制作的砂砾设置覆盖材质：
 
-![image-20200710091059701](overlay.assets/image-20200710091059701.png)
+![image-20200710091059701](https://i.loli.net/2020/07/28/kIh93e8ur6TzVdY.png)
 
 将官方的范本裁切开，放到ctm文件夹下，并新建gravel_overlay.properties
 
@@ -26,7 +26,7 @@ matchBlocks=minecraft:gravel
 tiles=0-16
 ```
 
-![image-20200710093307312](overlay.assets/image-20200710093307312.png)
+![image-20200710093307312](https://i.loli.net/2020/07/28/gtUG58uoKVMaxJl.png)
 
 很遗憾，什么都没发生！
 
@@ -36,7 +36,7 @@ tiles=0-16
 
 在枯山水——优先级章节我们已经提到，可以通过修改属性文件的路径，路径排在前面的文件具有更高的优先级，在log文件中，我们也可以清晰看到属性文件的排序：
 
-![image-20200710093935385](overlay.assets/image-20200710093935385.png)
+![image-20200710093935385](https://i.loli.net/2020/07/28/GoBz7xldLM49J3A.png)
 
 那么问题来了，既然我已经将gravel_overlay.properties设置为第一个加载，为什么它还是被dirt_stone.properties（砂砾——重复图案小节砂砾的属性文件）覆盖了？
 
@@ -54,7 +54,7 @@ tiles=0-16
 
 效果：
 
-![image-20200710094616204](overlay.assets/image-20200710094616204.png)
+![image-20200710094616204](https://i.loli.net/2020/07/28/xAOj75VClnkdc16.png)
 
 至此我们可以看出覆盖材质出现在了砂砾和其他方块的交界处，适合用于方块间的过渡。
 
@@ -76,11 +76,11 @@ tiles=0-16
 
 闭着眼瞎画的材质：
 
-![image-20200710101824568](overlay.assets/image-20200710101824568.png)
+![image-20200710101824568](https://i.loli.net/2020/07/28/NJ6v8aZmIuMBYWf.png)
 
 我们看到虽然体现出草皮和砂砾的过渡了，但是草皮的颜色没了。
 
-![image-20200710101918143](overlay.assets/image-20200710101918143.png)
+![image-20200710101918143](https://i.loli.net/2020/07/28/GHxjPo2KVAwrqEZ.png)
 
 我们需要给属性文件加上tintIndex和tintBlock：
 
@@ -104,11 +104,11 @@ tintBlock=minecraft:grass
 
 很好，我们已经实现草方块和砂砾的过渡了！
 
-![image-20200710103126832](overlay.assets/image-20200710103126832.png)
+![image-20200710103126832](https://i.loli.net/2020/07/28/wu1KoefznONHBlj.png)
 
 但现在砂砾不管遇到什么方块都会显示覆盖草方块的样子。
 
-![image-20200710103331939](overlay.assets/image-20200710103331939.png)
+![image-20200710103331939](https://i.loli.net/2020/07/28/FzKxkuSeZcPWB2n.png)
 
 所以要加上connectBlocks或者connectTiles加以限制，我们选用connectTiles：
 
@@ -125,7 +125,7 @@ tintBlock=minecraft:grass
 
 我们看到现在只有连接草方块时，砂砾才显示草方块的覆盖材质：
 
-![image-20200710103611967](overlay.assets/image-20200710103611967.png)
+![image-20200710103611967](https://i.loli.net/2020/07/28/6Hdjyl7SfepkEvx.png)
 
 既然如此，我们为什么不为其他方块也加上草方块的覆盖材质呢？
 
@@ -143,7 +143,7 @@ tintBlock=minecraft:grass
 
 效果：
 
-![image-20200710104052053](overlay.assets/image-20200710104052053.png)
+![image-20200710104052053](https://i.loli.net/2020/07/28/obT8kEvNZlUDIeF.png)
 
 现在看来，这个属性文件不是属于gravel的，反而是属于grass的，有了这个属性文件，可以让草方块蔓延到任何固体方块上。
 

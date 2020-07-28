@@ -2,29 +2,29 @@
 
 之前我们取消了沙子和红沙的随机模型，导致现在它们看上去非常栅格化，缺少随机性：
 
-![image-20200708143344382](weight.assets/image-20200708143344382.png)
+![image-20200708143344382](https://i.loli.net/2020/07/28/DFvn3ZaNBEqLAdu.png)
 
 我们要重新为它们设置随机材质
 
-![image-20200708144345874](weight.assets/image-20200708144345874.png)
+![image-20200708144345874](https://i.loli.net/2020/07/28/3cq2jGOnAgNFMBi.png)
 
 我们看到栅格化的问题确实减轻了不少，但是，我们之前放在这里的枯山水材质又被覆盖了。
 
-![image-20200708144434669](weight.assets/image-20200708144434669.png)
+![image-20200708144434669](https://i.loli.net/2020/07/28/SDV82uhxlLniKgC.png)
 
 这是因为如果不同的属性文件互相冲突，会使用文件路径排序靠前的属性文件。为了凑出这种情况，我做了点小把戏：
 
-![image-20200708144853852](weight.assets/image-20200708144853852.png)
+![image-20200708144853852](https://i.loli.net/2020/07/28/9gkn5yQ3hNUVE4T.png)
 
 原本sand文件夹排序在karesansui文件夹之后。我在前面加了个0，使沙子的属性文件排序在枯山水的属性文件之前。
 
 我们把这个0给去掉，让sand排到karesansui的后边去：
 
-![image-20200708153940316](weight.assets/image-20200708153940316.png)
+![image-20200708153940316](https://i.loli.net/2020/07/28/2eSqiN7rc6vVlPX.png)
 
 回到游戏重载资源包，我们看到枯山水优先于沙子显示了：
 
-![image-20200708154016153](weight.assets/image-20200708154016153.png)
+![image-20200708154016153](https://i.loli.net/2020/07/28/Kux6MH7qkenR3iB.png)
 
 虽然这个案例是凑出来的，但如果碰到出现冲突的情况，我们确实可以通过更改文件夹的名称排序来确立属性文件的优先级。
 

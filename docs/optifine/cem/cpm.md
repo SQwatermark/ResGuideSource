@@ -16,7 +16,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 本节我们要在比那名居天子的旁边加上一块漂浮的要石：
 
-![image-20200717165243854](cpm.assets/image-20200717165243854.png)
+![image-20200717165243854](https://i.loli.net/2020/07/28/ITBH1iV9NeKf75p.png)
 
 ## 设置JVM启动参数
 
@@ -28,13 +28,13 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 上面这两个配置的第一个用于开启自定义玩家模型功能，第二个用于每五秒刷新一次模型以便测试。平时使用时，只需要添加第一个参数，测试模型时把第二个也加上吧。
 
-![image-20200717190159066](cpm.assets/image-20200717190159066.png)
+![image-20200717190159066](https://i.loli.net/2020/07/28/lx8JDTZQNUAfG4Y.png)
 
 ## 制作模型
 
 在.minecraft文件夹下新建名为playermodels的文件夹，然后在playermodels文件夹里新建items文件夹和users文件夹，其中items文件夹用于存放模型和材质，users文件加用于存放玩家信息。
 
-![image-20200717172311583](cpm.assets/image-20200717172311583.png)
+![image-20200717172311583](https://i.loli.net/2020/07/28/GQeNRsHdb2tMwSa.png)
 
 因为我们要制作的是一块石头的模型，在items文件夹内新建文件夹名为stone，在stone文件夹内新建文本文件，命名为model.cfg，这本质上也是一个json格式的文件。这个文件包含有关模型的全部信息。
 
@@ -95,11 +95,11 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 由于默认看这一小节的读者已经掌握了jpm模型的做法，我就不演示了。现在我有一个做好的jpm模型，是用MagicaVoxel做了体素然后用Voxel Importer插件导入Blockbench的，丑，但是能用。
 
-![image-20200717191627324](cpm.assets/image-20200717191627324.png)
+![image-20200717191627324](https://i.loli.net/2020/07/28/T8QzMiOu9dZblXs.png)
 
 我们打开jpm文件，将boxes的内容整个复制下来，粘贴到model.cfg文件中，并将textureSize给抄上。
 
-![image-20200717192208848](cpm.assets/image-20200717192208848.png)
+![image-20200717192208848](https://i.loli.net/2020/07/28/yR4vlwP1CY2hnDq.png)
 
 **model.cfg**
 
@@ -137,7 +137,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 然后在model.cfg旁边放上材质，我们注意到model.cfg本身只规范了材质的大小，没写具体用什么材质，也就是说我们可以给不同的玩家用不同的模型，也可以给不同玩家用相同的模型，不同的材质。
 
-![image-20200717192813160](cpm.assets/image-20200717192813160.png)
+![image-20200717192813160](https://i.loli.net/2020/07/28/ol9fVp7UTQ6indO.png)
 
 ## 使用模型
 
@@ -162,7 +162,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 进入游戏看看效果
 
-![image-20200717192548190](cpm.assets/image-20200717192548190.png)
+![image-20200717192548190](https://i.loli.net/2020/07/28/M7I9aSogNFH16xp.png)
 
 要石的位置还不太理想，我们调整一下model.cfg，改一下偏移值：
 
@@ -172,15 +172,21 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 好的，达到想要的效果了，平时使用模型时，可以把jvm参数`-Dplayer.models.reload=true`删除了。
 
-![image-20200717194132139](cpm.assets/image-20200717194132139.png)
+![image-20200717194132139](https://i.loli.net/2020/07/28/kpZJCPIu2X6q8Dy.png)
 
 我们再灵活地使用一下模型的继承，增加几个要石：
 
-![image-20200717200221767](cpm.assets/image-20200717200221767.png)
+![image-20200717200221767](https://i.loli.net/2020/07/28/xDT6JK4nPtr219V.png)
 
 效果：
 
-![image-20200717200132885](cpm.assets/image-20200717200132885.png)
+![image-20200717200132885](https://i.loli.net/2020/07/28/abJ7IezAT1DW29d.png)
+
+::: warning
+
+隐身药水对自定义的模型无效。
+
+:::
 
 ## 附：非官方说明文档
 

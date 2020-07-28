@@ -43,7 +43,7 @@ biomes.3=雨林
 
 如果一个生物本身就有多个材质，例如狼，它有下列四张材质：
 
-![image-20200715102759623](random_entities.assets/image-20200715102759623.png)
+![image-20200715102759623](https://i.loli.net/2020/07/28/3DtSsE7LPcXmeTu.png)
 
 那序号2就表示wolf2.png，wolf_angry2.png，wolf_collar2.png，wolf_tame2.png。
 

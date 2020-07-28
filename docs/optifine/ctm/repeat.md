@@ -4,11 +4,11 @@
 
 我的朋友制作了这张128×128的石子路面，我们要用它替换砂砾：
 
-![image-20200709092817422](repeat.assets/image-20200709092817422.png)
+![image-20200709092817422](https://i.loli.net/2020/07/28/EUW2gM6ID9Nxci7.png)
 
 我们将其分割为32×32的16份：
 
-![image-20200709094141191](repeat.assets/image-20200709094141191.png)
+![image-20200709094141191](https://i.loli.net/2020/07/28/KfNEAagrl7YOdGb.png)
 
 **dirt_stone.properties**
 
@@ -26,6 +26,6 @@ width=4
 
 于是我们成功将砂砾换成了大块的图案（离远了看有点像芝麻糖？）：
 
-![image-20200709095131493](repeat.assets/image-20200709095131493.png)
+![image-20200709095131493](https://i.loli.net/2020/07/28/ls2GI4U6a5qSmJi.png)
 
 <br/><br/><Vssue/>

@@ -4,11 +4,11 @@
 
 我用Aseprite画好了这十六张材质，方便起见，是在一张画布上绘制的。
 
-![image-20200708213822683](horizontal.assets/image-20200708213822683.png)
+![image-20200708213822683](https://i.loli.net/2020/07/28/8bxyRcm4fZp1OBI.png)
 
 然后用图片剪切工具拆成16份：
 
-![image-20200708214510509](horizontal.assets/image-20200708214510509.png)
+![image-20200708214510509](https://i.loli.net/2020/07/28/nGHoPuiIX9xkzdy.png)
 
 由于之前设置的0-3号材质的序号已经发生变化，我们需要改一下namako.properties：
 
@@ -22,7 +22,7 @@ matchTiles=minecraft:blue_terracotta
 
 横向连接模板：
 
-![](horizontal.assets/horizontal_template.png)
+![](https://i.loli.net/2020/07/28/z64W2OhQtUVAZ7R.png)
 
 **pic5.properties**
 
@@ -37,11 +37,11 @@ matchTiles=./5.png
 
 对于图片1、9、13，如法炮制：
 
-![image-20200708220431542](horizontal.assets/image-20200708220431542.png)
+![image-20200708220431542](https://i.loli.net/2020/07/28/9YDER1lb8jGwBfi.png)
 
 重载资源包看看效果：
 
-![image-20200708221255742](horizontal.assets/image-20200708221255742.png)
+![image-20200708221255742](https://i.loli.net/2020/07/28/1XaKUN4QH8mqLW7.png)
 
 虽然拐角的包边显得十分尖锐尚需打磨，但我们的重点还是了解海鼠壁材质的思路，能够举一反三。
 

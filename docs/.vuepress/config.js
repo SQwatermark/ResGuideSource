@@ -107,10 +107,9 @@ module.exports = {
         ]
       },
 	  {
-        title: '天空盒',
-        path: '/optifine/sky/',
+        title: '环境',
+        path: '/vanilla/texture/environment/',
         children: [
-		  '/optifine/sky/sky-color',
 		  '/optifine/sky/skybox',
 		  '/optifine/sky/multiverse-sky',
         ]
@@ -129,6 +128,7 @@ module.exports = {
         path: '/appendix/',
         children: [
 		  '/appendix/fragments',
+		  '/appendix/tools',
         ]
       },
     ]

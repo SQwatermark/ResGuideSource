@@ -8,7 +8,7 @@ Minecraft使用音效时，并非直接找到音效的资源路径，Minecraft�
 
 和音效文件相同，sounds.json也是一个[jar包外部的资源](../more-assets)。如果你不知道怎么找到它，请读一读[这一节](../more-assets)。
 
-::: tip 提示
+::: tip
 
 sounds.json最详细的说明当然得看看[Wiki](https://minecraft-zh.gamepedia.com/Sounds.json)，比这里涉及到的用法全面多了。
 
@@ -49,11 +49,11 @@ sounds.json最详细的说明当然得看看[Wiki](https://minecraft-zh.gamepedi
 
 我下载了3段鲸吼声，转码后放在了如下路径：
 
-![image-20200706163409884](add-sounds.assets/image-20200706163409884.png)
+![image-20200706163409884](https://i.loli.net/2020/07/28/kHOXVKGAizJC5cx.png)
 
 在assets/minecraft路径下新建sounds.json
 
-![image-20200706163609964](add-sounds.assets/image-20200706163609964.png)
+![image-20200706163609964](https://i.loli.net/2020/07/28/e6MS3o7yH9DaTY1.png)
 
 令人高兴的是，sounds.json和大部分资源文件不同，游戏会将所有sounds.json叠加起来，最终游戏中的声音事件包含了每一个sounds.json中的声音事件。
 
@@ -96,15 +96,15 @@ sounds.json最详细的说明当然得看看[Wiki](https://minecraft-zh.gamepedi
 
 甚至出现在自动补全列表中了：
 
-![image-20200706164715020](add-sounds.assets/image-20200706164715020.png)
+![image-20200706164715020](https://i.loli.net/2020/07/28/WeSatwcKMiARVTv.png)
 
 完整指令
 
-![image-20200706165421510](add-sounds.assets/image-20200706165421510.png)
+![image-20200706165421510](https://i.loli.net/2020/07/28/27KIPZ8lWsJRxoy.png)
 
 虽然你们只能看到图片，反正我是听见了。
 
-![image-20200706165159725](add-sounds.assets/image-20200706165159725.png)
+![image-20200706165159725](https://i.loli.net/2020/07/28/E3DsyMn6paYvHdg.png)
 
 ::: tip 提示
 

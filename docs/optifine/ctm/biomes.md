@@ -10,15 +10,15 @@ biomes=minecraft:the_void
 
 保存，重载资源包，然后进入服务器（因为1.15.2的forge和optifine尚不兼容，我只能开个本地服务器，用bukkit版本的worldedit修改生物群系）
 
-![image-20200708140604073](biomes.assets/image-20200708140604073.png)
+![image-20200708140604073](https://i.loli.net/2020/07/27/1O8jRoUHkPr35pl.png)
 
 我们看到沙子和红沙的材质都恢复了，现在我们修改一下生物群系：
 
-![image-20200708141617231](biomes.assets/image-20200708141617231.png)
+![image-20200708141617231](https://i.loli.net/2020/07/27/sDpaHN3Bfxg7JrV.png)
 
 我们看到被修改为the_void生物群系的区域材质变成了ctm材质。虽然生物群系生成的范围似乎有些问题，不过我们本节的目的已经达到了。
 
-![image-20200708141433217](biomes.assets/image-20200708141433217.png)
+![image-20200708141433217](https://i.loli.net/2020/07/27/wtyc8J3CKd2PRmS.png)
 
 ::: tip
 

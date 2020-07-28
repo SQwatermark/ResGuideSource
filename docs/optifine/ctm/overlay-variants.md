@@ -16,7 +16,7 @@
 
 我将其提取出来，新建文件名为ruins.properties：
 
-![image-20200710132812408](overlay-ctm.assets/image-20200710132812408.png)
+![image-20200710132812408](https://i.loli.net/2020/07/28/oxk1DyVFSYZOnTM.png)
 
 **ruins.properties**
 
@@ -28,7 +28,7 @@ matchBlocks=minecraft:cut_red_sandstone
 faces=sides
 ```
 
-![image-20200710133444707](overlay-ctm.assets/image-20200710133444707.png)
+![image-20200710133444707](https://i.loli.net/2020/07/28/zVjeNLiBgC35rx6.png)
 
 要让同一块红砂岩只显示一种卢恩字母，加入symmetry=all：
 
@@ -43,7 +43,7 @@ faces=sides
 symmetry=all
 ```
 
-![image-20200710142453133](overlay-variants.assets/image-20200710142453133.png)
+![image-20200710142453133](https://i.loli.net/2020/07/28/2tUioI8OvJfNK3V.png)
 
 ## 享元模式
 
@@ -55,7 +55,7 @@ overlay材质和享元模式是相当契合的。在上一小节，我们做了�
 
 **cocricot mod1.12.2 的木骨架**
 
-![image-20200710161531247](overlay-variants.assets/image-20200710161531247.png)
+![image-20200710161531247](https://i.loli.net/2020/07/28/7rxAJ28oyacvGCF.png)
 
 ## 自发光纹理
 
@@ -80,27 +80,27 @@ suffix.emissive=_e
 
 建议使用[ReNamer](https://www.den4b.com/products/renamer)进行批量重命名
 
-![image-20200710152152941](overlay-variants.assets/image-20200710152152941.png)
+![image-20200710152152941](https://i.loli.net/2020/07/28/6wqeGf4kdPxmzjt.png)
 
 :::
 
 将重命名完成的文件放回原文件夹：
 
-![image-20200710152506798](overlay-variants.assets/image-20200710152506798.png)
+![image-20200710152506798](https://i.loli.net/2020/07/28/p6lVUHQvTS83DeP.png)
 
 重载资源包，将时间调整至晚上，查看效果：
 
-![image-20200710152751897](overlay-variants.assets/image-20200710152751897.png)
+![image-20200710152751897](https://i.loli.net/2020/07/28/At5GKyUEFdqP7xs.png)
 
 既然用上发光的材质了，那我们可以把原先的材质改一改，节省一点空间，能省一点是一点，万一做的是高清材质呢：
 
 将原先的材质更换成边长为1的完全透明的材质：
 
-![image-20200710154455263](overlay-variants.assets/image-20200710154455263.png)
+![image-20200710154455263](https://i.loli.net/2020/07/28/P1au3gtq6prZx8I.png)
 
 重载资源包，依然不影响效果：
 
-![image-20200710154540432](overlay-variants.assets/image-20200710154540432.png)
+![image-20200710154540432](https://i.loli.net/2020/07/28/xsqZJUI2OFb3zVT.png)
 
 ::: warning
 

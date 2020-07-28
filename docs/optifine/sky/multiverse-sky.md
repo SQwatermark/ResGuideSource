@@ -1,6 +1,6 @@
 # 多世界天空盒（服务器用）
 
-> 这个教程是给有很多个世界的服务器使用的。
+> 这个教程是给有很多个世界的服务器的客户端使用的，也可以给单机整合包用。
 
 ::: warning
 
@@ -15,7 +15,7 @@
 
 我们随便下载一个有天空材质的材质包，解压，打开assets/minecraft/optifine/sky文件夹，里面有一个名为world0文件夹，world0文件夹内就是天空的材质了。
 
-![image-20200719121126550](multiverse-sky.assets/image-20200719121126550.png)
+![image-20200719121126550](https://i.loli.net/2020/07/28/h9wEbH18iXIvAds.png)
 
 ::: tip
 
@@ -33,11 +33,11 @@
 
 接下来的问题就是，如何知道某个世界的维度。不是很难，找到日志（log）文件，搜索关键词dimension，应该很快就能得到需要的东西：
 
-![image-20200719125108825](multiverse-sky.assets/image-20200719125108825.png)
+![image-20200719125108825](https://i.loli.net/2020/07/27/eC25v8V3PnFEsS9.png)
 
 我们清楚地看到名为mcg_truemoon的世界的维度id为11。
 
 还有一个办法就是用nbtexplorer打开世界的level.dat文件，也很容易就能找到维度id：
 
-![image-20200719125529965](multiverse-sky.assets/image-20200719125529965.png)
+![image-20200719125529965](https://i.loli.net/2020/07/27/nIA6y84U5bsY9j2.png)
 

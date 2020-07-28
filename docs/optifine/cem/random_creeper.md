@@ -6,7 +6,7 @@
 
 绘制好材质，简单调色就可以了，将其放置在creeper文件夹下，并按照如下命名：
 
-![image-20200716091832243](random_creeper.assets/image-20200716091832243.png)
+![image-20200716091832243](https://i.loli.net/2020/07/28/2LtroCNF6ypdVRg.png)
 
 这里只放了红色和蓝色苦力怕，绿色苦力怕是默认材质，我将默认的电光材质也改成了绿色。
 
@@ -30,7 +30,7 @@ biomes.2=frozen_ocean frozen_river snowy_mountains snowy_tundra snowy_beach snow
 
 现在我们找到一块寒冷的群系，生成一只苦力怕：
 
-![image-20200716092318998](random_creeper.assets/image-20200716092318998.png)
+![image-20200716092318998](https://i.loli.net/2020/07/28/82i1EmoJ9wFRXyD.png)
 
 ```
 /summon minecraft:lightning_bolt
@@ -38,14 +38,14 @@ biomes.2=frozen_ocean frozen_river snowy_mountains snowy_tundra snowy_beach snow
 
 雪原中最靓的崽：
 
-![image-20200716092459001](random_creeper.assets/image-20200716092459001.png)
+![image-20200716092459001](https://i.loli.net/2020/07/28/8kjdOoxfUmAvKtQ.png)
 
 雨林中最靓的崽：
 
-![image-20200716092644368](random_creeper.assets/image-20200716092644368.png)
+![image-20200716092644368](https://i.loli.net/2020/07/28/SJjZiUOLYx4u6Cn.png)
 
 沙漠中最靓的崽：
 
-![image-20200716092918211](random_creeper.assets/image-20200716092918211.png)
+![image-20200716092918211](https://i.loli.net/2020/07/28/Q6amwGTtP4IbeBo.png)
 
 <br/><br/><Vssue/>

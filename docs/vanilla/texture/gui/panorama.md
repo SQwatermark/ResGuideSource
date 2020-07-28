@@ -4,7 +4,7 @@
 
 把这六张图片拼接一下，不难看出这是一个盒子的展开图。想象将其折叠成一个盒子，将玩家视角置于盒子正中央，就好似玩家声临其境一样。这就是游戏中常用的 [CubeMapping](https://en.wikipedia.org/wiki/Cube_mapping) 技术。
 
-![](panorama.assets/全景图.png)
+![](https://i.loli.net/2020/07/28/TZB52HWRr8K6kiu.png)
 
 ## 如何制作主菜单全景图
 
@@ -44,7 +44,7 @@
 
 Conquest_ 材质包的主菜单全景图是画出来的。
 
-![conquest全景图](panorama.assets/conquest全景图.png)
+![conquest全景图](https://i.loli.net/2020/07/28/GysUjbtpQAx29Ni.png)
 
 ### 进阶：使用软件
 

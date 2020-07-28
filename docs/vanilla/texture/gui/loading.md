@@ -4,11 +4,11 @@
 
 随便截一张图，放到optifine/gui/loadinng文件夹下，并命名为background0.png，这表示主世界的加载画面，如果是下界，命名为background-1.png，如果是末地，命名为background1.png，模组添加的维度也可以用这种background+id.png的方式命名。
 
-![image-20200716160014059](loading.assets/image-20200716160014059.png)
+![image-20200716160014059](https://i.loli.net/2020/07/28/aM3KTs6dDILZ8xA.png)
 
 重载资源包，通过传送门从下界传送回主世界：
 
-![image-20200716160613361](loading.assets/image-20200716160613361.png)
+![image-20200716160613361](https://i.loli.net/2020/07/28/WXpmgicv4sEGb98.png)
 
 吐槽一下，1.15.2除了最初一次加载，加载速度都快到来不及截图。
 
@@ -23,7 +23,7 @@
 scaleMode=full
 ```
 
-![image-20200716161157592](loading.assets/image-20200716161157592.png)
+![image-20200716161157592](https://i.loli.net/2020/07/28/o6fRICiSw3HpNVW.png)
 
 修改一下缩放模式：
 
@@ -32,7 +32,7 @@ scaleMode=full
 scaleMode=stretch
 ```
 
-![image-20200716161701863](loading.assets/image-20200716161701863.png)
+![image-20200716161701863](https://i.loli.net/2020/07/28/dmqWFLQHygtPYOn.png)
 
 ::: tip
 

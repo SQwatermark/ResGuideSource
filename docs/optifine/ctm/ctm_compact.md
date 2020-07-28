@@ -2,7 +2,7 @@
 
 前面我们提到，对于一些简单的情况，制47张材质过于繁琐了，于是OptiFine提供了一种简化方法，只需要5张材质：
 
-![](ctm_compact.assets/ctm_compact_template.png)
+![](https://i.loli.net/2020/07/28/MEqVZPOyz1SdnLe.png)
 
 是不是很神奇？这五张材质是如何变成游戏中看到的样子的？
 
@@ -67,7 +67,7 @@
 
 虽然知道有bug，但是简化CTM还是很诱人的，我还是尝试用简化CTM方法制作了玻璃材质（1号材质黑了是因为它现在彻底透明了）：
 
-![image-20200709102736870](ctm_compact.assets/image-20200709102736870.png)
+![image-20200709102736870](https://i.loli.net/2020/07/28/h4Vt1muqas6bR7E.png)
 
 **glass.properties**
 
@@ -79,11 +79,11 @@ matchBlocks=minecraft:glass
 
 我们看到简化CTM方法用于玻璃还是非常的稳健：
 
-![image-20200709102709736](ctm_compact.assets/image-20200709102709736.png)
+![image-20200709102709736](https://i.loli.net/2020/07/28/5XqORicLnowelB4.png)
 
 我们再试着用于玻璃板：
 
-![image-20200709102856643](ctm_compact.assets/image-20200709102856643.png)
+![image-20200709102856643](https://i.loli.net/2020/07/28/gQwRABM5U71DKik.png)
 
 它的顶部也被连接了，我们加上faces=sides将连接材质限制在侧面：
 
@@ -94,11 +94,11 @@ matchBlocks=minecraft:glass_pane
 faces=sides
 ```
 
-![image-20200709104553553](ctm_compact.assets/image-20200709104553553.png)
+![image-20200709104553553](https://i.loli.net/2020/07/28/kegdjGbQc7Fr6Nf.png)
 
 至此我以为简化CTM玻璃板不过如此，直到我转到了另一面：
 
-![image-20200709104851371](ctm_compact.assets/image-20200709104851371.png)
+![image-20200709104851371](https://i.loli.net/2020/07/28/QBfXY3qnCvORzg2.png)
 
 这种问题的确不是我有办法解决的，只能放弃了。
 

@@ -12,20 +12,10 @@
 
 我这里仅仅简单调了下色：
 
-![image-20200618151513955](normal-textures.assets/image-20200618151513955.png)
+![image-20200618151513955](normal-textures.assets/rec4HboaVg8C6Q2.png)
 
 重载资源包，放出金合欢木，看看修改后的材质吧！
 
-![image-20200708101328142](normal-textures.assets/image-20200708101328142.png)
-
-::: details 阶段小结
-
-到现在为止，如果你有一定的美术基础，已经可以做出一款不错的材质包了，前面的虽然是最最基础的内容，却也是最有用的内容。
-
-但既然资源包可以实现许许多多的内容，何必束手束脚的呢？看看conquest、cocricot、ITP等诸多资源包，它们所做到的显然不是改改材质就能实现的。
-
-如果你有很多想法苦于不知道怎么实现，继续看下去吧，学习愉快！
-
-:::
+![image-20200708101328142](https://i.loli.net/2020/07/28/Ny8IpD74nbHdc2O.png)
 
 <br/><br/><Vssue/>

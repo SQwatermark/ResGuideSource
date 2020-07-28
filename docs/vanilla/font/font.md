@@ -28,7 +28,7 @@
 
 **基本多文种平面（Basic Multilingual Plane）**
 
-[![基本多文种平面](font.assets/GEyycj.md.png "基本多文种平面")](https://baike.baidu.com/item/%E5%9F%BA%E6%9C%AC%E5%A4%9A%E6%96%87%E7%A7%8D%E5%B9%B3%E9%9D%A2 "基本多文种平面")
+[![基本多文种平面](https://i.loli.net/2020/07/28/HYEkIFiptUfZBGL.png "基本多文种平面")](https://baike.baidu.com/item/%E5%9F%BA%E6%9C%AC%E5%A4%9A%E6%96%87%E7%A7%8D%E5%B9%B3%E9%9D%A2 "基本多文种平面")
 
 这张表格与 `unicode_page_xx.png` 形成对应关系，但是 Minecraft 并未使用其全部内容（不包含08、D8-F8）
 
@@ -85,7 +85,7 @@
    此处的 `shift`，`size` 和 `oversample` 都使用了默认值
 
 2. 进入游戏查看，发现字体位置偏上，且过于模糊：
-   ![字体示例](font.assets/GE6S8e.md.png "字体示例")
+   ![字体示例](https://i.loli.net/2020/07/28/TiJCuxF7Ueqs9Mr.png "字体示例")
 
 3. 调整 `default.json` 中设定的值（shift和oversample）：
 
@@ -104,7 +104,7 @@
    ```
 
 4. 重新进入游戏观察，OK（但是这个字体本身过细，不适合 mc）
-   ![字体示例2](font.assets/GEyzCD.md.png "字体示例2")
+   ![字体示例2](https://i.loli.net/2020/07/28/Zeb9WJcmjSoFVCs.png)
 
 
 ### 如何对单个字进行调整
