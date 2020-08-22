@@ -2,7 +2,7 @@
 
 我们可以通过自定义加载画面修改Minecraft加载世界时显示的背景图片。
 
-随便截一张图，放到optifine/gui/loadinng文件夹下，并命名为background0.png，这表示主世界的加载画面，如果是下界，命名为background-1.png，如果是末地，命名为background1.png，模组添加的维度也可以用这种background+id.png的方式命名。
+随便截一张图，放到optifine/gui/loading文件夹下，并命名为background0.png，这表示主世界的加载画面，如果是下界，命名为background-1.png，如果是末地，命名为background1.png，模组添加的维度也可以用这种background+id.png的方式命名。
 
 ![image-20200716160014059](https://i.loli.net/2020/07/28/aM3KTs6dDILZ8xA.png)
 

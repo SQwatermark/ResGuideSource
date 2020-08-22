@@ -90,7 +90,7 @@
 }
 ```
 
-我们看到皮革盔甲有两个渲染层，截个图给大家看一下分别是什么：
+我们看到药水有两个渲染层，截个图给大家看一下分别是什么：
 
 **potion.png**
 
@@ -108,7 +108,7 @@
 return tintindex > 0 ? -1 : PotionUtils.getColor(...);
 ```
 
-即判断tintindex是否大于0，如果不大于0（对应layer0），返回的颜色乘数为-1（转换后为(1,1,1)，即不染色）；如果大于0（对应layer1），返回药水的颜色乘数（即染色）。
+即判断tintindex是否大于0，如果大于0（对应layer1），返回的颜色乘数为-1（转换后为(1,1,1)，即不染色）；如果不大于0（对应layer0），返回药水的颜色乘数（即染色）。
 
 而刷怪蛋的两个渲染层都会被染色（下图来源于一个[Blog](http://greyminecraftcoder.blogspot.com/2013/08/rendering-items.html)）：
 

@@ -2,7 +2,7 @@
 
 一位朋友在为模组制作竹子的模型的时候遇到了麻烦，促使我注意到Minecraft模型的阴影效果。
 
-![image-20200706205746558](shading.assets/image-20200706205746558.png)
+![image-20200706205746558](https://i.loli.net/2020/07/28/6Ch3jVm8OYegFBn.png)
 
 竹叶的底面出现了突兀的阴影，这原本也没什么，毕竟没阴影才不正常，但大面积种植后我们发现这样的阴影非常影响观感。
 
@@ -27,7 +27,7 @@
 
 我们将竹叶的所有元素的`shade`都设置成了`false`，效果如下。
 
-![image-20200706210220839](shading.assets/image-20200706210220839.png)
+![image-20200706210220839](https://i.loli.net/2020/07/28/njHIDWtNFPqeCfS.png)
 
 这让我对Minecraft的阴影产生了兴趣，后来我找到了一篇Blog，简单叙述了Minecraft的光照。我也翻译了这篇文章。有兴趣可以点击[这里](https://www.mcbbs.net/thread-1062742-1-1.html)查看。
 
@@ -42,6 +42,6 @@
 > - Z轴上的面（Z+、Z-=南、北）为80%亮度
 > - Z轴上的面（X+、X-=东、西）为60%亮度
 > 
-> ![img](shading.assets/BlockShadeOnOff.png)
+> ![img](https://i.loli.net/2020/07/28/y1PfcdXoIj5nD6g.png)
 
 <br/><br/><Vssue/>

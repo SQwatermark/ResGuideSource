@@ -80,7 +80,7 @@ tiles=0-16
 
 我们看到虽然体现出草皮和砂砾的过渡了，但是草皮的颜色没了。
 
-![image-20200710101918143](https://i.loli.net/2020/07/28/GHxjPo2KVAwrqEZ.png)
+![image-20200710101918143](https://i.loli.net/2020/07/28/an76tdCzbwHFs3T.png)
 
 我们需要给属性文件加上tintIndex和tintBlock：
 
@@ -125,7 +125,7 @@ tintBlock=minecraft:grass
 
 我们看到现在只有连接草方块时，砂砾才显示草方块的覆盖材质：
 
-![image-20200710103611967](https://i.loli.net/2020/07/28/6Hdjyl7SfepkEvx.png)
+![image-20200710103611967](https://i.loli.net/2020/07/28/36KzfZIQj1cWgNX.png)
 
 既然如此，我们为什么不为其他方块也加上草方块的覆盖材质呢？
 

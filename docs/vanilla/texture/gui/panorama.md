@@ -20,7 +20,7 @@
    - 关闭飘来飘去的云
    - 如果开的光影中有各种晃动元素，也要关掉
 
-3. 将角视场调整为90
+3. 将角视场调整为82
 
 4. 按下 F1（有些笔记本需要 Fn + F1）隐藏一切 UI
 
@@ -32,7 +32,7 @@
    - `/tp @p ~ ~ ~ 90 0`，截图得到 `panorama_3.png`
    - `/tp @p ~ ~ ~ -90 -90`，截图得到 `panorama_4.png`
    - `/tp @p ~ ~ ~ -90 90`，截图得到 `panorama_5.png`
-6. 将截图放到材质包的 assets/minecraft/textures/gui\title/background 文件夹下，测试，如果感觉图片之间衔接不好，可以试着调整一下光影设置，很多光影会模糊加深屏幕边缘，要将这类设置关掉。
+6. 将截图放到材质包的 assets/minecraft/textures/gui/title/background 文件夹下，测试，如果感觉图片之间衔接不好，可以试着调整一下光影设置，很多光影会模糊加深屏幕边缘，要将这类设置关掉。
 
 ### extra：使用mod
 
@@ -48,9 +48,29 @@ Conquest_ 材质包的主菜单全景图是画出来的。
 
 ### 进阶：使用软件
 
-全景图本质上是一个天空盒（skybox），它自然可以用3D渲染软件渲染出来，这部分需要一定专业知识，在此不多赘述。
+全景图本质上是一个天空盒（skybox），它自然可以用3D渲染软件渲染出来，这部分需要一定专业知识，在此不多赘述。我也不会。
 
-## 使用 OptiFine 制作随机的主菜单全景图
+### 特殊：静态背景图片
+
+还记得我们在一开始遇到的问题吗？我们用原版assets文件制作初始资源包时，主菜单的全景图变成了灰幕。
+
+从Minecraft1.13版本起，全景图文件夹里就多了一张名为panorama_overlay.png的图片，让我们再次把这张图片放回assets/minecraft/textures/gui/title/background文件夹
+
+![image-20200822162516716](https://i.loli.net/2020/08/22/7G1sKDv64FiTxpu.png)
+
+顾名思义，这张图的含义似乎是：在全景图上覆盖的图片，我们将其稍加编辑，查看下效果：
+
+![image-20200822162930523](https://i.loli.net/2020/08/22/UTBny5d4sQXPEej.png)
+
+![image-20200822162918630](https://i.loli.net/2020/08/22/2ugvMi6jbRDacJE.png)
+
+效果已经很明显了，panorama_overlay.png将覆盖在主菜单全景图上，如果这张图片支持任意分辨率，那我们就可以用一张静态的图片取而代之。
+
+比如这样：
+
+![image-20200822164541552](https://i.loli.net/2020/08/22/PD5pEzjACO76oGW.png)
+
+## 使用 OptiFine 添加更多花样
 
 详见 OptiFine 帮助文档的[自定义全景图](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=896135&pid=15810206)章节
 

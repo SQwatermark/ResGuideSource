@@ -4,7 +4,7 @@
 
 > 环境光遮蔽（Ambient Occlusion）是一种基于附近的方块计算表面的光照的方法。[这儿](https://www.mcbbs.net/plugin.php?id=link_redirect&target=http%3A%2F%2F0fps.wordpress.com%2F2013%2F07%2F03%2Fambient-occlusion-for-minecraft-like-worlds%2F)有Minecraft如何实现这个方法的简介。简而言之，对于每个顶点，计算出三个毗邻的方块和接触这个面的方块的平均光照强度。在下方的例子中，对于这个用红色圈起来的顶点，是以白色显示的这三个方块和这个面正上方的方块（未显示）的平均亮度。如果这四个方块都是透明的，”环境光遮蔽“光照强度将会是1.0。每个不透明方块都会降低顶点接收到的光照 - 如果四个方块都是不透明的那么这个强度将会是0.2。”环境光遮蔽“值会与顶点的颜色乘数相乘。顶点的混合亮度被计算为四个相邻方块的平均值。（还有一些其他有关对角方块是否被计算在内的细节，但是你已经知道了基本的思路）在绘制面时，OpenGL提供了平滑，所以环境光遮蔽在不同顶点上的产生的阴影在整个平面上被平滑了。
 >
-> ![img](ambientocclusion.assets/AmbientOcclusion.png)
+> ![img](https://i.loli.net/2020/07/29/E5w6cS4VGk8uiUv.png)
 
 
 
