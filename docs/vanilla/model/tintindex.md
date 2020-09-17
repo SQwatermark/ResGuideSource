@@ -119,5 +119,3 @@ return tintindex > 0 ? -1 : PotionUtils.getColor(...);
 > 深入了解：
 >
 > ​	光与色（敬请期待）
-
-<br/><br/><Vssue/>

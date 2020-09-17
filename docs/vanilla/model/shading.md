@@ -43,5 +43,3 @@
 > - Z轴上的面（X+、X-=东、西）为60%亮度
 > 
 > ![img](https://i.loli.net/2020/07/28/y1PfcdXoIj5nD6g.png)
-
-<br/><br/><Vssue/>

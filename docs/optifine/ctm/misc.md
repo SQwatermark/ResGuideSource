@@ -30,5 +30,3 @@ innerSeams是ctm方法和简化ctm方法的一个参数，默认值为false：
 - horizontal也可写为bookshelf
 - horizontal+vertical也可写为h+v
 - vertical+horizontal也可写为v+h
-
-<br/><br/><Vssue/>

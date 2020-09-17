@@ -146,5 +146,3 @@ tintBlock=minecraft:grass
 ![image-20200710104052053](https://i.loli.net/2020/07/28/obT8kEvNZlUDIeF.png)
 
 现在看来，这个属性文件不是属于gravel的，反而是属于grass的，有了这个属性文件，可以让草方块蔓延到任何固体方块上。
-
-<br/><br/><Vssue/>

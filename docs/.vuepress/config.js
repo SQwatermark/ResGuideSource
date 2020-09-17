@@ -5,6 +5,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
+	  { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
 	  { text: 'OptiFine文档', link: 'https://www.mcbbs.net/thread-896135-1-1.html' },
 	  { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
     ],

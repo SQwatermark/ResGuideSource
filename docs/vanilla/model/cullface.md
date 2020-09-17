@@ -76,5 +76,3 @@
 ## 拓展阅读
 
 [Minecraft中文wiki: 不透明度](https://minecraft-zh.gamepedia.com/教程/不透明度)
-
-<br/><br/><Vssue/>

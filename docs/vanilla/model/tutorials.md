@@ -14,5 +14,3 @@
 - **[Minecraft中文wiki：模型](https://minecraft-zh.gamepedia.com/%E6%A8%A1%E5%9E%8B)**
 - **[[教程]物品手持/背包显示不同材质](https://www.mcbbs.net/thread-831718-1-1.html)**
 - **[【教程】奈子的超杂项材质教程[SCT]：父子继承/动态物品模型/动态物品材质](https://www.mcbbs.net/thread-961666-1-1.html)**
-
-<br/><br/><Vssue/>

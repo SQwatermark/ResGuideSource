@@ -29,5 +29,3 @@
 ## 相关教程推荐
 
 **[【PCD】Optifine 进阶技巧: 令方块在特定情况下显示特定模型](https://www.mcbbs.net/thread-1016264-1-1.html)**
-
-<br/><br/><Vssue/>

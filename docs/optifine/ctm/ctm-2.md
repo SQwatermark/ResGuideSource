@@ -82,5 +82,3 @@ tiles=0-47
 保存，重载资源包，十分完美：
 
 ![image-20200708114537676](https://i.loli.net/2020/07/28/pwB95zl8uHikfPV.png)
-
-<br/><br/><Vssue/>

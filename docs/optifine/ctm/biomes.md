@@ -27,5 +27,3 @@ biomes=minecraft:the_void
 对于1.13以前的版本，生物群系的id大不相同，可以查阅[扁平化前的Java版数据值](https://minecraft-zh.gamepedia.com/Java版数据值/扁平化前#.E7.94.9F.E7.89.A9.E7.BE.A4.E7.B3.BBID)
 
 :::
-
-<br/><br/><Vssue/>

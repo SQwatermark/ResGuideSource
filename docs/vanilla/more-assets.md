@@ -62,5 +62,3 @@ Minecraft经常迭代版本，如果玩家经常更新版本的话，不可避�
 不要直接修改这些文件，即便你必须要修改，也请使用资源包。Minecraft 会在连接网络的时候根据index文件夹里的json文件还原你所做的更改。即便[有办法绕过文件哈希值和大小检测](https://www.mcbbs.net/thread-421087-1-1.html)，也仍然强烈建议不要直接修改这些文件，尤其是要将其分发出去时，发布擅自修改的 Minecraft资源文件是违反 [EULA](https://www.minecraft.net/zh-hans/terms/r1/) 的）
 
 :::
-
-<br/><br/><Vssue/>

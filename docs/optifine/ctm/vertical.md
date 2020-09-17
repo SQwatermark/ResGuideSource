@@ -44,5 +44,3 @@ matchTiles=minecraft:blue_terracotta
 ![image-20200708205113091](https://i.loli.net/2020/07/28/3UPzeYABTu2ZcF6.png)
 
 有点内味了，但我还希望在拐角处加一个包边图案。这但那是下一节的内容了，本节到此结束。
-
-<br/><br/><Vssue/>

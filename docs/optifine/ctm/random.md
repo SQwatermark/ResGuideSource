@@ -47,5 +47,3 @@ tiles=1-4
 保存，重载材质包，查看一下效果吧。
 
 ![image-20200708132520832](https://i.loli.net/2020/07/28/xwzfdF9tZaAYPKp.png)
-
-<br/><br/><Vssue/>

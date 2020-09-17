@@ -2,7 +2,7 @@
 
 在模型章节，我们认识到了原版方块模型存在诸多限制，而原版提供的渲染类型为cutout的方块并不多，那么我们想为资源包添加很多很多的方块模型是不是就没办法了呢？
 
-确实没办法，但是我们可以添加很多很多物品模型，并通过物品展示框展示出来，达到类似方块模型的效果。从Minecraft1.8支持自定义模型起，[IT-Project模型包](https://www.mcbbs.net/thread-524880-1-1.html)就是这么个做法，不过后来使用了[CustomStuff4](https://www.curseforge.com/minecraft/mc-mods/custom-stuff-4)，以通过模组增加更多的模型了。
+确实没办法，但是我们可以添加很多很多物品模型，并通过物品展示框展示出来，达到类似方块模型的效果。从Minecraft1.8支持自定义模型起，[IT-Project模型包](https://www.mcbbs.net/thread-524880-1-1.html)就是这么个做法，同时有一个[CustomStuff4](https://www.curseforge.com/minecraft/mc-mods/custom-stuff-4)版本，通过模组增加更多的模型。
 
 现在请观赏IT-Project的宣传视频，感受一下模型包的强大之处：
 
@@ -18,7 +18,7 @@
 
 :::
 
-我把博丽神社的奉纳箱偷了过来（好孩子不要学我，从网上随便找了张材质就贴上去了）：
+我把博丽神社的奉纳箱偷了过来（材质是随便找的素材）：
 
 ![image-20200711115558032](modelpack.assets/image-20200711115558032.png)
 
@@ -85,5 +85,3 @@
 模型直接失踪，大成功！
 
 ![image-20200711132702370](modelpack.assets/image-20200711132702370.png)
-
-<br/><br/><Vssue/>

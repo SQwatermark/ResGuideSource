@@ -17,5 +17,3 @@
 重载资源包，放出金合欢木，看看修改后的材质吧！
 
 ![image-20200708101328142](https://i.loli.net/2020/07/28/Ny8IpD74nbHdc2O.png)
-
-<br/><br/><Vssue/>

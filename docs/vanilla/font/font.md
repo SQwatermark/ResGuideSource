@@ -129,5 +129,3 @@ p.s. 可以用这种方法将一些文字替换成形象的图画
 - **[潜影盒内容预览 - 字体黑科技](https://www.mcbbs.net/thread-913031-1-1.html)**
 
 - **[【1.13】地图制作技巧——字体艺术](https://www.mcbbs.net/thread-835539-1-1.html)**
-
-<br/><br/><Vssue/>

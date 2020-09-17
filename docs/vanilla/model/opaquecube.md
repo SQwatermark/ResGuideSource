@@ -12,7 +12,7 @@
 
 由于这种事情是写死在代码里的，我们在做模型的时候只能规避这些方块了。
 
-::: tip 提示
+::: tip
 
 学习做mod就可以彻底摆脱这些束缚了
 
@@ -21,5 +21,3 @@
 ## 拓展阅读
 
 [Minecraft中文wiki: 不透明度](https://minecraft-zh.gamepedia.com/教程/不透明度)
-
-<br/><br/><Vssue/>

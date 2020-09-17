@@ -8,5 +8,3 @@
 2. [找到原版资源文件，方便我们模仿和修改](vanilla-resources.md)
 3. [着手修改一个简单的材质](normal-textures.md)
 4. [更换资源包的图标](icon.md)
-
-<br/><br/><Vssue/>

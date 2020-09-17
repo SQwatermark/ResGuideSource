@@ -81,10 +81,14 @@
 
 :::
 
+### 巧用动态材质制作四季效果
+
+参考[3D Seasons](https://www.curseforge.com/minecraft/texture-packs/d-seasons)资源包。
+
+// TODO
+
 ## 相关视频
 
 ::: bv 1YV411k7JN
 
 :::
-
-<br/><br/><Vssue/>

@@ -27,5 +27,3 @@ width=4
 于是我们成功将砂砾换成了大块的图案（离远了看有点像芝麻糖？）：
 
 ![image-20200709095131493](https://i.loli.net/2020/07/28/ls2GI4U6a5qSmJi.png)
-
-<br/><br/><Vssue/>

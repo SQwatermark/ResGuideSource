@@ -70,5 +70,3 @@ duration=2
 还有一个测试出来的情报就是，动态材质不是覆盖在动态区域上，而是直接将动态区域给替换了：
 
 ![image-20200714204444459](https://i.loli.net/2020/07/28/vYw2PXFi5lSUMfx.png)
-
-<br/><br/><Vssue/>

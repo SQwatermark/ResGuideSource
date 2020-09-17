@@ -63,5 +63,3 @@ item.diode.name=雷石东直放站
 这一版本的语言文件还有一些十分有趣的翻译，感兴趣可以自己查看
 
 **[Minecraft中文WIKI关于1.3.1中部分译名错乱的说明](https://www.mcbbs.net/thread-40209-1-1.html)**
-
-<br/><br/><Vssue/>

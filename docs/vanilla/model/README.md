@@ -21,5 +21,3 @@
 - [tintindex](tintindex.md)
 - [不透明方块](opaquecube.md)
 - [渲染类型](rendertype.md)
-
-<br/><br/><Vssue/>

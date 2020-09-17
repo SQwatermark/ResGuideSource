@@ -47,5 +47,3 @@ biomes.2=frozen_ocean frozen_river snowy_mountains snowy_tundra snowy_beach snow
 沙漠中最靓的崽：
 
 ![image-20200716092918211](https://i.loli.net/2020/07/28/Q6amwGTtP4IbeBo.png)
-
-<br/><br/><Vssue/>

@@ -73,5 +73,3 @@ Conquest_ 材质包的主菜单全景图是画出来的。
 ## 使用 OptiFine 添加更多花样
 
 详见 OptiFine 帮助文档的[自定义全景图](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=896135&pid=15810206)章节
-
-<br/><br/><Vssue/>
