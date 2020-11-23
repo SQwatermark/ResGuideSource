@@ -12,7 +12,7 @@
 
 我这里仅仅简单调了下色：
 
-![image-20200618151513955](normal-textures.assets/rec4HboaVg8C6Q2.png)
+![image-20200618151513955](https://i.loli.net/2020/11/18/RkXvZhLQfuGtKqO.png)
 
 重载资源包，放出金合欢木，看看修改后的材质吧！
 

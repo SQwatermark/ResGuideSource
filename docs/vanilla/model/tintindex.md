@@ -94,11 +94,11 @@
 
 **potion.png**
 
-![image-20200707115104443](tintindex.assets/image-20200707115104443.png)
+![image-20200707115104443](https://i.loli.net/2020/11/18/tAMxj8rfZCalw5Q.png)
 
 **potion_overlay.png**
 
-![image-20200707115206990](tintindex.assets/image-20200707115206990.png)
+![image-20200707115206990](https://i.loli.net/2020/11/18/9VOCnFxGHBWIN71.png)
 
 很显然，potion.png是瓶子，不会被染色，而potion_overlay.png是瓶子里的药水，而药水有各种各样的颜色。
 

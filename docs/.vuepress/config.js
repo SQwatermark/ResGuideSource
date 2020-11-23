@@ -4,135 +4,146 @@ module.exports = {
   base: "/resguide/",
   themeConfig: {
     nav: [
-      { text: '主页', link: '/' },
-	  { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
-	  { text: 'OptiFine文档', link: 'https://www.mcbbs.net/thread-896135-1-1.html' },
-	  { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
+      { text: '教程', link: '/' },
+      { text: 'OptiFine文档', link: '/optifinedoc/' },
+      { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
+      { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
     ],
-    sidebar: [
-      '/propaedeutics/',
-	  {
-        title: '基础',   // 必要的
-        path: '/basic/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        children: [
-          '/basic/pack.mcmeta',
-          '/basic/vanilla-resources',
-          '/basic/normal-textures',
-          '/basic/icon'
-        ]
-      },
-	  ['/basic/structure', '幕间一'],
-	  ['/vanilla/texture/animation/', '动态材质（前篇）'],
-	  {
-        title: '模型和渲染',
-        path: '/vanilla/model/',
-        children: [
-		  '/vanilla/model/tutorials',
-          '/vanilla/model/shading',
-		  '/vanilla/model/ambientocclusion',
-		  '/vanilla/model/cullface',
-		  '/vanilla/model/tintindex',
-		  '/vanilla/model/opaquecube',
-		  '/vanilla/model/rendertype',
-		  '/vanilla/model/modelpack',
-		  '/vanilla/model/item_tags',
-		  '/vanilla/model/flower_pot',
-        ]
-      },
-	  ['/vanilla/more-assets', '幕间二'],
-	  {
-        title: '音效',
-        path: '/vanilla/sounds/',
-        children: [
-          '/vanilla/sounds/replace-sounds',
-          '/vanilla/sounds/add-sounds'
-        ]
-      },
-	  {
-        title: '语言和文字',
-        path: '/vanilla/lang/',
-        children: [
-          '/vanilla/lang/lang',
-		  '/vanilla/font/font',
-          '/vanilla/font/default.json'
+    sidebar: {
+    
+      '/optifinedoc/': [
+        '',
+        'properties_files',
+      ],
+      
+      '/': [
+        '/propaedeutics/',
+        {
+          title: '基础',   // 必要的
+          path: '/basic/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+          children: [
+            '/basic/pack.mcmeta',
+            '/basic/vanilla-resources',
+            '/basic/normal-textures',
+            '/basic/icon',
+            '/basic/structure',
+          ]
+        },
+        ['/vanilla/texture/animation/', '动态材质（前篇）'],
+        {
+          title: '模型和渲染',
+          path: '/vanilla/model/',
+          children: [
+            '/vanilla/model/tutorials',
+            '/vanilla/model/shading',
+            '/vanilla/model/ambientocclusion',
+            '/vanilla/model/cullface',
+            '/vanilla/model/tintindex',
+            '/vanilla/model/opaquecube',
+            '/vanilla/model/rendertype',
+            '/vanilla/model/modelpack',
+            '/vanilla/model/item_tags',
+            '/vanilla/model/flower_pot',
+          ]
+        },
+        ['/vanilla/more-assets', '额外的资源文件'],
+        {
+          title: '音效',
+          path: '/vanilla/sounds/',
+          children: [
+            '/vanilla/sounds/replace-sounds',
+            '/vanilla/sounds/add-sounds',
+          ]
+        },
+        {
+          title: '语言和文字',
+          path: '/vanilla/lang/',
+          children: [
+            '/vanilla/lang/lang',
+            '/vanilla/font/font',
+            '/vanilla/font/default.json',
 
-        ]
-      },
-	  ['/optifine/', '幕间三'],
-	  {
-        title: 'CTM',
-        path: '/optifine/ctm/',
-        children: [
-		  '/optifine/ctm/ctm',
-		  '/optifine/ctm/ctm-2',
-		  '/optifine/ctm/random',
-		  '/optifine/ctm/biomes',
-		  '/optifine/ctm/weight',
-		  '/optifine/ctm/ctm_compact',
-		  '/optifine/ctm/vertical',
-		  '/optifine/ctm/horizontal',
-		  '/optifine/ctm/repeat',
-		  '/optifine/ctm/overlay',
-		  '/optifine/ctm/overlay-variants',
-		  '/optifine/ctm/misc',
-        ]
-      },
-	  {
-        title: 'CIT',
-        path: '/optifine/cit/',
-        children: [
+          ]
+        },
+        ['/optifine/', 'OptiFine与MCPatcher'],
+        {
+          title: 'CTM',
+          path: '/optifine/ctm/',
+          children: [
+            '/optifine/ctm/ctm',
+            '/optifine/ctm/ctm-2',
+            '/optifine/ctm/random',
+            '/optifine/ctm/biomes',
+            '/optifine/ctm/weight',
+            '/optifine/ctm/ctm_compact',
+            '/optifine/ctm/vertical',
+            '/optifine/ctm/horizontal',
+            '/optifine/ctm/repeat',
+            '/optifine/ctm/overlay',
+            '/optifine/ctm/overlay-variants',
+            '/optifine/ctm/misc',
+          ]
+        },
+        {
+          title: 'CIT',
+          path: '/optifine/cit/',
+          children: [
 
-        ]
-      },
-	  {
-        title: 'CEM',
-        path: '/optifine/cem/',
-        children: [
-          '/optifine/cem/random_entities',
-		  '/optifine/cem/random_creeper',
-		  '/optifine/cem/cpm',
-        ]
-      },
-	  {
-        title: '动态材质（后篇）',
-        path: '/optifine/animation/',
-        children: [
-		  '/optifine/animation/inventory',
-        ]
-      },
-	  {
-        title: '光与色',
-        path: '/optifine/colormap/',
-        children: [
-		  '/optifine/colormap/lightmap',
-        ]
-      },
-	  {
-        title: '环境',
-        path: '/vanilla/texture/environment/',
-        children: [
-		  '/optifine/sky/skybox',
-		  '/optifine/sky/multiverse-sky',
-        ]
-      },
-	  {
-        title: 'GUI',
-        path: '/vanilla/texture/gui/',
-        children: [
-		  '/vanilla/texture/gui/panorama',
-		  '/vanilla/texture/gui/loading',
-        ]
-      },
-	  ['/optifine/shader/pbr', 'PBR材质'],
-	  {
-        title: '附录',
-        path: '/appendix/',
-        children: [
-		  '/appendix/fragments',
-		  '/appendix/tools',
-        ]
-      },
-    ]
+          ]
+        },
+        {
+          title: 'CEM',
+          path: '/optifine/cem/',
+          children: [
+            '/optifine/cem/random_entities',
+            '/optifine/cem/random_creeper',
+            '/optifine/cem/cpm',
+          ]
+        },
+        {
+          title: '动态材质（后篇）',
+          path: '/optifine/animation/',
+          children: [
+            '/optifine/animation/inventory',
+          ]
+        },
+        {
+          title: '光与色',
+          path: '/optifine/colormap/',
+          children: [
+            '/optifine/colormap/lightmap',
+          ]
+        },
+        {
+          title: '环境',
+          path: '/vanilla/texture/environment/',
+          children: [
+            '/vanilla/texture/environment/rain-and-snow',
+            '/optifine/sky/skybox',
+            '/optifine/sky/multiverse-sky',
+          ]
+        },
+        {
+          title: 'GUI',
+          path: '/vanilla/texture/gui/',
+          children: [
+            '/vanilla/texture/gui/panorama',
+            '/vanilla/texture/gui/loading',
+          ]
+        },
+        ['/optifine/shader/pbr', '视差和高光'],
+        {
+          title: '附录',
+          path: '/appendix/',
+          children: [
+            '/appendix/fragments',
+            '/appendix/tools',
+          ]
+        }
+      ]
+      
+    }
+    
   },
   markdown: {
     extendMarkdown: md => {

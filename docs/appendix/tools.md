@@ -26,6 +26,6 @@
 
 勾选“Overwrite Original Files”，这会覆盖原文件，所以请务必备份，点击Optimize!
 
-![](tools.assets/image-20200725084446835.png)
+![](https://i.loli.net/2020/11/18/gUEiZDPvSLaAf8F.png)
 
 我们2.38mb的资源包成功缩水为1.86mb！
