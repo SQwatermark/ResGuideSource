@@ -8,8 +8,6 @@ OptiFine的许多功能需要用到属性文件，它们控制OptiFine调用资�
 
 属性文件是与 Windows 的 ".ini" 格式相似的简单文本文件，它的文件扩展名为properties。除了注释行之外，文件中的每一行都表示一个属性，格式为 "属性名=值"。 
 
-译注：建议使用notepad++之类的代码编辑器来编辑属性文件，确认编码为UTF-8格式，不建议使用记事本。
-
 ```properties
 # 这里是一个注释
 属性1=值
@@ -107,7 +105,7 @@ texture=minecraft:optifine/dial/clock0.png
 
 在1.13中，许多有复杂变体的方块被 "扁平化" 为几个简单方块，方块的元数据(metadata)被删除。 参阅 [https://minecraft.gamepedia.com/1.13/Flattening](https://minecraft.gamepedia.com/1.13/Flattening) （中文链接：[https://minecraft-zh.gamepedia.com/1.13/扁平化](https://minecraft-zh.gamepedia.com/1.13/扁平化)）
 
- 方块名的格式为 "<命名空间:>name\<:属性1=值1,...:属性2=值1,...\>"。<br>尖角括号 "<>" 中为可选部分。默认命名空间为 "minecraft"。
+方块名的格式为 "<命名空间:>name\<:属性1=值1,...:属性2=值1,...\>"。<br>尖角括号 "<>" 中为可选部分。默认命名空间为 "minecraft"。
 
 ```properties
 # 简称

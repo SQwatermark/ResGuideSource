@@ -14,6 +14,12 @@ module.exports = {
       '/optifinedoc/': [
         '',
         'properties_files',
+        'ctm',
+        'natural_textures',
+        'better_grass',
+        'custom_blocks',
+        'emissive_textures',
+        'biome_palettes',
       ],
       
       '/': [
