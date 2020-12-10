@@ -1,26 +1,38 @@
-# 自然纹理
+<center><h1>自然纹理</h1><p>Natural Textures</p></center>
 
-Natural Textures
-
-## 概述|Overview
+## 概述丨Overview
 
 让材质具有随机的旋转和翻转，可以创造出类似于随机材质的效果，避免方块的栅格感
 
-**译注：在制作CTM材质时，请务必注意有没有关闭对应方块的自然纹理**
+**译者注：在制作CTM材质时，请务必注意有没有关闭对应方块的自然纹理**
 
-## 属性文件|natural.properties
+
+
+## 属性文件丨natural.properties
 
 路径: /assets/minecraft/optifine/natural.properties
 
-**格式** 
+
+
+**格式**
 
 ```properties
 <材质名称> = <值>
 ```
 
+
+
 **值**
 
-​	4 = 旋转 x 90°(4种变体)<br>	2 = 旋转 x 180°(2种变体)<br>	F = 水平翻转材质 (2种变体)<br>	4F = 4 + F (8种变体)<br>	2F = 2 + F (4种变体)
+> 4 = 旋转 x 90°(4种变体)
+>
+> 2 = 旋转 x 180°(2种变体)
+>
+> F = 水平翻转材质 (2种变体)
+>
+> 4F = 4 + F (8种变体)
+>
+> 2F = 2 + F (4种变体)
 
 例子：黑曜石的材质，有四种旋转变体，并且可以翻转
 
@@ -28,7 +40,7 @@ Natural Textures
 obsidian = 4F
 ```
 
-<font size=5>下面给出自然纹理的默认值</font>
+下面给出自然纹理的默认值
 
 **草方块**
 
@@ -138,9 +150,12 @@ redstone_lamp = 4F
 prismarine = 4F
 ```
 
-**杂项**
+**混合**
 
 ```properties
 obsidian = 4F
 cactus_side = 2F
 ```
+
+
+

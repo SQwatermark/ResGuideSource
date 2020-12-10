@@ -13,13 +13,35 @@ module.exports = {
     
       '/optifinedoc/': [
         '',
-        'properties_files',
-        'ctm',
-        'natural_textures',
-        'better_grass',
-        'custom_blocks',
+        ['properties_files', '属性文件说明'],
+        ['ctm', '连接材质'],
+        ['natural_textures', '自然纹理'],
+        ['better_grass', '更好的草地'],
+        ['custom_blocks', '自定义方块渲染'],
+        ['cit', '自定义物品材质'],
+        ['random_entities', '随机实体材质'],
+        ['cem', '自定义实体模型'],
+        ['custom_animations', '自定义动态材质'],
+        {
+          title: '自定义颜色',   // 必要的
+          path: 'custom_colors',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+          children: [
+            'color',
+            'colormap',
+            'biome_palettes',
+            'biome_palettes_grid_format',
+            'custom_lightmaps',
+          ]
+        },
+        'custom_sky',
         'emissive_textures',
-        'biome_palettes',
+        'dynamic_lights',
+        'custom_loading_screens',
+        'custom_guis',
+        'custom_panorama',
+        'hd_fonts',
+        'system_properties',
+        'todo',
       ],
       
       '/': [

@@ -1,14 +1,14 @@
-# 更好的草地
+<center><h1>更好的草地</h1><p>Better Grass</p></center>
 
-Better Grass
-
-## 概述|Overview
+## 概述丨Overview
 
 让低坡度草地的侧面覆盖上草方块顶部的材质，可以在视频设置里开启或关闭。
 
-## 属性文件|bettergrass.properties
 
-位置: /assets/minecraft/optifine/bettergrass.properties
+
+## 属性文件丨bettergrass.properties
+
+位置：/assets/minecraft/optifine/bettergrass.properties
 
 **方块**
 
@@ -21,6 +21,8 @@ mycelium=true
 podzol=true
 ```
 
+
+
 **积雪方块**
 
 设置特定积雪方块是否启用更好的草地功能
@@ -31,10 +33,13 @@ mycelium.snow=true
 podzol.snow=true
 ```
 
+
+
 **多层草地侧面**
 
-- layer 1 = grass_side
-- layer 2 = grass (由生物群系着色) 
+> layer 1 = grass_side
+>
+> layer 2 = grass (由生物群系着色)
 
 允许用透明草地材质做草地侧面的覆盖层
 
@@ -42,11 +47,12 @@ podzol.snow=true
 grass.multilayer=false
 ```
 
+
+
 **材质**
 
-更好的草地使用的材质贴图
-
-"texture.grass" 由生物群系着色
+更好的草地使用的材质贴图。
+"texture.grass" 由生物群系着色。
 
 ```properties
 texture.grass=block/grass_block_top
