@@ -107,6 +107,7 @@ potion.water=385dc6
 例如：
 
 > egg.shell.creeper=0da70b
+>
 > egg.spots.minecraft\:creeper=000000
 
 ```properties
@@ -121,7 +122,9 @@ egg.spots.<实体名>=<颜色>
 别名
 
 > map.snow=map.white
+>
 > map.adobe=map.orange
+>
 > map.lightBlue=map.light_blue
 
 方块在地图中的颜色
