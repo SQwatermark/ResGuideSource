@@ -261,11 +261,11 @@ nbt.<tag>=<值>
 
 目前只支持以下NBT类型：
 
-> \- String, Integer, Short, Long, Double, Float - 仅匹配特定值
+> String, Integer, Short, Long, Double, Float - 仅匹配特定值
 >
-> \- Compound - 匹配特定标签或任何标签 (\*).
+> Compound - 匹配特定标签或任何标签 (\*).
 >
-> \- List - 匹配特定序号 (从0开始) 或任何序号 (\*).
+> List - 匹配特定序号 (从0开始) 或任何序号 (\*).
 
 以 "!" 开头的值表示匹配相反的东西（非）。
 
@@ -293,15 +293,19 @@ nbt.<tag>=<值>
 
 > nbt.display.Lore.*=My Lore Text
 
-字符串可以用多种方式匹配：
 
-\- 精确值
+
+<big>字符串可以用多种方式匹配：</big>
+
+**精确值**
 
 > nbt.display.Name=Letter to Herobrine
 
 精确匹配字符串 "Letter to Herobrine" 而不会匹配其他的。
 
-\- 使用通配符 ? 和 *
+
+
+**使用通配符 ? 和 \***
 
 > nbt.display.Name=pattern:Letter to *
 
@@ -315,7 +319,9 @@ nbt.<tag>=<值>
 
 > letter to Herobrine
 
-\- 通配符,不区分大小写
+
+
+**通配符，不区分大小写**
 
 > nbt.display.Name=ipattern:Letter to *
 
@@ -327,7 +333,9 @@ nbt.<tag>=<值>
 >
 > letter to Herobrine
 
-\- Java正则表达式
+
+
+**Java正则表达式**
 
  （参考 [http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html](http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html)）
 
@@ -345,7 +353,9 @@ nbt.<tag>=<值>
 >
 > A Letter to Herobrine
 
-\- Java正则表达式,不区分大小写
+
+
+**Java正则表达式，不区分大小写**
 
 > nbt.display.Name=iregex:Letter (to|from) .*
 
@@ -377,7 +387,7 @@ nbt.<tag>=<值>
 >
 > nbt.display.name=regex:\\\
 >
-> nbt.display.name=/\/\
+> nbt.display.name=/\\/\\
 
 你可以用 "damage=0" 和NBT规则匹配有自定义效果的药水：
 
@@ -387,7 +397,7 @@ nbt.<tag>=<值>
  nbt.CustomPotionEffects.0.Id=20
 ```
 
-要覆盖默认的药水颜色，可以使用CustomPotionColor标记：
+要覆盖默认的药水颜色，可以使用 CustomPotionColor 标记：
 
 ```
  /give @p minecraft:potion 1 0 {CustomPotionEffects:[{Id:20,Amplifier:0,Duration:20}],CustomPotionColor:-1}
@@ -407,7 +417,7 @@ nbt.<tag>=<值>
 
 物品的替换材质是覆盖到原始的items.png上的，因此遵循与正常物品材质相同的规则。
 
-尤其是，这意味着动画必须使用Mojang的.mcmeta文件系统来实现正常播放。
+尤其是，这意味着动画必须使用 Mojang 的 .mcmeta 文件系统来实现正常播放。
 
 ```properties
 texture=<替换材质>
@@ -421,7 +431,7 @@ texture=<替换材质>
 
 例如，根据其状态，原版弓有四种可能的材质：
 
-bow_standby, bow_pulling_0, bow_pulling_1, bow_pulling_2. 
+> bow_standby, bow_pulling_0, bow_pulling_1, bow_pulling_2. 
 
 要替换全部四张，你可以使用
 
@@ -440,6 +450,7 @@ bow_standby, bow_pulling_0, bow_pulling_1, bow_pulling_2.
 或者
 
 > texture.potion_bottle_splash=...
+>
 > texture.potion_overlay=...
 
 如果没有匹配的texture.\<name>属性，则使用通用的texture属性。
@@ -452,7 +463,7 @@ texture.<name>=<替换材质>
 
 **(可选) 替换模型**
 
-一个原版格式的Json物品模型 (http://minecraft.gamepedia.com/Model#Item_models)
+一个原版格式的Json物品模型（[http://minecraft.gamepedia.com/Model#Item_models](http://minecraft.gamepedia.com/Model#Item_models)）
 
 > item/mymodel -> assets/minecraft/models/item/mymodel.json
 >
@@ -796,5 +807,6 @@ http://www.minecraftwiki.net/wiki/Data_values#Potions
 另外两个材质(非喷溅型)也可以设置：
 
 > optifine/cit/potion/normal/water.png - 水瓶 (item 373:0)
+>
 > optifine/cit/potion/normal/empty.png - 玻璃瓶 (item 374)
 
