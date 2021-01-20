@@ -2,20 +2,16 @@
 
 ## CTM丨Connected Textures mod
 
-连接材质，原先是MCPatcher的功能，它提供了一系列连接方块材质的方法。
+连接材质，原先是 MCPatcher 的功能，它提供了一系列连接方块材质的方法。
 
-如果你想要某个方块(block)或者图块(tile)覆盖上连接材质或者随机材质，
-请在材质包的optifine/ctm文件夹下新建一个后缀为.properties的文件。
-属性(properties)文件可以放在optifine/ctm的任意一层子文件夹下。
+如果你想要某个方块（block）或者图块（tile）覆盖上连接材质或者随机材质，请在材质包的optifine/ctm文件夹下新建一个后缀为 .properties 的文件。属性（properties）文件可以放在 optifine/ctm 的任意一层子文件夹下。
 
-译注：这里所谓的 "图块（tile）" 指的就是assets里面的一张张图片，虽然译名标准化里tile是不翻译的，但是tile在某些情境下可以翻译成"方块"，为了避免混淆，还是按照感觉给出个译名。
+译注：这里所谓的 "图块（tile）" 指的就是 assets 里面的一张张图片，虽然[译名标准化](https://minecraft-zh.gamepedia.com/Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96)里 tile 是不翻译的，但是 tile 在某些情境下可以翻译成"方块"，为了避免混淆，还是按照感觉给出个译名。
 
-针对不同需求和限制，可以使用不同的连接方块材质的方法。
-下面将介绍如何使用每种方法。
+针对不同需求和限制，可以使用不同的连接方块材质的方法。下面将介绍如何使用每种方法。
 
 ::: warning
-所有属性名称都区分大小写。
-除非另有说明，否则所有的路径都相对于assets/minecraft。
+所有属性名称都区分大小写。除非另有说明，否则所有的路径都相对于assets/minecraft。
 :::
 
 
@@ -23,21 +19,19 @@
 
 **(可选) 列出这个方法所应用于的方块/图块**
 
-同一个方块/图块可以有多个属性文件，
-它们会按照文件名的字母顺序依次加载。
-所有针对图块的属性文件会在针对方块的属性文件之前被检测，第一个匹配的属性文件会被加载。
+同一个方块/图块可以有多个属性文件，它们会按照文件名的字母顺序依次加载。所有用于图块的属性文件会在用于方块的属性文件之前被检测，第一个匹配的属性文件会被加载。
 
 ```properties
 matchTiles=<需要匹配的图块列表>
 ```
 
-表示原版mc中的图块，只需要使用它在textures/block中的文件名：
+要表示原版mc中的图块，只需要使用它在 textures/block 中的文件名：
 
 ```properties
 matchTiles=dirt
 ```
 
-表示模组添加的图块，你需要知道模组的名字：
+要表示模组添加的图块，你需要知道模组的名字：
 
 ```properties
 matchTiles=botania:blazeblock
@@ -76,14 +70,13 @@ matchBlocks=<方块列表 + 可选属性>
 > 如果文件名为 optifine/ctm/xxx/block_\<name>.properties，则默认
 > matchBlocks=\<name>
 >
-> 除非你明确指定了某个属性的值。
+> 除非你明确指定了属性的值。
 
 
 
 **(可选) metadata**
 
-限制匹配的方块的metadata，可以是 0 到 31 的任意值。
-仅限 1.13 之前的版本。
+限制匹配的方块的metadata，可以是 0 到 31 的任意值。仅限 1.13 之前的版本。
 
 译注：方块的metadata最高为16，不清楚这里可以到31的原因。
 
@@ -95,11 +88,11 @@ metadata=<metadata 列表>
 
 **(可选) 权重**
 
-如果多个属性文件匹配相同的方块，会使用拥有最大权重的属性文件。
-如果权重相同，会接着比较属性文件名。
+如果多个属性文件匹配相同的方块，会使用拥有最大权重的属性文件。如果权重相同，会接着比较属性文件名。
+
 默认的权重为0。
 
-**译注：这个属性可能已经没用了，我查看了1.15.2版本的optifine源码，属性文件解析器根本不会解析weight属性。（已被sp614x承认）**
+**译注：这个属性可能已经没用了，我查看了1.15.2版本的 OptiFine 源码，属性文件解析器根本不会解析weight属性。（[已被sp614x承认](https://github.com/sp614x/optifine/issues/4294)）**
 
 ```properties
 weight=<整数>
@@ -107,44 +100,43 @@ weight=<整数>
 
 
 
-**(必需) 选择替换材质的方法**
+**(必需) 替换材质的方法**
 
-可选的方法:
+可选的方法：
 
-> ctm: 标准ctm方法 (例如原始的ctm玻璃), 使用47个图块
+> ctm: 标准ctm方法（例如原始的ctm玻璃），使用47个图块
 >
-> ctm_compact: 简化ctm方法, 使用5个图块
+> ctm_compact: 简化ctm方法，使用5个图块
 >
-> horizontal: 只连接到侧面的方块 (例如书架)
+> horizontal: 只连接到侧面的方块（例如书架）
 >
 > vertical: 只连接到上方和下方的方块
 >
-> horizontal+vertical: 优先水平连接, 无法水平连接时才垂直连接
+> horizontal+vertical: 优先水平连接，无法水平连接时才垂直连接
 >
-> vertical+horizontal: 优先垂直连接, 无法垂直连接时才水平连接
+> vertical+horizontal: 优先垂直连接，无法垂直连接时才水平连接
 >
-> top: 仅连接到上方的方块 (例如砂岩)
+> top: 仅连接到上方的方块（例如砂岩）
 >
 > random: 随机选择图块
 >
 > repeat: 大面积重复固定的图案
 >
-> fixed: 使用单个固定图块. 相当于只设置一个图块的随机
+> fixed: 使用单个固定图块。相当于只设置一个图块的随机
 >
-> overlay: 用于方块间过渡的覆盖层, 使用17个图块
+> overlay: 用于方块间过渡的覆盖层，使用17个图块
 >
-> overlay_ctm: 方法"ctm"的overlay变体
+> overlay_ctm: 方法 "ctm" 的 overlay 变体
 >
-> overlay_random: 方法"random"的overlay变体
+> overlay_random: 方法 "random" 的 overlay 变体
 >
-> overlay_repeat: 方法"repeat"的overlay变体
+> overlay_repeat: 方法 "repeat" 的 overlay 变体
 >
-> overlay_fixed: 方法"fixed"的overlay变体
+> overlay_fixed: 方法 "fixed" 的 overlay 变体
 
-如果overlay方法的处理顺序在其他方法之前，
-则可以将它们与其他方法组合在一起。（按照字母顺序）
+如果overlay方法的处理顺序在其他方法之前，则可以将它们与其他方法组合在一起。（按照字母顺序）
 
-方法"ctm_compact"和任何overlay方法都不兼容。
+方法 "ctm_compact" 和任何 overlay 方法都不兼容。
 
 ```properties
 method=<方法名>
@@ -179,8 +171,7 @@ method=<方法名>
 tiles=0-4 5 some/other/name.png
 ```
 
-对于要跳过的空图块，overlay方法可以使用特殊的名称 "\<skip>"。
-overlay方法不能使用图块名称 "\<default>"。
+对于要跳过的空图块，overlay 方法可以使用特殊的名称 "\<skip>"，但不能使用图块名称 "\<default>"。
 
 ```properties
 tiles=<图块列表>
@@ -190,18 +181,17 @@ tiles=<图块列表>
 
 **(可选) 连接类型**
 
-即连接到毗邻方块的条件，
-告诉游戏在什么情况下应该连接两个方块的材质。
+即连接到毗邻方块的条件，告诉游戏在什么情况下应该连接两个方块的材质。
 
 > block: 当这个方块的id = 相邻方块的id时连接
 >
 > tile: 当这个方块的图块 = 相邻方块的图块时连接
 >
-> material: 当这个方块的材料 (stone, dirt, etc.) = 相邻方块的材料时连接
+> material: 当这个方块的材料（stone, dirt, etc.）= 相邻方块的材料时连接
 >
-> state: 当方块状态 (block + properties) = 相邻方块的状态时连接
+> state: 当方块状态（block + properties）= 相邻方块的状态时连接
 
-基于方块的属性文件默认为block；基于图块的属性文件默认为tile。
+用于方块的属性文件默认为 block；用于图块的属性文件默认为 tile。
 
 ```properties
 connect=<block | tile | material | state>
@@ -241,8 +231,7 @@ faces=<以下的组合: north south east west top bottom sides all>
 
 限定生物群系或高度范围。
 
-[这里](https://minecraft.gamepedia.com/Biome#Biome_IDs)列出了原版生物群系ID。
-也可以使用模组添加的生物群系。
+[这里](https://minecraft.gamepedia.com/Biome#Biome_IDs)列出了原版生物群系ID。也可以使用模组添加的生物群系。
 
 旧属性 "minHeight" 和 "maxHeight" 也可以被识别。
 
@@ -255,9 +244,9 @@ heights=<高度范围>
 
 **(可选) 名字**
 
-只适用于具有对应的可命名的方块实体值的方块。
+只适用于具有对应的可命名的方块实体的方块。
 
-例如:
+例如：
 
 > beacon(信标) brewing_stand(酿造台) enchanting_table(附魔台) furnace(熔炉) dispenser(发射器) dropper(投掷器) hopper(漏斗)
 
@@ -270,7 +259,7 @@ name=<名字>
 ::: warning
 下文所有内容都针对特定连接材质方法。
 
-每一个.properties文件都应该仅包含其中一个小节列出的属性。
+每一个 .properties 文件都应该仅包含其中一个小节列出的属性。
 :::
 
 ## 标准CTM方法丨Standard 8-way connected textures
@@ -325,11 +314,11 @@ innerSeams=false
 
 
 
-## 有特例的CTM方法丨Compact 8-way connected textures with special cases
+## 有特例的简化CTM方法丨Compact 8-way connected textures with special cases
 
 > method=ctm_compact
 
-**(必需) 5个图块**
+**(必需) 简化CTM方法使用的5个图块**
 
 ```properties
 tiles=<5 tiles> <额外的图块>
@@ -337,17 +326,11 @@ tiles=<5 tiles> <额外的图块>
 
 
 
-**(可选) 简化CTM图块替换**
-允许为特定CTM实例定义替换图块。
-
-> <ctm_index> 是ctm_template.png中CTM实例的序号 (0-46)
->
-> <tile_index> 是在 "tiles" 中定义的图块的序号 (不是文件名!)
-
-使用 "ctm_compact" 你可以定义超过5个图块，可以使用更多图块作为替代。
+**(可选) 让CTM的一些情况使用指定的图块**
 
 ```properties
-ctm.<ctm_index>=<tile_index>
+ctm.46=5
+ctm.17=6
 ```
 
 
@@ -426,10 +409,10 @@ weights=10 1 10 2 7 3
 ```
 
 那么图块6和8的权重为10，图块7权重为1，以此类推。
+
 权重之和不必为100或任何其他特定值。
 
-在上面的例子中，图块6和图块8的使用频率分别为大约30.3%(10/(10+1+10+2+7+3))，
-依此类推。
+在上面的例子中，图块6和图块8的使用频率分别为大约30.3%(10/(10+1+10+2+7+3))，依此类推。
 
 ```properties
 weights=<对应的权重>
@@ -439,7 +422,7 @@ weights=<对应的权重>
 
 **(可选) 随机循环**
 
-用于增加随机性的重复随机函数的次数。
+重复随机函数的次数，用于增加随机性。
 可以使不同的材质使用不同的随机样式。
 较高的值可能会降低区块加载速度。
 默认值为0。
@@ -468,13 +451,13 @@ symmetry=<none | opposite | all>
 
 **(可选) 相邻方块之间的材质连接**
 
-如果为true，OptiFine对所有多方块对象的所有部分使用相同的随机数种子，
+如果为 true，OptiFine 对所有多方块对象的所有部分使用相同的随机数种子，
 例如，高草丛的顶部和底部。
 
 这允许你为多方块对象创建统一的随机材质。
-如果该属性为false，这两部分会被 "打乱"，也就是说，这两张材质可能会不匹配。
+如果该属性为 false，这两部分会被 "打乱"，也就是说，这两张材质可能会不匹配。
 
-注: 要使其正常工作，你需要多个links =true的属性文件，
+注: 要使其正常工作，你需要多个 links =true 的属性文件，
 以及相同数量的替换材质和相同数量的权重。
 
 例如，
@@ -540,6 +523,7 @@ tiles=<图块列表>
 只适用于标准的六面体方块。默认值为none
 
 > none: 6个面都有材质，这样图块从所有面看上去都是一样的。
+>
 > opposite: 双向对称；相反的面具有相同的材质，这意味着与北面和西面相比，南面和东面的图块将左右镜像。
 
 ```properties
@@ -586,8 +570,7 @@ connectBlocks=<方块列表>
 
 **(可选) Tint index**
 
-图块材质的Tint index，
-默认为-1 (禁用)
+图块材质的Tint index，默认为-1（禁用）
 
 ```properties
 tintIndex=<index>
@@ -613,7 +596,9 @@ tintBlock=<block>
 值：
 
 > cutout_mipped - 有多级纹理的透明材质
+>
 > cutout - 没有多级纹理的透明材质
+>
 > translucent - 有多级纹理的半透明材质
 
 默认值为 "cutout_mipped"
