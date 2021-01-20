@@ -12,7 +12,6 @@ module.exports = {
     sidebar: {
     
       '/optifinedoc/': [
-        '',
         ['properties_files', '属性文件说明'],
         ['ctm', '连接材质'],
         ['natural_textures', '自然纹理'],
@@ -180,9 +179,9 @@ module.exports = {
   },
   plugins: [
     '@vuepress/back-to-top',
-	['@dovyp/vuepress-plugin-clipboard-copy', true],
-    ['vuepress-plugin-container',{type: 'right',defaultTitle: ''}],
-    ['vuepress-plugin-container',{type: 'theorem',before: info => `<div class="theorem"><p class="title">${info}</p>`,after: '</div>'}],
+	//['@dovyp/vuepress-plugin-clipboard-copy', true],
+  ['vuepress-plugin-container',{type: 'right',defaultTitle: ''}],
+  ['vuepress-plugin-container',{type: 'theorem',before: info => `<div class="theorem"><p class="title">${info}</p>`,after: '</div>'}],
 	['vuepress-plugin-container',{type: 'tip',defaultTitle: {'/': '提示'}}],
 	['vuepress-plugin-container',{type: 'warning',defaultTitle: {'/': '注意'}}],
 	['vuepress-plugin-container',{type: 'danger',defaultTitle: {'/': '警告'}}],
