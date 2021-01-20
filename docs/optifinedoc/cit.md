@@ -8,7 +8,7 @@
 关于单个物品材质，参阅 cit_single.properties。
 
 所有的属性名都区分大小写。
-除非另作说明，所有的路径都相对于assets/minecraft。
+除非另作说明，所有的路径都相对于 assets/minecraft。
 
 **(可选) 如何对同一物品应用多个效果**
 
@@ -16,11 +16,11 @@
 
 > average: 根据附魔等级加权平均。
 >
-> &emsp;&emsp;&emsp;&emsp;intensity = enchantment_level / sum(enchantment_levels)
+> &emsp;&emsp;&emsp;&emsp;强度 = 附魔等级 / 总的附魔等级
 >
-> layered: 类似于average，但使用的是max而不是sum。
+> layered: 类似于average，但使用的是最大值而不是总和。
 >
-> &emsp;&emsp;&emsp;&emsp;intensity = enchantment_level / max(enchantment_levels)
+> &emsp;&emsp;&emsp;&emsp;强度 = 附魔等级 / 所有附魔中最高的等级
 >
 > cycle:&emsp; 轮流显示每种效果，每种效果的持续时间都可以通过duration属性(在cit_single.properties中)
 >
@@ -36,7 +36,7 @@ method=<average | layered | cycle>
 
 **(可选) average/layered方法可以渲染多少层**
 
-根据每种效果位于的层数(layer value)，上面的层比下面的层具有更高的优先级。
+根据每种效果位于的层数（layer value），上面的层比下面的层具有更高的优先级。
 
 ```properties
 cap=<count>
@@ -47,6 +47,7 @@ cap=<count>
 **(可选) 在cycle方法中一种效果转变为另一种效果的速度**
 
 对于有持续时间属性的效果，这并不影响实际效果的持续时间。
+
 默认值为5秒。
 
 ```properties
@@ -57,10 +58,10 @@ fade=<seconds>
 
 **(可选) 是否使用默认的glink.png附魔效果**
 
-如果设置为true，则在没有自定义附魔效果时使用glink.png。
-如果设置为false，默认的glink.png附魔效果将完全停止渲染。
-这对没有特定附魔但有附魔效果的物品很重要，
--- 比如药水和金苹果。
+如果设置为 true，则在没有自定义附魔效果时使用 glink.png。如果设置为 false，默认的 glink.png 附魔效果将完全停止渲染。
+
+这对没有特定附魔但有附魔效果的物品很重要——比如药水和金苹果。
+
 默认值为true。
 
 ```properties
@@ -71,16 +72,13 @@ useGlint=<true | false>
 
 ## 单个物品材质丨cit_single.properties
 
-基于MCPatcher的Custom Item Textures mod的配置
+基于 MCPatcher 的 Custom Item Textures mod 的配置
 
-对于每一个想要使用自定义材质的物品，使用这个模板在材质包的optifine/cit文件夹下创建一个.properties文件。
-属性(properties)文件可以放在optifine/cit的任意一层子文件夹下。
+对于每一个想要使用自定义材质的物品，使用这个模板在材质包的 optifine/cit 文件夹下创建一个 .properties 文件。属性（properties）文件可以放在 optifine/cit 的任意一层子文件夹下。
 
-每个属性文件都指定一个匹配的物品ID或物品名列表，一个替换材质，
-和一系列可选的用于指定伤害、堆叠数或NBT标签的规则。
+每个属性文件都指定一个匹配的物品ID或物品名列表，一个替换材质，和一系列可选的用于指定伤害、堆叠数或NBT标签的规则。
 
-所有的属性名都区分大小写。
-除非另作说明，所有的路径都相对于assets/minecraft。
+所有的属性名都区分大小写。除非另作说明，所有的路径都相对于assets/minecraft。
 
 
 
@@ -94,9 +92,9 @@ useGlint=<true | false>
             如果多个属性文件匹配相同的物品，只会使用第一个匹配的属性文件。
             (先按照权重排序，在权重相同的情况下按照物品名排序)
 
-- enchantment: 附魔的覆盖材质 (替换 misc/glint.png)。
+- enchantment: 附魔的覆盖材质（替换 misc/glint.png）。
                 如果多个属性文件匹配相同的物品，
-                它们将按照全局属性cit.properties文件中指定的规则来进行混合。
+                它们将按照全局属性 cit.properties 文件中指定的规则来进行混合。
 
 - armor:    盔甲材质替换，应用于玩家和怪物穿戴的盔甲模型。
             如果多个属性文件匹配相同的物品，只有第一个属性文件会被使用。
@@ -114,7 +112,7 @@ type=<item | enchantment | armor | elytra>
 
 
 
-使用替换材质的物品列表(对于 type=enchantment 类型可选，对于其他类型是必需的)
+使用替换材质的物品列表（对于 type=enchantment 类型可选，对于其他类型是必需的）
 
 ```properties
 items=<物品ID列表>
@@ -205,7 +203,7 @@ stackSize=<堆叠数 0-65535>
 
 **(可选) 附魔名称**
 
-附魔名称可以是短名 ("flame") 或全称 ("minecraft:flame")。
+附魔名称可以是简称 ("flame") 或全名 ("minecraft:flame")。
 
 例如：
 
@@ -253,8 +251,7 @@ hand=any|main(主手)|off(副手)
 
 **(可选) 基于NBT的规则**
 
-只有当NBT标签具有特定值时才使用替换材质。
-如果提供了多个规则，则所有规则都必须匹配。
+只有当NBT标签具有特定值时才使用替换材质。如果提供了多个规则，则所有规则都必须匹配。
 
 可以使用像NBTExplorer这样的实用程序来查看不同物品的NBT标签。
 
@@ -270,7 +267,7 @@ nbt.<tag>=<值>
 >
 > \- List - 匹配特定序号 (从0开始) 或任何序号 (\*).
 
-以 "!" 开头的值表示相反的匹配(非)。
+以 "!" 开头的值表示匹配相反的东西（非）。
 
 整型也可以指定为十六进制颜色，例如#ff99cc。
 
@@ -332,7 +329,7 @@ nbt.<tag>=<值>
 
 \- Java正则表达式
 
- (参考 http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html)
+ （参考 [http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html](http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html)）
 
 > nbt.display.Name=regex:Letter (to|from) .*
 

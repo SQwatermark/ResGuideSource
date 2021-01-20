@@ -26,7 +26,7 @@ layer.translucent=<blocks>
 ```
 
 固体不透明方块（石头, 泥土, 矿石, 诸如此类）无法使用自定义渲染层，
-因为这会影响面剔除(face culling)，环境光遮蔽(ambient occlusion)，光传播(light propagation)，等。
+因为这会影响面剔除（face culling），环境光遮蔽（ambient occlusion），光线传播（light propagation），等。
 
 示例：
 

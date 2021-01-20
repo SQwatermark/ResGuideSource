@@ -39,7 +39,7 @@ podzol.snow=true
 
 > layer 1 = grass_side
 >
-> layer 2 = grass (由生物群系着色)
+> layer 2 = grass（由生物群系着色）
 
 允许用透明草地材质做草地侧面的覆盖层
 

@@ -1,33 +1,32 @@
 <center><h1>颜色设置</h1><p>color.properties</p></center>
 
----
-
 ## 属性文件丨color.properties
 
----
-
-你只需要为你想要修改的属性提供数值。
-方便起见，下面列出Minecraft中每个属性的默认值。
+你只需要为你想要修改的属性提供数值。方便起见，下面列出Minecraft中每个属性的默认值。
 
 所有的属性名都区分大小写。
+
 所有颜色都是十六进制rgb格式，从000000到ffffff。
+
 除非另有说明，否则所有路径都相对于assets/minecraft。
 
 **水的粒子效果(飞溅的水花, 气泡, 水滴)的底色**
-生物群系水体颜色乘数应用于该值。该值应该与基础水材质的颜色匹配。
-如果你的基础水材质是灰色的，那么你可以通过misc/watercolorX.png进行着色，
-并且把这个值设置为为ffffff。
 
-```
+生物群系水体颜色乘数应用于该值。该值应该与基础水材质的颜色匹配。
+
+如果你的基础水材质是灰色的，那么你可以通过misc/watercolorX.png进行着色，并且把这个值设置为为ffffff。
+
+```properties
 particle.water=334cff
 ```
 
 
 
 **传送门颗粒的底色**
+
 RGB值都会乘一个0.4到1.0之间的随机乘数
 
-```
+```properties
 particle.portal=ff4ce5
 ```
 
@@ -35,7 +34,7 @@ particle.portal=ff4ce5
 
 **下界和末地颜色**
 
-```
+```properties
 fog.nether=330707
 fog.end=181318
 sky.end=282828
@@ -44,18 +43,20 @@ sky.end=282828
 
 
 **荷叶颜色**
+
 单一颜色，应用于所有的生物群系。
 
-```
+```properties
 lilypad=208030
 ```
 
 
 
 **药水效果的颜色**
+
 最终表现出来的颜色是这些颜色以药水效果的等级作为权重，加权平均后的结果。
 
-```
+```properties
 potion.absorption=2552a5
 potion.blindness=1f1f23
 potion.confusion=551d4a
@@ -89,21 +90,26 @@ potion.wither=352a27
 
 potion.water 代表一个普通的水瓶
 
-```
+```properties
 potion.water=385dc6
 ```
 
 
 
 **刷怪蛋颜色**
-egg.<shell|spots>.<实体名>=<颜色>
-实体名可以是简化的 (通常的实体名)，也可以是完整的 (带有命名空间的)。
-完整实体名的分隔符 ":" 必须转义。
-例如:
- egg.shell.creeper=0da70b
- egg.spots.minecraft\:creeper=000000
 
-```
+> egg.<shell|spots>.<实体名>=<颜色>
+
+实体名可以是简化的 (通常的实体名)，也可以是完整的 (带有命名空间的)。
+
+完整实体名的分隔符 ":" 必须转义。
+
+例如：
+
+> egg.shell.creeper=0da70b
+> egg.spots.minecraft\:creeper=000000
+
+```properties
 egg.shell.<实体名>=<颜色>
 egg.spots.<实体名>=<颜色>
 ```
@@ -111,14 +117,16 @@ egg.spots.<实体名>=<颜色>
 
 
 **地图颜色**
+
 别名
- map.snow=map.white
- map.adobe=map.orange
- map.lightBlue=map.light_blue
+
+> map.snow=map.white
+> map.adobe=map.orange
+> map.lightBlue=map.light_blue
 
 方块在地图中的颜色
 
-```
+```properties
 map.air=000000
 map.grass=7fb238
 map.sand=f7e9a3
@@ -145,7 +153,7 @@ map.netherrack=700200
 
 通用地图颜色
 
-```
+```properties
 map.white=ffffff
 map.orange=d87f33
 map.magenta=b24cd8
@@ -166,12 +174,13 @@ map.black=191919
 
 
 
-旗帜使用通用地图颜色。
-旗帜颜色不能区别于地图颜色进行单独配置。
+旗帜使用通用地图颜色，无法单独设置旗帜的颜色。
+
+
 
 **羊的颜色**
 
-```
+```properties
 sheep.white=ffffff
 sheep.orange=f2b233
 sheep.magenta=e57fd8
@@ -194,7 +203,7 @@ sheep.black=191919
 
 **狼项圈颜色**
 
-```
+```properties
 collar.white=ffffff
 collar.orange=f2b233
 collar.magenta=e57fd8
@@ -216,9 +225,10 @@ collar.black=191919
 
 
 **染料颜色**
-注: 这些值虽然存在，但实际上并没有在任何地方使用。
 
-```
+注：这些值虽然存在，但实际上并没有在任何地方使用。
+
+```properties
 dye.black=1e1b1b
 dye.red=b3312c
 dye.green=3b511a
@@ -240,27 +250,28 @@ dye.white=f0f0f0
 
 
 **文字颜色**
+
 经验等级文字的颜色
 
-```
+```properties
 text.xpbar=80ff20
 ```
 
 "Boss生命值" 文字的颜色
 
-```
+```properties
 text.boss=ff00ff
 ```
 
 告示牌文字的颜色
 
-```
+```properties
 text.sign=000000
 ```
 
 由 \247 + 0123456789abcdef 生成的颜色代码
 
-```
+```properties
 text.code.0=000000
 text.code.1=0000aa
 text.code.2=00aa00
@@ -298,54 +309,57 @@ text.code.31=3f3f3f
 
 
 **资源载入画面**
+
 背景颜色
 
-```
+```properties
 screen.loading=ffffff
 ```
 
 加载条背景颜色
 
-```
+```properties
 screen.loading.bar=ffffff
 ```
 
 加载条边框颜色
 
-```
+```properties
 screen.loading.outline=000000
 ```
 
 加载条前景颜色
 
-```
+```properties
 screen.loading.progress=e22837
 ```
 
 Logo 混合模式
-src, dst, srcA 和 dstA 是以下之一：
- ZERO, ONE, SRC_COLOR, ONE_MINUS_SRC_COLOR, DST_COLOR, ONE_MINUS_DST_COLOR,
- SRC_ALPHA, ONE_MINUS_SRC_ALPHA, DST_ALPHA, ONE_MINUS_DST_ALPHA, SRC_ALPHA_SATURATE
 
-```
+src, dst, srcA 和 dstA 是以下之一：
+
+> ZERO, ONE, SRC_COLOR, ONE_MINUS_SRC_COLOR, DST_COLOR, ONE_MINUS_DST_COLOR,
+>  SRC_ALPHA, ONE_MINUS_SRC_ALPHA, DST_ALPHA, ONE_MINUS_DST_ALPHA, SRC_ALPHA_SATURATE
+
+```properties
 screen.loading.blend=<off|src dst srcA dstA>
 ```
 
 
 
 **其他设置项**
+
 这个设置会覆盖视频设置中的云的类型。
 
-```
+```properties
 clouds=fast(快速)|fancy(高品质)|none(无)
 ```
 
 
 
-经验球动画持续时间 (毫秒)
-默认为 628 毫秒
+经验球动画持续时间（毫秒）默认为 628 毫秒
 
-```
+```properties
 xporb.time=628
 ```
 
