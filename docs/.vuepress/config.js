@@ -26,22 +26,22 @@ module.exports = {
           title: '自定义颜色',   // 必要的
           path: 'custom_colors',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           children: [
-            'color',
-            'colormap',
-            'biome_palettes',
-            'biome_palettes_grid_format',
-            'custom_lightmaps',
+            ['color', '颜色设置'],
+            ['colormap', '颜色映射'],
+            ['biome_palettes', '生物群系调色板'],
+            ['biome_palettes_grid_format', '生物群系调色板：网格格式'],
+            ['custom_lightmaps', '自定义光照贴图'],
           ]
         },
-        'custom_sky',
-        'emissive_textures',
-        'dynamic_lights',
-        'custom_loading_screens',
-        'custom_guis',
-        'custom_panorama',
-        'hd_fonts',
-        'system_properties',
-        'todo',
+        ['custom_sky', '自定义天空'],
+        ['emissive_textures', '自发光纹理'],
+        ['dynamic_lights', '动态光源'],
+        ['custom_loading_screens', '自定义载入画面'],
+        ['custom_guis', '自定义GUI'],
+        ['custom_panorama', '自定义全景图'],
+        ['hd_fonts', '高清字体'],
+        ['system_properties', '系统属性'],
+        ['todo', '尚未完成的事'],
       ],
       
       '/': [
