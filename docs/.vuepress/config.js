@@ -40,6 +40,7 @@ module.exports = {
         ['custom_panorama', '自定义全景图'],
         ['hd_fonts', '高清字体'],
         ['system_properties', '系统属性'],
+        ['shaders.txt', '光影'],
         ['todo', '尚未完成的事'],
       ],
       
