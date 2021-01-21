@@ -215,152 +215,150 @@ Todo：
 | uniform mat4 gbufferProjection;         | projection matrix when the gbuffers were generated           |
 | uniform mat4 gbufferProjectionInverse;  | inverse gbufferProjection                                    |
 | uniform mat4 gbufferPreviousProjection; | last frame gbufferProjection                                 |
+| uniform mat4 shadowProjection;          | projection matrix when the shadow map was generated          |
+| uniform mat4 shadowProjectionInverse;   | inverse shadowProjection                                     |
+| uniform mat4 shadowModelView;           | modelview matrix when the shadow map was generated           |
+| uniform mat4 shadowModelViewInverse;    | inverse shadowModelView                                      |
+| uniform float wetness;                  | rainStrength smoothed with wetnessHalfLife or drynessHalfLife |
+| uniform float eyeAltitude;              | view entity Y position                                       |
+| uniform ivec2 eyeBrightness;            | x = block brightness, y = sky brightness, light 0-15 = brightness 0-240 |
+| uniform ivec2 eyeBrightnessSmooth;      | eyeBrightness smoothed with eyeBrightnessHalflife            |
+| uniform ivec2 terrainTextureSize;       | not used                                                     |
+| uniform int terrainIconSize;            | not used                                                     |
+| uniform int isEyeInWater;               | 1 = camera is in water, 2 = camera is in lava                |
+| uniform float nightVision;              | night vision (0.0-1.0)                                       |
+| uniform float blindness;                | blindness (0.0-1.0)                                          |
+| uniform float screenBrightness;         | screen brightness (0.0-1.0)                                  |
+| uniform int hideGUI;                    | GUI is hidden                                                |
+| uniform float centerDepthSmooth;        | centerDepth smoothed with centerDepthSmoothHalflife          |
+| uniform ivec2 atlasSize;                | texture atlas size (only set when the atlas texture is bound) |
+| uniform vec4 entityColor;               | entity color multiplier (entity hurt, creeper flashing when exploding) |
+| uniform int entityId;                   | entity ID                                                    |
+| uniform int blockEntityId;              | block entity ID (block ID for the tile entity, only for blocks specified in "block.properties") |
+| uniform ivec4 blendFunc;                | blend function (srcRGB, dstRGB, srcAlpha, dstAlpha)          |
+| uniform int instanceId;                 | instance ID when instancing is enabled (countInstances > 1), 0 = original, 1-N = copies |
+| uniform float playerMood;               | player mood (0.0-1.0), increases the longer a player stays underground |
+
+## GBuffers Uniforms
+
+> Programs: basic, textured, textured_lit, skybasic, skytextured, clouds, terrain, terrain_solid, terrain_cutout_mip, terrain_cutout, damagedblock, water, block, beaconbeam, item, entities, armor_glint, spidereyes, hand, hand_water, weather)
+
+| Source                          | Value                                                   |
+| ------------------------------- | ------------------------------------------------------- |
+| uniform sampler2D texture;      | 0                                                       |
+| uniform sampler2D lightmap;     | 1                                                       |
+| uniform sampler2D normals;      | 2                                                       |
+| uniform sampler2D specular;     | 3                                                       |
+| uniform sampler2D shadow;       | waterShadowEnabled ? 5 : 4                              |
+| uniform sampler2D watershadow;  | 4                                                       |
+| uniform sampler2D shadowtex0;   | 4                                                       |
+| uniform sampler2D shadowtex1;   | 5                                                       |
+| uniform sampler2D depthtex0;    | 6                                                       |
+| uniform sampler2D gaux1;        | 7  \<custom texture or output from deferred programs\>  |
+| uniform sampler2D gaux2;        | 8  \<custom texture or output from deferred programs\>  |
+| uniform sampler2D gaux3;        | 9  \<custom texture or output from deferred programs\>  |
+| uniform sampler2D gaux4;        | 10  \<custom texture or output from deferred programs\> |
+| uniform sampler2D colortex4;    | 7  \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex5;    | 8  \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex6;    | 9  \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex7;    | 10  \<custom texture or output from deferred programs\> |
+| uniform sampler2D colortex8;    | 16  \<custom texture or output from deferred programs\> |
+| uniform sampler2D colortex9;    | 17  \<custom texture or output from deferred programs\> |
+| uniform sampler2D colortexA;    | 18 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortexB;    | 19 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortexC;    | 20 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortexD;    | 21 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortexE;    | 22 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortexF;    | 23 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D depthtex1;    | 11                                                      |
+| uniform sampler2D shadowcolor;  | 13                                                      |
+| uniform sampler2D shadowcolor0; | 13                                                      |
+| uniform sampler2D shadowcolor1; | 14                                                      |
+| uniform sampler2D noisetex;     | 15                                                      |
+
+## Shadow Uniforms
+
+> Programs: shadow, shadow_solid, shadow_cutout 
+
+| Source                          | Value                      |
+| ------------------------------- | -------------------------- |
+| uniform sampler2D tex;          | 0                          |
+| uniform sampler2D texture;      | 0                          |
+| uniform sampler2D lightmap;     | 1                          |
+| uniform sampler2D normals;      | 2                          |
+| uniform sampler2D specular;     | 3                          |
+| uniform sampler2D shadow;       | waterShadowEnabled ? 5 : 4 |
+| uniform sampler2D watershadow;  | 4                          |
+| uniform sampler2D shadowtex0;   | 4                          |
+| uniform sampler2D shadowtex1;   | 5                          |
+| uniform sampler2D gaux1;        | 7  \<custom texture\>      |
+| uniform sampler2D gaux2;        | 8  \<custom texture\>      |
+| uniform sampler2D gaux3;        | 9  \<custom texture\>      |
+| uniform sampler2D gaux4;        | 10  \<custom texture\>     |
+| uniform sampler2D colortex4;    | 7  \<custom texture\>      |
+| uniform sampler2D colortex5;    | 8  \<custom texture\>      |
+| uniform sampler2D colortex6;    | 9  \<custom texture\>      |
+| uniform sampler2D colortex7;    | 10  \<custom texture\>     |
+| uniform sampler2D colortex8;    | 16  \<custom texture\>     |
+| uniform sampler2D colortex9;    | 17  \<custom texture\>     |
+| uniform sampler2D colortexA;    | 18  \<custom texture\>     |
+| uniform sampler2D colortexB;    | 19  \<custom texture\>     |
+| uniform sampler2D colortexC;    | 20  \<custom texture\>     |
+| uniform sampler2D colortexD;    | 21  \<custom texture\>     |
+| uniform sampler2D colortexE;    | 22  \<custom texture\>     |
+| uniform sampler2D colortexF;    | 23  \<custom texture\>     |
+| uniform sampler2D shadowcolor;  | 13                         |
+| uniform sampler2D shadowcolor0; | 13                         |
+| uniform sampler2D shadowcolor1; | 14                         |
+| uniform sampler2D noisetex;     | 15                         |
+
+## Composite and Deferred Uniforms
+
+> Programs: composite, composite1, composite2, composite3, composite4, composite5, composite6, composite7, final, deferred, deferred1, deferred2, deferred3, deferred4, deferred5, deferred6, deferred7
+
+| Source                          | Value                      |
+| ------------------------------- | -------------------------- |
+| uniform sampler2D gcolor;       | 0                          |
+| uniform sampler2D gdepth;       | 1                          |
+| uniform sampler2D gnormal;      | 2                          |
+| uniform sampler2D composite;    | 3                          |
+| uniform sampler2D gaux1;        | 7                          |
+| uniform sampler2D gaux2;        | 8                          |
+| uniform sampler2D gaux3;        | 9                          |
+| uniform sampler2D gaux4;        | 10                         |
+| uniform sampler2D colortex0;    | 0                          |
+| uniform sampler2D colortex1;    | 1                          |
+| uniform sampler2D colortex2;    | 2                          |
+| uniform sampler2D colortex3;    | 3                          |
+| uniform sampler2D colortex4;    | 7                          |
+| uniform sampler2D colortex5;    | 8                          |
+| uniform sampler2D colortex6;    | 9                          |
+| uniform sampler2D colortex7;    | 10                         |
+| uniform sampler2D colortex8;    | 16                         |
+| uniform sampler2D colortex9;    | 17                         |
+| uniform sampler2D colortexA;    | 18                         |
+| uniform sampler2D colortexB;    | 19                         |
+| uniform sampler2D colortexC;    | 20                         |
+| uniform sampler2D colortexD;    | 21                         |
+| uniform sampler2D colortexE;    | 22                         |
+| uniform sampler2D colortexF;    | 23                         |
+| uniform sampler2D shadow;       | waterShadowEnabled ? 5 : 4 |
+| uniform sampler2D watershadow;  | 4                          |
+| uniform sampler2D shadowtex0;   | 4                          |
+| uniform sampler2D shadowtex1;   | 5                          |
+| uniform sampler2D gdepthtex;    | 6                          |
+| uniform sampler2D depthtex0;    | 6                          |
+| uniform sampler2D depthtex1;    | 11                         |
+| uniform sampler2D depthtex2;    | 12                         |
+| uniform sampler2D shadowcolor;  | 13                         |
+| uniform sampler2D shadowcolor0; | 13                         |
+| uniform sampler2D shadowcolor1; | 14                         |
+| uniform sampler2D noisetex;     | 15                         |
 
 
 
 
 ```
-
-uniform mat4 shadowProjection;                  projection matrix when the shadow map was generated
-uniform mat4 shadowProjectionInverse;           inverse shadowProjection
-uniform mat4 shadowModelView;                   modelview matrix when the shadow map was generated
-uniform mat4 shadowModelViewInverse;            inverse shadowModelView
-uniform float wetness;                          rainStrength smoothed with wetnessHalfLife or drynessHalfLife
-uniform float eyeAltitude;                      view entity Y position
-uniform ivec2 eyeBrightness;                    x = block brightness, y = sky brightness, light 0-15 = brightness 0-240 
-uniform ivec2 eyeBrightnessSmooth;              eyeBrightness smoothed with eyeBrightnessHalflife
-uniform ivec2 terrainTextureSize;               not used
-uniform int terrainIconSize;                    not used
-uniform int isEyeInWater;                       1 = camera is in water, 2 = camera is in lava
-uniform float nightVision;                      night vision (0.0-1.0)
-uniform float blindness;                        blindness (0.0-1.0)
-uniform float screenBrightness;                 screen brightness (0.0-1.0)
-uniform int hideGUI;                            GUI is hidden
-uniform float centerDepthSmooth;                centerDepth smoothed with centerDepthSmoothHalflife
-uniform ivec2 atlasSize;                        texture atlas size (only set when the atlas texture is bound)
-uniform vec4 entityColor;                       entity color multiplier (entity hurt, creeper flashing when exploding)
-uniform int entityId;                           entity ID
-uniform int blockEntityId;                      block entity ID (block ID for the tile entity, only for blocks specified in "block.properties")
-uniform ivec4 blendFunc;                        blend function (srcRGB, dstRGB, srcAlpha, dstAlpha)
-uniform int instanceId;                         instance ID when instancing is enabled (countInstances > 1), 0 = original, 1-N = copies
-uniform float playerMood;                       player mood (0.0-1.0), increases the longer a player stays underground
-
-GBuffers Uniforms
-================= 
-Programs: basic, textured, textured_lit, skybasic, skytextured, clouds, terrain, terrain_solid, terrain_cutout_mip, terrain_cutout, damagedblock, water, block, beaconbeam, item, entities, armor_glint, spidereyes, hand, hand_water, weather)
-==================
-Source                                          Value                                                    
-=====================================================================================================================================================================
-uniform sampler2D texture;                      0
-uniform sampler2D lightmap;                     1
-uniform sampler2D normals;                      2         
-uniform sampler2D specular;                     3
-uniform sampler2D shadow;                       waterShadowEnabled ? 5 : 4
-uniform sampler2D watershadow;                  4
-uniform sampler2D shadowtex0;                   4
-uniform sampler2D shadowtex1;                   5
-uniform sampler2D depthtex0;                    6
-uniform sampler2D gaux1;                        7  <custom texture or output from deferred programs>
-uniform sampler2D gaux2;                        8  <custom texture or output from deferred programs>
-uniform sampler2D gaux3;                        9  <custom texture or output from deferred programs>
-uniform sampler2D gaux4;                        10 <custom texture or output from deferred programs>
-uniform sampler2D colortex4;                    7  <custom texture or output from deferred programs>
-uniform sampler2D colortex5;                    8  <custom texture or output from deferred programs>
-uniform sampler2D colortex6;                    9  <custom texture or output from deferred programs>
-uniform sampler2D colortex7;                    10 <custom texture or output from deferred programs>
-uniform sampler2D colortex8;                    16 <custom texture or output from deferred programs>
-uniform sampler2D colortex9;                    17 <custom texture or output from deferred programs>
-uniform sampler2D colortexA;                    18 <custom texture or output from deferred programs>
-uniform sampler2D colortexB;                    19 <custom texture or output from deferred programs>
-uniform sampler2D colortexC;                    20 <custom texture or output from deferred programs>
-uniform sampler2D colortexD;                    21 <custom texture or output from deferred programs>
-uniform sampler2D colortexE;                    22 <custom texture or output from deferred programs>
-uniform sampler2D colortexF;                    23 <custom texture or output from deferred programs>
-uniform sampler2D depthtex1;                    11
-uniform sampler2D shadowcolor;                  13
-uniform sampler2D shadowcolor0;                 13
-uniform sampler2D shadowcolor1;                 14
-uniform sampler2D noisetex;                     15
-
-Shadow Uniforms
-==================
-Programs: shadow, shadow_solid, shadow_cutout 
-==================
-Source                                          Value                                                    
-=====================================================================================================================================================================
-uniform sampler2D tex;                          0
-uniform sampler2D texture;                      0
-uniform sampler2D lightmap;                     1
-uniform sampler2D normals;                      2         
-uniform sampler2D specular;                     3
-uniform sampler2D shadow;                       waterShadowEnabled ? 5 : 4
-uniform sampler2D watershadow;                  4
-uniform sampler2D shadowtex0;                   4
-uniform sampler2D shadowtex1;                   5
-uniform sampler2D gaux1;                        7  <custom texture>
-uniform sampler2D gaux2;                        8  <custom texture>
-uniform sampler2D gaux3;                        9  <custom texture>
-uniform sampler2D gaux4;                        10 <custom texture>
-uniform sampler2D colortex4;                    7  <custom texture>
-uniform sampler2D colortex5;                    8  <custom texture>
-uniform sampler2D colortex6;                    9  <custom texture>
-uniform sampler2D colortex7;                    10 <custom texture>
-uniform sampler2D colortex8;                    16 <custom texture>
-uniform sampler2D colortex9;                    17 <custom texture>
-uniform sampler2D colortexA;                    18 <custom texture>
-uniform sampler2D colortexB;                    19 <custom texture>
-uniform sampler2D colortexC;                    20 <custom texture>
-uniform sampler2D colortexD;                    21 <custom texture>
-uniform sampler2D colortexE;                    22 <custom texture>
-uniform sampler2D colortexF;                    23 <custom texture>
-uniform sampler2D shadowcolor;                  13
-uniform sampler2D shadowcolor0;                 13
-uniform sampler2D shadowcolor1;                 14
-uniform sampler2D noisetex;                     15
-
-Composite and Deferred Uniforms
-===============================
-Programs: composite, composite1, composite2, composite3, composite4, composite5, composite6, composite7, final, deferred, deferred1, deferred2, deferred3, deferred4, deferred5, deferred6, deferred7
-===============================
-Source                                          Value                                                    
-=====================================================================================================================================================================
-uniform sampler2D gcolor;                       0
-uniform sampler2D gdepth;                       1
-uniform sampler2D gnormal;                      2
-uniform sampler2D composite;                    3
-uniform sampler2D gaux1;                        7
-uniform sampler2D gaux2;                        8
-uniform sampler2D gaux3;                        9
-uniform sampler2D gaux4;                        10
-uniform sampler2D colortex0;                    0
-uniform sampler2D colortex1;                    1
-uniform sampler2D colortex2;                    2
-uniform sampler2D colortex3;                    3
-uniform sampler2D colortex4;                    7
-uniform sampler2D colortex5;                    8
-uniform sampler2D colortex6;                    9
-uniform sampler2D colortex7;                    10
-uniform sampler2D colortex8;                    16 
-uniform sampler2D colortex9;                    17 
-uniform sampler2D colortexA;                    18 
-uniform sampler2D colortexB;                    19 
-uniform sampler2D colortexC;                    20 
-uniform sampler2D colortexD;                    21 
-uniform sampler2D colortexE;                    22 
-uniform sampler2D colortexF;                    23 
-uniform sampler2D shadow;                       waterShadowEnabled ? 5 : 4
-uniform sampler2D watershadow;                  4
-uniform sampler2D shadowtex0;                   4
-uniform sampler2D shadowtex1;                   5
-uniform sampler2D gdepthtex;                    6
-uniform sampler2D depthtex0;                    6
-uniform sampler2D depthtex1;                    11
-uniform sampler2D depthtex2;                    12
-uniform sampler2D shadowcolor;                  13
-uniform sampler2D shadowcolor0;                 13
-uniform sampler2D shadowcolor1;                 14
-uniform sampler2D noisetex;                     15
-
 GBuffers Textures
 =================
 Id Name           Legacy name
