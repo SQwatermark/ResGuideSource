@@ -40,7 +40,13 @@ module.exports = {
         ['custom_panorama', '自定义全景图'],
         ['hd_fonts', '高清字体'],
         ['system_properties', '系统属性'],
-        ['shaders.txt', '光影'],
+        {
+          title: '光影',   // 必要的
+          children: [
+            ['shaders.txt', '说明'],
+            ['shaders.properties', '属性文件'],
+          ]
+        },
         ['todo', '尚未完成的事'],
       ],
       
@@ -85,7 +91,7 @@ module.exports = {
         },
         {
           title: '语言和文字',
-          path: '/vanilla/lang/',
+          //path: '/vanilla/lang/',
           children: [
             '/vanilla/lang/lang',
             '/vanilla/font/font',
@@ -137,7 +143,7 @@ module.exports = {
         },
         {
           title: '光与色',
-          path: '/optifine/colormap/',
+          //path: '/optifine/colormap/',
           children: [
             '/optifine/colormap/lightmap',
           ]
@@ -153,7 +159,7 @@ module.exports = {
         },
         {
           title: 'GUI',
-          path: '/vanilla/texture/gui/',
+          //path: '/vanilla/texture/gui/',
           children: [
             '/vanilla/texture/gui/panorama',
             '/vanilla/texture/gui/loading',
@@ -162,7 +168,7 @@ module.exports = {
         ['/optifine/shader/pbr', '视差和高光'],
         {
           title: '附录',
-          path: '/appendix/',
+          //path: '/appendix/',
           children: [
             '/appendix/fragments',
             '/appendix/tools',
