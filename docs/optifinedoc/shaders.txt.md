@@ -355,449 +355,588 @@ Todo：
 | uniform sampler2D shadowcolor1; | 14                         |
 | uniform sampler2D noisetex;     | 15                         |
 
+## GBuffers Textures
 
+| Id   | Name         | Legacy name                                                  |
+| ---- | ------------ | ------------------------------------------------------------ |
+| 0    | texture      |                                                              |
+| 1    | lightmap     |                                                              |
+| 2    | normals      |                                                              |
+| 3    | specular     |                                                              |
+| 4    | shadowtex0   | shadow, watershadow                                          |
+| 5    | shadowtex1   | shadow (when watershadow used)                               |
+| 6    | depthtex0    |                                                              |
+| 7    | gaux1        | colortex4 \<custom texture or output from deferred programs\> |
+| 8    | gaux2        | colortex5 \<custom texture or output from deferred programs\> |
+| 9    | gaux3        | colortex6 \<custom texture or output from deferred programs\> |
+| 10   | gaux4        | colortex7 \<custom texture or output from deferred programs\> |
+| 12   | depthtex1    |                                                              |
+| 13   | shadowcolor0 | shadowcolor                                                  |
+| 14   | shadowcolor1 | \<custom texture or output from deferred programs\>          |
+| 15   | noisetex     | \<custom texture or output from deferred programs\>          |
+| 16   | colortex8    | \<custom texture or output from deferred programs\>          |
+| 17   | colortex9    | \<custom texture or output from deferred programs\>          |
+| 18   | colortexA    | \<custom texture or output from deferred programs\>          |
+| 19   | colortexB    | \<custom texture or output from deferred programs\>          |
+| 20   | colortexC    | \<custom texture or output from deferred programs\>          |
+| 21   | colortexD    | \<custom texture or output from deferred programs\>          |
+| 22   | colortexE    | \<custom texture or output from deferred programs\>          |
+| 23   | colortexF    | \<custom texture or output from deferred programs\>          |
 
+## Shadow Textures
 
-```
-GBuffers Textures
-=================
-Id Name           Legacy name
-======================================
-0  texture
-1  lightmap
-2  normals
-3  specular
-4  shadowtex0     shadow, watershadow 
-5  shadowtex1     shadow (when watershadow used)
-6  depthtex0
-7  gaux1          colortex4 <custom texture or output from deferred programs>
-8  gaux2          colortex5 <custom texture or output from deferred programs>
-9  gaux3          colortex6 <custom texture or output from deferred programs>
-10 gaux4          colortex7 <custom texture or output from deferred programs>
-12 depthtex1
-13 shadowcolor0   shadowcolor 
-14 shadowcolor1
-15 noisetex
-16 colortex8      <custom texture or output from deferred programs>
-17 colortex9      <custom texture or output from deferred programs>
-18 colortexA      <custom texture or output from deferred programs>
-19 colortexB      <custom texture or output from deferred programs>
-20 colortexC      <custom texture or output from deferred programs>
-21 colortexD      <custom texture or output from deferred programs>
-22 colortexE      <custom texture or output from deferred programs>
-23 colortexF      <custom texture or output from deferred programs>
+| Id   | Name         | Legacy name                    |
+| ---- | ------------ | ------------------------------ |
+| 0    | texture      | tex                            |
+| 1    | lightmap     |                                |
+| 2    | normals      |                                |
+| 3    | specular     |                                |
+| 4    | shadowtex0   | shadow, watershadow            |
+| 5    | shadowtex0   | shadow (when watershadow used) |
+| 7    | gaux1        | colortex4 \<custom texture\>   |
+| 8    | gaux2        | colortex5 \<custom texture\>   |
+| 9    | gaux3        | colortex6 \<custom texture\>   |
+| 10   | gaux4        | colortex7 \<custom texture\>   |
+| 13   | shadowcolor0 | shadowcolor                    |
+| 14   | shadowcolor1 |                                |
+| 15   | noisetex     |                                |
+| 16   | colortex8    | \<custom texture\>             |
+| 17   | colortex9    | \<custom texture\>             |
+| 18   | colortexA    | \<custom texture\>             |
+| 19   | colortexB    | \<custom texture\>             |
+| 20   | colortexC    | \<custom texture\>             |
+| 21   | colortexD    | \<custom texture\>             |
+| 22   | colortexE    | \<custom texture\>             |
+| 23   | colortexF    | \<custom texture\>             |
 
-Shadow Textures
-==================
-Id Name           Legacy name
-======================================
-0  texture        tex
-1  lightmap
-2  normals
-3  specular
-4  shadowtex0     shadow, watershadow        
-5  shadowtex1     shadow (when watershadow used)
-7  gaux1          colortex4 <custom texture>
-8  gaux2          colortex5 <custom texture>
-9  gaux3          colortex6 <custom texture>
-10 gaux4          colortex7 <custom texture>
-13 shadowcolor0   shadowcolor
-14 shadowcolor1   
-15 noisetex
-16 colortex8      <custom texture>
-17 colortex9      <custom texture>
-18 colortexA      <custom texture>
-19 colortexB      <custom texture>
-20 colortexC      <custom texture>
-21 colortexD      <custom texture>
-22 colortexE      <custom texture>
-23 colortexF      <custom texture>
+## Composite and Deferred Textures
 
-Composite and Deferred Textures
-===============================
-Id Name           Legacy name
-======================================
-0  colortex0      gcolor 
-1  colortex1      gdepth 
-2  colortex2      gnormal 
-3  colortex3      composite
-4  shadowtex0     shadow, watershadow 
-5  shadowtex1     shadow (when watershadow used)
-6  depthtex0      gdepthtex
-7  colortex4      gaux1
-8  colortex5      gaux2
-9  colortex6      gaux3
-10 colortex7      gaux4
-11 depthtex1
-12 depthtex2
-13 shadowcolor0   shadowcolor
-14 shadowcolor1
-15 noisetex
-16 colortex8
-17 colortex9
-18 colortexA
-19 colortexB
-20 colortexC
-21 colortexD
-22 colortexE
-23 colortexF
+| Id   | Name         | Legacy name                    |
+| ---- | ------------ | ------------------------------ |
+| 0    | colortex0    | gcolor                         |
+| 1    | colortex1    | gdepth                         |
+| 2    | colortex2    | gnormal                        |
+| 3    | colortex3    | composite                      |
+| 4    | shadowtex0   | shadow, watershadow            |
+| 5    | shadowtex1   | shadow (when watershadow used) |
+| 6    | depthtex0    | gdepthtex                      |
+| 7    | colortex4    | gaux1                          |
+| 8    | colortex5    | gaux2                          |
+| 9    | colortex6    | gaux3                          |
+| 10   | colortex7    | gaux4                          |
+| 11   | depthtex1    |                                |
+| 12   | depthtex2    |                                |
+| 13   | shadowcolor0 | shadowcolor                    |
+| 14   | shadowcolor1 |                                |
+| 15   | noisetex     |                                |
+| 16   | colortex8    |                                |
+| 17   | colortex9    |                                |
+| 18   | colortexA    |                                |
+| 19   | colortexB    |                                |
+| 20   | colortexC    |                                |
+| 21   | colortexD    |                                |
+| 22   | colortexE    |                                |
+| 23   | colortexF    |                                |
 
-Depth buffers usage
-===================
-Name        Usage
-==============================================================================
-depthtex0   everything
-depthtex1   no translucent objects (water, stained glass) 
-depthtex2   no translucent objects (water, stained glass), no handheld objects
+## Depth buffers usage
 
-Shadow buffers usage
-====================
-Name        Usage
-==============================================================================
-shadowtex0  everything
-shadowtex1  no translucent objects (water, stained glass) 
+| Name      | Usage                                                        |
+| --------- | ------------------------------------------------------------ |
+| depthtex0 | everything                                                   |
+| depthtex1 | no translucent objects (water, stained glass)                |
+| depthtex2 | no translucent objects (water, stained glass), no handheld objects |
 
-Vertex Shader Configuration
-===========================
-Source                                          Effect                                                    Comment
-=====================================================================================================================================================================
-attribute <type> mc_Entity;                     useEntityAttrib = true
-attribute <type> mc_midTexCoord;                useMidTexCoordAttrib = true             
-attribute <type> at_tangent;                    useTangentAttrib = true
-const int countInstances = 1;                   when "countInstances > 1" the geometry will be rendered several times, see uniform "instanceId"
+## Shadow buffers usage
 
-Geometry Shader Configuration
-===========================
-Source                                          Effect                                                    Comment
-=====================================================================================================================================================================
-#extension GL_ARB_geometry_shader4 : enable     Enable GL_ARB_geometry_shader4
-const int maxVerticesOut = 3;                   Set GEOMETRY_VERTICES_OUT_ARB for GL_ARB_geometry_shader4 
+| Name       | Usage                                         |
+| ---------- | --------------------------------------------- |
+| shadowtex0 | everything                                    |
+| shadowtex1 | no translucent objects (water, stained glass) |
 
-Fragment Shader Configuration
-=============================
-Source                                          Effect                                                     Comment
-=====================================================================================================================================================================
-uniform <type> shadow;                          shadowDepthBuffers = 1
-uniform <type> watershadow;                     shadowDepthBuffers = 2
-uniform <type> shadowtex0;                      shadowDepthBuffers = 1
-uniform <type> shadowtex1;                      shadowDepthBuffers = 2
-uniform <type> shadowcolor;                     shadowColorBuffers = 1
-uniform <type> shadowcolor0;                    shadowColorBuffers = 1
-uniform <type> shadowcolor1;                    shadowColorBuffers = 2
-uniform <type> depthtex0;                       depthBuffers = 1
-uniform <type> depthtex1;                       depthBuffers = 2
-uniform <type> depthtex2;                       depthBuffers = 3
-uniform <type> gdepth;                          if (bufferFormat[1] == RGBA) bufferFormat[1] = RGBA32F;
-uniform <type> gaux1;                           colorBuffers = 5
-uniform <type> gaux2;                           colorBuffers = 6
-uniform <type> gaux3;                           colorBuffers = 7
-uniform <type> gaux4;                           colorBuffers = 8
-uniform <type> colortex4;                       colorBuffers = 5
-uniform <type> colortex5;                       colorBuffers = 6
-uniform <type> colortex6;                       colorBuffers = 7
-uniform <type> colortex7;                       colorBuffers = 8
-uniform <type> centerDepthSmooth;               centerDepthSmooth = true
-/* SHADOWRES:1024 */                            shadowMapWidth = shadowMapHeight = 1024
-const int shadowMapResolution = 1024;           shadowMapWidth = shadowMapHeight = 1024
-/* SHADOWFOV:90.0 */                            shadowMapFov = 90
-const float shadowMapFov = 90.0;                shadowMapFov = 90
-/* SHADOWHPL:160.0 */                           shadowMapDistance = 160.0
-const float shadowDistance = 160.0f;            shadowMapDistance = 160.0
-const float shadowDistanceRenderMul = -1f;      shadowDistanceRenderMul = -1                               When > 0 enable shadow optimization (shadowRenderDistance = shadowDistance * shadowDistanceRenderMul)
-const float shadowIntervalSize = 2.0f;          shadowIntervalSize = 2.0
-const bool generateShadowMipmap = true;         shadowMipmap = true
-const bool generateShadowColorMipmap = true;    shadowColorMipmap = true
-const bool shadowHardwareFiltering = true;      shadowHardwareFiltering = true
-const bool shadowHardwareFiltering0 = true;     shadowHardwareFiltering[0] = true
-const bool shadowHardwareFiltering1 = true;     shadowHardwareFiltering[1] = true
-const bool shadowtexMipmap = true;              shadowMipmap[0] = true
-const bool shadowtex0Mipmap = true;             shadowMipmap[0] = true
-const bool shadowtex1Mipmap = true;             shadowMipmap[1] = true
-const bool shadowcolor0Mipmap = true;           shadowColorMipmap[0] = true
-const bool shadowColor0Mipmap = true;           shadowColorMipmap[0] = true
-const bool shadowcolor1Mipmap = true;           shadowColorMipmap[1] = true
-const bool shadowColor1Mipmap = true;           shadowColorMipmap[1] = true
-const bool shadowtexNearest = true;             shadowFilterNearest[0] = true
-const bool shadowtex0Nearest = true;            shadowFilterNearest[0] = true
-const bool shadow0MinMagNearest = true;         shadowFilterNearest[0] = true
-const bool shadowtex1Nearest = true;            shadowFilterNearest[1] = true
-const bool shadow1MinMagNearest = true;         shadowFilterNearest[1] = true
-const bool shadowcolor0Nearest = true;          shadowColorFilterNearest[0] = true
-const bool shadowColor0Nearest = true;          shadowColorFilterNearest[0] = true
-const bool shadowColor0MinMagNearest = true;    shadowColorFilterNearest[0] = true
-const bool shadowcolor1Nearest = true;          shadowColorFilterNearest[1] = true
-const bool shadowColor1Nearest = true;          shadowColorFilterNearest[1] = true
-const bool shadowColor1MinMagNearest = true;    shadowColorFilterNearest[1] = true
-/* WETNESSHL:600.0 */                           wetnessHalfLife = 600 (ticks)
-const float wetnessHalflife = 600.0f;           wetnessHalfLife = 600 (ticks)
-/* DRYNESSHL:200.0 */                           drynessHalfLife = 200 (ticks)
-const float drynessHalflife = 200.0f;           drynessHalfLife = 200 (ticks)
-const float eyeBrightnessHalflife = 10.0f;      eyeBrightnessHalflife = 10 (ticks)
-const float centerDepthHalflife = 1.0f;         centerDepthSmoothHalflife = 1 (ticks)
-const float sunPathRotation = 0f;               sunPathRotation = 0f
-const float ambientOcclusionLevel = 1.0f;       ambientOcclusionLevel = 1.0f                               0.0f = AO disabled, 1.0f = vanilla AO
-const int superSamplingLevel = 1;               superSamplingLevel = 1
-const int noiseTextureResolution = 256;         noiseTextureResolution = 256
-/* GAUX4FORMAT:RGBA32F */                       buffersFormat[7] = GL_RGBA32F
-/* GAUX4FORMAT:RGB32F */                        buffersFormat[7] = GL_RGB32F
-/* GAUX4FORMAT:RGB16 */                         buffersFormat[7] = GL_RGB16
-const int <bufferIndex>Format = <format>;       bufferFormats[index] = <format>                            See "Draw Buffer Index" and "Texture Formats"
-const bool <bufferIndex>Clear = false;          gbuffersClear[index] = false                               Skip glClear() for the given buffer, only for "composite" and "deferred" programs 
-const vec4 <bufferIndex>ClearColor = vec4();    gbuffersClearColor[index] = vec4(r, g, b, a)               Clear color for the given buffer, only for "composite" and "deferred" programs 
-const bool <bufferIndex>MipmapEnabled = true;   bufferMipmaps[index] = true                                Only for programs "composite" , "deferred" and "final"
-const int <shadowBufferIx>Format = <format>;    shadowBufferFormats[index] = <format>                      See "Shadow Buffer Index" and "Texture Formats"
-const bool <shadowBufferIx>Clear = false;       shadowBuffersClear[index] = false                          Skip glClear() for the given shadow color buffer 
-const vec4 <shadowBufferIx>ClearColor = vec4(); shadowBuffersClearColor[index] = vec4(r, g, b, a)          Clear color for the given shadow color buffer
-/* DRAWBUFFERS:02BF */                          drawBuffers = "02BF"                                       Draw buffers 0, 2, B and F
+## Vertex Shader Configuration
 
-Draw Buffer Index
-=================
-Prefix                  Index
-==================================
-colortex<0-F>           0-F
-gcolor                  0
-gdepth                  1
-gnormal                 2
-composite               3
-gaux1                   4
-gaux2                   5
-gaux3                   6
-gaux4                   7
+| Source                             | Effect                                                       |
+| ---------------------------------- | ------------------------------------------------------------ |
+| attribute \<type\> mc_Entity;      | useEntityAttrib = true                                       |
+| attribute \<type\> mc_midTexCoord; | useMidTexCoordAttrib = true                                  |
+| attribute \<type\> at_tangent;     | useTangentAttrib = true                                      |
+| const int countInstances = 1;      | when "countInstances > 1" the geometry will be rendered several times, see uniform "instanceId" |
 
-Shadow Buffer Index
-===================
-Prefix                  Index
-==================================
-shadowcolor             0
-shadowcolor<0-1>        0-1
- 
-Texture Formats
-===============
-1. 8-bit normalized
- R8
- RG8
- RGB8
- RGBA8
-2. 8-bit signed normalized
- R8_SNORM
- RG8_SNORM
- RGB8_SNORM
- RGBA8_SNORM
-3. 16-bit normalized
- R16
- RG16
- RGB16
- RGBA16
-4. 16-bit signed normalized 
- R16_SNORM
- RG16_SNORM
- RGB16_SNORM
- RGBA16_SNORM
-5. 16-bit float
- R16F
- RG16F
- RGB16F
- RGBA16F
-6. 32-bit float     
- R32F
- RG32F
- RGB32F
- RGBA32F
-7. 32-bit integer
- R32I
- RG32I
- RGB32I
- RGBA32I
-8. 32-bit unsigned integer 
- R32UI
- RG32UI
- RGB32UI
- RGBA32UI
-9. Mixed
- R3_G3_B2
- RGB5_A1
- RGB10_A2
- R11F_G11F_B10F
- RGB9_E5
+## Geometry Shader Configuration
 
-Pixel Formats
-=============
-1. Normalized
- RED
- RG
- RGB
- BGR
- RGBA
- BGRA
-2. Integer
- RED_INTEGER
- RG_INTEGER
- RGB_INTEGER
- BGR_INTEGER
- RGBA_INTEGER
- BGRA_INTEGER
+| Source                                      | Effect                                                    |
+| ------------------------------------------- | --------------------------------------------------------- |
+| #extension GL_ARB_geometry_shader4 : enable | Enable GL_ARB_geometry_shader4                            |
+| const int maxVerticesOut = 3;               | Set GEOMETRY_VERTICES_OUT_ARB for GL_ARB_geometry_shader4 |
 
-Pixel Types
-===========
- BYTE
- SHORT
- INT
- HALF_FLOAT
- FLOAT
- UNSIGNED_BYTE
- UNSIGNED_BYTE_3_3_2
- UNSIGNED_BYTE_2_3_3_REV
- UNSIGNED_SHORT
- UNSIGNED_SHORT_5_6_5
- UNSIGNED_SHORT_5_6_5_REV
- UNSIGNED_SHORT_4_4_4_4
- UNSIGNED_SHORT_4_4_4_4_REV
- UNSIGNED_SHORT_5_5_5_1
- UNSIGNED_SHORT_1_5_5_5_REV
- UNSIGNED_INT
- UNSIGNED_INT_8_8_8_8
- UNSIGNED_INT_8_8_8_8_REV
- UNSIGNED_INT_10_10_10_2
- UNSIGNED_INT_2_10_10_10_REV
+## Fragment Shader Configuration
 
-Block ID mapping
-================
+| Source                         | Effect                                                  | Comment |
+| ------------------------------ | ------------------------------------------------------- | ------- |
+| uniform \<type\> shadow;       | shadowDepthBuffers = 1                                  |         |
+| uniform \<type\> watershadow;  | shadowDepthBuffers = 2                                  |         |
+| uniform \<type\> shadowtex0;   | shadowDepthBuffers = 1                                  |         |
+| uniform \<type\> shadowtex1;   | shadowDepthBuffers = 2                                  |         |
+| uniform \<type\> shadowcolor;  | shadowColorBuffers = 1                                  |         |
+| uniform \<type\> shadowcolor0; | shadowColorBuffers = 1                                  |         |
+| uniform \<type\> shadowcolor1; | shadowColorBuffers = 2                                  |         |
+| uniform \<type\> depthtex0;    | depthBuffers = 1                                        |         |
+| uniform \<type\> depthtex1;    | depthBuffers = 2                                        |         |
+| uniform \<type\> depthtex2;    | depthBuffers = 3                                        |         |
+| uniform \<type\> gdepth;       | if (bufferFormat[1] == RGBA) bufferFormat[1] = RGBA32F; |         |
+| uniform \<type\> gaux1;        | colorBuffers = 5                                        |         |
+| uniform \<type\> gaux2;        | colorBuffers = 6                                        |         |
+| uniform \<type\> gaux3;        | colorBuffers = 7                                        |         |
+| uniform \<type\> gaux4;        | colorBuffers = 8                                        |         |
+| uniform \<type\> colortex4;    | colorBuffers = 5                                        |         |
+| uniform \<type\> colortex5;    | colorBuffers = 6                                        |         |
+| uniform \<type\> colortex6;    | colorBuffers = 7                                        |         |
+| uniform \<type\> colortex7;    | colorBuffers = 8                                        |         |
+| /* SHADOWRES:1024 */                             | shadowMapWidth = shadowMapHeight = 1024                      ||
+| const int shadowMapResolution  = 1024;           | shadowMapWidth = shadowMapHeight = 1024                      ||
+| /* SHADOWFOV:90.0 */                             | shadowMapFov = 90                                            ||
+| const float shadowMapFov =  90.0;                | shadowMapFov = 90                                            ||
+| /* SHADOWHPL:160.0 */                            | shadowMapDistance = 160.0                                    ||
+| const float shadowDistance =  160.0f;            | shadowMapDistance = 160.0                                    ||
+| const float  shadowDistanceRenderMul = -1f;      | shadowDistanceRenderMul = -1 |When > 0  enable shadow optimization (shadowRenderDistance = shadowDistance *  shadowDistanceRenderMul)|
+| const float shadowIntervalSize  = 2.0f;          | shadowIntervalSize = 2.0                                     ||
+| const bool  generateShadowMipmap = true;         | shadowMipmap = true                                          ||
+| const bool  generateShadowColorMipmap = true;    | shadowColorMipmap = true                                     ||
+| const bool  shadowHardwareFiltering = true;      | shadowHardwareFiltering = true                               ||
+| const bool  shadowHardwareFiltering0 = true;     | shadowHardwareFiltering[0] = true                            ||
+| const bool  shadowHardwareFiltering1 = true;     | shadowHardwareFiltering[1] = true                            ||
+| const bool shadowtexMipmap =  true;              | shadowMipmap[0] = true                                       ||
+| const bool shadowtex0Mipmap =  true;             | shadowMipmap[0] = true                                       ||
+| const bool shadowtex1Mipmap =  true;             | shadowMipmap[1] = true                                       ||
+| const bool shadowcolor0Mipmap  = true;           | shadowColorMipmap[0] = true                                  ||
+| const bool shadowColor0Mipmap  = true;           | shadowColorMipmap[0] = true                                  ||
+| const bool shadowcolor1Mipmap  = true;           | shadowColorMipmap[1] = true                                  ||
+| const bool shadowColor1Mipmap  = true;           | shadowColorMipmap[1] = true                                  ||
+| const bool shadowtexNearest =  true;             | shadowFilterNearest[0] = true                                ||
+| const bool shadowtex0Nearest =  true;            | shadowFilterNearest[0] = true                                ||
+| const bool  shadow0MinMagNearest = true;         | shadowFilterNearest[0] = true                                ||
+| const bool shadowtex1Nearest =  true;            | shadowFilterNearest[1] = true                                ||
+| const bool  shadow1MinMagNearest = true;         | shadowFilterNearest[1] = true                                ||
+| const bool shadowcolor0Nearest  = true;          | shadowColorFilterNearest[0] = true                           ||
+| const bool shadowColor0Nearest  = true;          | shadowColorFilterNearest[0] = true                           ||
+| const bool  shadowColor0MinMagNearest = true;    | shadowColorFilterNearest[0] = true                           ||
+| const bool shadowcolor1Nearest  = true;          | shadowColorFilterNearest[1] = true                           ||
+| const bool shadowColor1Nearest  = true;          | shadowColorFilterNearest[1] = true                           ||
+| const bool  shadowColor1MinMagNearest = true;    | shadowColorFilterNearest[1] = true                           ||
+| /* WETNESSHL:600.0 */                            | wetnessHalfLife = 600 (ticks)                                ||
+| const float wetnessHalflife =  600.0f;           | wetnessHalfLife = 600 (ticks)                                ||
+| /* DRYNESSHL:200.0 */                            | drynessHalfLife = 200 (ticks)                                ||
+| const float drynessHalflife =  200.0f;           | drynessHalfLife = 200 (ticks)                                ||
+| const float  eyeBrightnessHalflife = 10.0f;      | eyeBrightnessHalflife = 10 (ticks)                           ||
+| const float  centerDepthHalflife = 1.0f;         | centerDepthSmoothHalflife = 1 (ticks)                        ||
+| const float sunPathRotation =  0f;               | sunPathRotation = 0f                                         ||
+| const float  ambientOcclusionLevel = 1.0f;       | ambientOcclusionLevel = 1.0f |0.0f = AO  disabled, 1.0f = vanilla AO|
+| const int superSamplingLevel =  1;               | superSamplingLevel = 1                                       ||
+| const int  noiseTextureResolution = 256;         | noiseTextureResolution = 256                                 ||
+| /* GAUX4FORMAT:RGBA32F */                        | buffersFormat[7] = GL_RGBA32F                                ||
+| /* GAUX4FORMAT:RGB32F */                         | buffersFormat[7] = GL_RGB32F                                 ||
+| /* GAUX4FORMAT:RGB16 */                          | buffersFormat[7] = GL_RGB16                                  ||
+| const int  \<bufferIndex\>Format = \<format\>;   | bufferFormats[index] = \<format\> |See "Draw  Buffer Index" and "Texture Formats"|
+| const bool  \<bufferIndex\>Clear = false;        | gbuffersClear[index] = false |Skip glClear()  for the given buffer, only for "composite" and "deferred"  programs|
+| const vec4  \<bufferIndex\>ClearColor = vec4();  | gbuffersClearColor[index] = vec4(r, g, b, a) |Clear color for the given  buffer, only for "composite" and "deferred" programs|
+| const bool  \<bufferIndex\>MipmapEnabled = true; | bufferMipmaps[index] = true |Only for  programs "composite" , "deferred" and "final"|
+| const int  \<shadowBufferIx\>Format = \<format\>; | shadowBufferFormats[index] = \<format\> |See "Shadow Buffer  Index" and "Texture Formats"|
+| const bool  \<shadowBufferIx\>Clear = false;     | shadowBuffersClear[index] = false |Skip glClear() for  the given shadow color buffer|
+| const vec4  \<shadowBufferIx\>ClearColor = vec4(); | shadowBuffersClearColor[index] = vec4(r, g, b, a) |Clear color for the given shadow  color buffer|
+| /* DRAWBUFFERS:02BF */                           | drawBuffers = "02BF" |Draw  buffers 0, 2, B and F|
+
+## Draw Buffer Index
+
+| Prefix          | Index |
+| --------------- | ----- |
+| colortex\<0-F\> | 0-F   |
+| gcolor          | 0     |
+| gdepth          | 1     |
+| gnormal         | 2     |
+| composite       | 3     |
+| gaux1           | 4     |
+| gaux2           | 5     |
+| gaux3           | 6     |
+| gaux4           | 7     |
+
+## Shadow Buffer Index
+
+| Prefix             | Index |
+| ------------------ | ----- |
+| shadowcolor        | 0     |
+| shadowcolor\<0-1\> | 0-1   |
+
+## Texture Formats
+
+**1. 8-bit normalized**
+
+>  R8
+>
+>  RG8
+>
+>  RGB8
+>
+>  RGBA8
+
+**2. 8-bit signed normalized**
+
+>  R8_SNORM
+>
+>  RG8_SNORM
+>
+>  RGB8_SNORM
+>
+>  RGBA8_SNORM
+
+**3. 16-bit normalized**
+
+>  R16
+>
+>  RG16
+>
+>  RGB16
+>
+>  RGBA16
+
+**4. 16-bit signed normalized**
+
+>  R16_SNORM
+>
+>  RG16_SNORM
+>
+>  RGB16_SNORM
+>
+>  RGBA16_SNORM
+
+**5. 16-bit float**
+
+>  R16F
+>
+>  RG16F
+>
+>  RGB16F
+>
+>  RGBA16F
+
+**6. 32-bit float**
+
+>  R32F
+>
+>  RG32F
+>
+>  RGB32F
+>
+>  RGBA32F
+
+**7. 32-bit integer**
+
+>  R32I
+>
+>  RG32I
+>
+>  RGB32I
+>
+>  RGBA32I
+
+**8. 32-bit unsigned integer**
+
+>  R32UI
+>
+>  RG32UI
+>
+>  RGB32UI
+>
+>  RGBA32UI
+
+**9. Mixed**
+
+>  R3_G3_B2
+>
+>  RGB5_A1
+>
+>  RGB10_A2
+>
+>  R11F_G11F_B10F
+>
+>  RGB9_E5
+
+## Pixel Formats
+
+**1. Normalized**
+
+>  RED
+>
+>  RG
+>
+>  RGB
+>
+>  BGR
+>
+>  RGBA
+>
+>  BGRA
+
+**2. Integer**
+
+>  RED_INTEGER
+>
+>  RG_INTEGER
+>
+>  RGB_INTEGER
+>
+>  BGR_INTEGER
+>
+>  RGBA_INTEGER
+>
+>  BGRA_INTEGER
+
+## Pixel Types
+
+>  BYTE
+>
+>  SHORT
+>
+>  INT
+>
+>  HALF_FLOAT
+>
+>  FLOAT
+>
+>  UNSIGNED_BYTE
+>
+>  UNSIGNED_BYTE_3_3_2
+>
+>  UNSIGNED_BYTE_2_3_3_REV
+>
+>  UNSIGNED_SHORT
+>
+>  UNSIGNED_SHORT_5_6_5
+>
+>  UNSIGNED_SHORT_5_6_5_REV
+>
+>  UNSIGNED_SHORT_4_4_4_4
+>
+>  UNSIGNED_SHORT_4_4_4_4_REV
+>
+>  UNSIGNED_SHORT_5_5_5_1
+>
+>  UNSIGNED_SHORT_1_5_5_5_REV
+>
+>  UNSIGNED_INT
+>
+>  UNSIGNED_INT_8_8_8_8
+>
+>  UNSIGNED_INT_8_8_8_8_REV
+>
+>  UNSIGNED_INT_10_10_10_2
+>
+>  UNSIGNED_INT_2_10_10_10_REV
+
+## Block ID mapping
+
 The block ID mapping is defined in "shaders/block.properties" included in the shader pack.
-Forge mods may add custom block mapping as "assets/<modid>/shaders/block.properties" in the mod JAR file.
+
+Forge mods may add custom block mapping as "assets/\<modid\>/shaders/block.properties" in the mod JAR file.
+
 The "block.properties" file can use conditional preprocessor directives (#ifdef, #if, etc.)
+
 For more details see section "Standard Macros" A to G. Option macros are not available.
-Format "block.<id>=<block1> <block2> ..."
+
+Format "block.\<id\>=\<block1\> \<block2\> ..."
+
 The key is the substitute block ID, the values are the blocks which are to be replaced.
+
 Only one line per block ID is allowed.
+
 See "properties_files.txt" for the block matching rules.
 
-  # Short format
-  block.31=red_flower yellow_flower reeds
-  # Long format
-  block.32=minecraft:red_flower ic2:nether_flower botania:reeds
-  # Properties
-  block.33=minecraft:red_flower:type=white_tulip minecraft:red_flower:type=pink_tulip botania:reeds:type=green
+```properties
+# Short format
+block.31=red_flower yellow_flower reeds
+# Long format
+block.32=minecraft:red_flower ic2:nether_flower botania:reeds
+# Properties
+block.33=minecraft:red_flower:type=white_tulip minecraft:red_flower:type=pink_tulip botania:reeds:type=green
+```
 
 See "properties.files" for more details.
 
-Block render layers
-===================
+## Block render layers
+
 The custom block render layers are defined in "shaders/block.properties" included in the shader pack.
 
-  layer.solid=<blocks>
-  layer.cutout=<blocks>
-  layer.cutout_mipped=<blocks>
-  layer.translucent=<blocks>
+```properties
+layer.solid=<blocks>
+layer.cutout=<blocks>
+layer.cutout_mipped=<blocks>
+layer.translucent=<blocks>
+```
 
 Layers
-  solid - no alpha, no blending (solid textures)
-  cutout - alpha, no blending (cutout textures)
-  cutout_mipped - alpha, no blending, mipmaps (cutout with mipmaps)
-  translucent - alpha, blending, mipmaps (water, stained glass)
- 
-Blocks which are solid opaque cubes (stone, dirt, ores, etc) can't be rendered on a custom layer
-as this would affect face culling, ambient occlusion, light propagation and so on.
+
+> solid - no alpha, no blending (solid textures)
+>
+> cutout - alpha, no blending (cutout textures)
+>
+> cutout_mipped - alpha, no blending, mipmaps (cutout with mipmaps)
+>
+> translucent - alpha, blending, mipmaps (water, stained glass)
+
+Blocks which are solid opaque cubes (stone, dirt, ores, etc) can't be rendered on a custom layer as this would affect face culling, ambient occlusion, light propagation and so on.
 
 For exaple:
-  layer.translucent=glass_pane fence wooden_door
 
-Item ID mapping
-================
+```properties
+layer.translucent=glass_pane fence wooden_door
+```
+
+## Item ID mapping
+
 The item ID mapping is defined in "shaders/item.properties" included in the shader pack.
-Forge mods may add custom item mapping as "assets/<modid>/shaders/item.properties" in the mod JAR file.
+
+Forge mods may add custom item mapping as "assets/\<modid\>/shaders/item.properties" in the mod JAR file.
+
 The "item.properties" file can use conditional preprocessor directives (#ifdef, #if, etc.)
+
 For more details see section "Standard Macros" A to G. Option macros are not available.
-Format "item.<id>=<item1> <item2> ..."
+
+Format "item.\<id\>=\<item1\> \<item2\> ..."
+
 The key is the substitute item ID, the values are the items which are to be replaced.
+
 Only one line per item ID is allowed.
 
-  # Short format
-  item.5000=diamond_sword dirt
-  # Long format
-  item.5001=minecraft:diamond_sword botania:reeds
+```properties
+# Short format
+item.5000=diamond_sword dirt
+# Long format
+item.5001=minecraft:diamond_sword botania:reeds
+```
 
-Entity ID mapping
-=================
+## Entity ID mapping
+
 The entity ID mapping is defined in "shaders/entity.properties" included in the shader pack.
-Forge mods may add custom entity mapping as "assets/<modid>/shaders/entity.properties" in the mod JAR file.
+
+Forge mods may add custom entity mapping as "assets/\<modid\>/shaders/entity.properties" in the mod JAR file.
+
 The "entity.properties" file can use conditional preprocessor directives (#ifdef, #if, etc.)
+
 For more details see section "Standard Macros" A to G. Option macros are not available.
-Format "entity.<id>=<entity1> <entity2> ..."
+
+Format "entity.\<id\>=\<entity1\> \<entity2\> ..."
+
 The key is the substitute entity ID, the values are the entities which are to be replaced.
+
 Only one line per entity ID is allowed.
 
-  # Short format
-  entity.2000=sheep cow
-  # Long format
-  entity.2001=minecraft:pig botania:pixie
+```properties
+# Short format
+entity.2000=sheep cow
+# Long format
+entity.2001=minecraft:pig botania:pixie
+```
 
-Standard Macros
-===============
+## Standard Macros
+
 The standard macros are automatically included after the "#version" declaration in every shader file
 
-A. Minecraft version
- #define MC_VERSION <value>
- The value is in format 122 (major 1, minor 2, release 2)
- For example: 1.9.4 -> 10904, 1.11.2 -> 11102, etc.
+**A. Minecraft version**
 
-B. Maximum supported GL version
- #define MC_GL_VERSION <value>
- The value is integer, for example: 210, 320, 450
+```glsl
+#define MC_VERSION <value>
+```
 
-C. Maximum supported GLSL version
- #define MC_GLSL_VERSION <value>
- The value is integer, for example: 120, 150, 450
+The value is in format 122 (major 1, minor 2, release 2)
 
-D. Operating system 
- One of the following:
-  #define MC_OS_WINDOWS
-  #define MC_OS_MAC
-  #define MC_OS_LINUX
-  #define MC_OS_OTHER
+For example: 1.9.4 -\> 10904, 1.11.2 -\> 11102, etc.
 
-E. GPU
- One of the following:
-  #define MC_GL_VENDOR_ATI
-  #define MC_GL_VENDOR_INTEL
-  #define MC_GL_VENDOR_NVIDIA
-  #define MC_GL_VENDOR_XORG
-  #define MC_GL_VENDOR_OTHER
+**B. Maximum supported GL version**
 
-F. Driver
- One of the following:
-  #define MC_GL_RENDERER_RADEON 
-  #define MC_GL_RENDERER_GEFORCE
-  #define MC_GL_RENDERER_QUADRO
-  #define MC_GL_RENDERER_INTEL
-  #define MC_GL_RENDERER_GALLIUM
-  #define MC_GL_RENDERER_MESA
-  #define MC_GL_RENDERER_OTHER
+```glsl
+#define MC_GL_VERSION <value>
+```
 
-G. OpenGL extensions
- Macros for the supported OpenGL extensions are named like the corresponding extension with a prefix "MC_".
- For example the macro "MC_GL_ARB_shader_texture_lod" is defined when the extension "GL_ARB_shader_texture_lod" is supported.
+The value is integer, for example: 210, 320, 450
+
+**C. Maximum supported GLSL version**
+
+```glsl
+#define MC_GLSL_VERSION <value>
+```
+
+The value is integer, for example: 120, 150, 450
+
+**D. Operating system**
+
+One of the following:
+
+```glsl
+#define MC_OS_WINDOWS
+#define MC_OS_MAC
+#define MC_OS_LINUX
+#define MC_OS_OTHER
+```
+
+**E. GPU**
+
+One of the following:
+
+```glsl
+#define MC_GL_VENDOR_ATI
+#define MC_GL_VENDOR_INTEL
+#define MC_GL_VENDOR_NVIDIA
+#define MC_GL_VENDOR_XORG
+#define MC_GL_VENDOR_OTHER
+```
+
+**F. Driver**
+
+One of the following:
+
+```glsl
+#define MC_GL_RENDERER_RADEON 
+#define MC_GL_RENDERER_GEFORCE
+#define MC_GL_RENDERER_QUADRO
+#define MC_GL_RENDERER_INTEL
+#define MC_GL_RENDERER_GALLIUM
+#define MC_GL_RENDERER_MESA
+#define MC_GL_RENDERER_OTHER
+```
+
+**G. OpenGL extensions**
+
+ Macros for the supported OpenGL extensions are named like the corresponding extension with a prefix "MC\_".
+
+ For example the macro "MC\_GL\_ARB\_shader\_texture\_lod" is defined when the extension "GL\_ARB\_shader\_texture\_lod" is supported.
+
  Only the macros which are referenced and supported are added to the shader file.
 
-H. Options
- #define MC_FXAA_LEVEL <value>       // When FXAA is enabled, values: 2, 4
- #define MC_NORMAL_MAP               // When the normal map is enabled
- #define MC_SPECULAR_MAP             // When the specular map is enabled
- #define MC_RENDER_QUALITY <value>   // Values: 0.5, 0.70710677, 1.0, 1.4142135, 2.0
- #define MC_SHADOW_QUALITY <value>   // Values: 0.5, 0.70710677, 1.0, 1.4142135, 2.0
- #define MC_HAND_DEPTH <value>       // Values: 0.0625, 0.125, 0.25
- #define MC_OLD_HAND_LIGHT           // When Old Hand Light is enabled
- #define MC_OLD_LIGHTING             // When Old Lighting is enabled
+**H. Options**
 
-I. Textures 
- #define MC_TEXTURE_FORMAT_LAB_PBR       // Texture format LabPBR (https://github.com/rre36/lab-pbr/wiki)
- #define MC_TEXTURE_FORMAT_LAB_PBR_1_3   // Version 1.3
- (see "texture.properties")
-
-References
-==========
- http://daxnitro.wikia.com/wiki/Editing_Shaders_%28Shaders2%29
- http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286604-shaders-mod-updated-by-karyonix
- http://www.minecraftforum.net/forums/search?by-author=karyonix&display-type=posts
- http://www.seas.upenn.edu/~cis565/fbo.htm#feedback
+```glsl
+#define MC_FXAA_LEVEL <value>       // When FXAA is enabled, values: 2, 4
+#define MC_NORMAL_MAP               // When the normal map is enabled
+#define MC_SPECULAR_MAP             // When the specular map is enabled
+#define MC_RENDER_QUALITY <value>   // Values: 0.5, 0.70710677, 1.0, 1.4142135, 2.0
+#define MC_SHADOW_QUALITY <value>   // Values: 0.5, 0.70710677, 1.0, 1.4142135, 2.0
+#define MC_HAND_DEPTH <value>       // Values: 0.0625, 0.125, 0.25
+#define MC_OLD_HAND_LIGHT           // When Old Hand Light is enabled
+#define MC_OLD_LIGHTING             // When Old Lighting is enabled
 ```
+
+**I. Textures**
+
+```glsl
+#define MC_TEXTURE_FORMAT_LAB_PBR       // Texture format LabPBR (https://github.com/rre36/lab-pbr/wiki)
+#define MC_TEXTURE_FORMAT_LAB_PBR_1_3   // Version 1.3
+```
+
+(see "texture.properties")
+
+## References
+
+- [http://daxnitro.wikia.com/wiki/Editing_Shaders_%28Shaders2%29](http://daxnitro.wikia.com/wiki/Editing_Shaders_%28Shaders2%29)
+- [http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286604-shaders-mod-updated-by-karyonix](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286604-shaders-mod-updated-by-karyonix)
+- [http://www.minecraftforum.net/forums/search?by-author=karyonix&display-type=posts](http://www.minecraftforum.net/forums/search?by-author=karyonix&display-type=posts)
+- [http://www.seas.upenn.edu/~cis565/fbo.htm#feedback](http://www.seas.upenn.edu/~cis565/fbo.htm#feedback)
 
