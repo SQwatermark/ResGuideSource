@@ -1,11 +1,11 @@
 ```properties
 ###############################################################################
-# Sample configuration for OptiFine's Shaders feature.
+# OptiFine光影功能的示例配置文件
 #
 ###############################################################################
 # shaders.properties
 ###############################################################################
-# Place this file in the "shaders" folder of the shader pack
+# 将这个文件放在光影包的 "shaders" 文件夹下
 # 
 # This file can use conditional preprocessor directives (#ifdef, #if, etc.)
 # For more details see "shaders.txt", section "Standard Macros" A to G.
@@ -35,10 +35,10 @@ shadowTranslucent=true|false
 # Enable or disable underwater screen overlay
 underwaterOverlay=true|false
 
-# Enable or disable sun rendering
+# 启用或禁用太阳渲染
 sun=true|false
 
-# Enable or disable moon rendering
+# 启用或禁用月亮渲染
 moon=true|false
 
 # Enable or disable vignette rendering
@@ -67,10 +67,10 @@ separateAo=true|false
 # Enable or disable frustum culling
 frustum.culling=true|false
 
-# OptiFine version
-# The minimum OptiFine version which is required by the shader pack
-# Each Minecraft version has to be specified separately.
-# For example:
+# OptiFine 版本
+# 光影包需要的最低OptiFine版本
+# 每个Minecraft版本都需要分别说明
+# 示例:
 #   version.1.12.2=D1
 #   version.1.10.2=F1
 #   version.1.8=J1
@@ -311,7 +311,7 @@ screen.columns=2
 # Sub-screen
 screen.NAME.columns=2
 
-# Example:
+# 示例:
 # screen=<profile> <empty> BLOOM CELLSHADING [SUN_EFFECTS] [WAVING_GRASS]
 # screen.SUN_EFFECTS=SUN_EFFECTS GOD_RAYS LENS_FLARE RAINDROPS
 # screen.WAVING_GRASS=WAVING_GRASS WAVING_LEAVES WAVING_VINES
@@ -417,7 +417,7 @@ screen.NAME.columns=2
 #   vec3(x, y, z) 
 #   vec4(x, y, z, w)
 #
-# Example:
+# 示例:
 #   variable.bool.isBiomeDark=in(biome, BIOME_RIVER, BIOME_FOREST)
 #   variable.float.valBiomeDark=smooth(1, if(isBiomeDark, 1, 0), 5)
 #   variable.float.valHurtDark=smooth(2, if(is_hurt, 1.3, 0), 0, 10)

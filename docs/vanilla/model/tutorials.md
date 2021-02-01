@@ -7,6 +7,7 @@
 - **[[教程]Blockbench教程-做出属于自己的模型](https://www.mcbbs.net/thread-833634-1-1.html)**
 - **[【教程】[Blockbench]如何免费简单地制作原版3D模型！](https://www.mcbbs.net/thread-846639-1-1.html)**
 - **[Sithme 的 Cubik Studio 模型制作过程系列视频](https://www.bilibili.com/video/av94357570)**
+- **[酒石酸的Blockbench视频教程](https://www.bilibili.com/video/BV1fk4y127qg)**
 
 ### 原版模型
 

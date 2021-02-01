@@ -6,13 +6,15 @@
 
 光影和着色器都是 Shader 的翻译。下面统一翻译成着色器。（标题翻译成光影只是为了吸引眼球）
 
+我没有能力写光影制作教程，想学光影的朋友可以阅读szszss的[Shadersmod教程](http://blog.hakugyokurou.net/?page_id=1655)，不要担心教程太老，不同版本的光影包大同小异。关键是对渲染管线的理解（找点文章读一读）、对GLSL语言的掌握（语法不算难）和一揽子图形学技巧（难点，需要投入时间钻研），这个文档不过是一个说明书，告诉你可以使用哪些东西而已。
+
 :::
 
 ## 概述|Overview
 
 着色器模块（The Shaders Mod）使用了一条[延迟渲染管线（deferred rendering pipeline）](https://learnopengl-cn.github.io/05%20Advanced%20Lighting/08%20Deferred%20Shading/)。
 
-管线首先处理G缓冲着色器（gbuffer shaders）。它们会将数据渲染成纹理（textures），而纹理会被发送到合成着色器（composite shaders）中。
+管线首先处理G-Buffer着色器（gbuffer shaders）。它们将数据渲染成纹理（textures），而纹理会被发送到合成着色器（composite shaders）中。
 
 可选的延迟着色器（deferred shaders）可以被添加到地形和水的渲染之间。
 
@@ -38,9 +40,9 @@
 
 着色器之间的数据传递是通过颜色附件（color attachments）来完成。
 
-所有设备至少都有4个颜色附件，对于支持它的机器，有多大16个。
+所有设备至少都有4个颜色附件，对于支持它的机器，有多达16个。
 
-MacOS限制为8个颜色附件，即便是 modern GPU。
+MacOS 限制为8个颜色附件，即便是 modern GPU。
 
 在延迟、合成、和最终着色器中，它们由 gcolor、gdepth、gnormal、composite、gaux1、gaux2、gaux3和gaux4 uniforms 引用。
 
@@ -60,7 +62,7 @@ MacOS限制为8个颜色附件，即便是 modern GPU。
 
 当两个缓冲区切换，main/alt 与 A/B 之间的对应关系被反转。
 
-G缓冲程序（gbuffer programs）总是在 "main" 缓冲（仅限 gaux1-4）中读写（它们不应该同时在同一个缓冲中读写）。
+G-Buffer程序总是在 "main" 缓冲（仅限 gaux1-4）中读写（它们不应该同时在同一个缓冲中读写）。
 
 延迟/合成程序（deferred/composite programs）总是从 "main" 中读取并写入 "alt" 缓冲。
 
@@ -68,21 +70,21 @@ G缓冲程序（gbuffer programs）总是在 "main" 缓冲（仅限 gaux1-4）�
 
 <br/>
 
-The property "flip.\<program\>.\<buffer\>=\<true|false\>" can be used to enable or disable the flip independant of the buffer write.
+属性 "flip.\<program\>.\<buffer\>=\<true|false\>" 可用于启用或禁用 the flip independant of the buffer write.
 
 The virtual programs "deferred_pre" and "composite_pre" can be used for buffer flipping before the deferred/composite pass.
 
 <br/>
 
-Output color attachments are configured with the "/* DRAWBUFFERS:XYZ */" comment, placed in the fragment shader.
+输出的颜色附件使用片段着色器中的 "/\* DRAWBUFFERS:XYZ \*/" 注释进行设置。
 
-Gbuffers, deferred and composite programs can write to any color attachment, but no more than 8 at the same time.
+Gbuffers, deferred 和 composite 程序可以向任何颜色附件写入，但是同时不能超过8个。
 
-If the output color attachments are not configured, then the program will write to the first 8 color attachments.  
+如果没有设置输出的颜色附件，程序将会对前8个颜色附件写入。
 
 <br/>
 
-When writing to the color attachments in the composite shader, blending is disabled. 
+写入合成着色器（composite shader）中的颜色附件时，混合（blending）被禁用。
 
 Writing to color attachments that the composite shader also reads from will generate artifacts (unless you just copy the original contents) 
 
@@ -109,7 +111,7 @@ The following preprocessor directives are currently recognized:
 
 <br/>
 
-The current shaderpack can be reloaded by pressing "F3+R" or using the command "/reloadShaders". 
+可以用 "F3+R" 或用 "/reloadShaders" 指令重载光影包。 
 
 
 

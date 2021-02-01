@@ -6,4 +6,4 @@
 
 **[【教程】纯净游戏内添加更多物品](https://www.mcbbs.net/thread-782790-1-1.html)**
 
-**[OptiFine帮助文档翻译——CIT章节](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=896135&pid=15607678)**
+**[OptiFine帮助文档翻译——CIT章节](../../optifinedoc/cit.md)**

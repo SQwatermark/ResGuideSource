@@ -2,15 +2,15 @@
 
 ## 实体模型丨cem_model.txt
 
-对于每一个你想要覆盖的实体模型或者方块实体模型，
-使用这个模板在 "assets/minecraft/optifine/cem" 文件夹下新建一个名称为 "<实体名>.jem" 的文件。
-实体模型包含一系列实体部件模型。
-部件模型可以在此文件内部被指定，或者从外部的 ".jpm" 文件读取。
+对于每一个你想要覆盖的实体模型或者方块实体模型，按照这个模板在 "assets/minecraft/optifine/cem" 文件夹下新建一个名称为 "<实体名>.jem" 的文件。
+
+实体模型包含一系列实体部件模型。部件模型可以写在此文件内部，也可以从外部的 ".jpm" 文件读取。
 
 特例:
 \- 哞菇背后的蘑菇可以通过下列材质自定义
 
 > "assets/minecraft/textures/entity/cow/red_mushroom.png" 
+>
 > "assets/minecraft/textures/entity/cow/brown_mushroom.png"
 
 | 实体名              | 部件名                                                       |
@@ -239,7 +239,7 @@
 
 
 
-**变量(Variables)**
+**变量（Variables）**
 
 模型变量由此格式指定：
 
@@ -277,7 +277,7 @@
 >
 > sx, sy, sz - 缩放(scale) x, y, z
 
-**表达式(Expressions)**
+**表达式（Expressions）**
 
 表达式是具有括号、常量、变量、运算符和函数的一般数学表达式。
 
@@ -429,7 +429,7 @@
 >
 > in(x, val1, val2, ...)                检查一个值是否和多个值之一相等
 
-**示例:**
+**示例：**
 
 ```json
    ...
@@ -443,7 +443,3 @@
      }
    ]
 ```
-
-
-
-译注：制作模型推荐cubikstudio或者是blockbench，前者是收费的，后者是免费的。

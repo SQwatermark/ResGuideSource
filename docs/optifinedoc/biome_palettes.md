@@ -2,7 +2,7 @@
 
 ## 概述丨Overview
 
-OptiFine的自定义生物群系调色板的说明，基于McPatcher的自定义生物群系调色板。
+此页面是 OptiFine 的自定义生物群系调色板的说明，基于McPatcher的自定义生物群系调色板。
 
 在原版Minecraft中，草和树叶的材质根据所处生物群系的气候显示不同颜色。
 
@@ -12,19 +12,19 @@ OptiFine的自定义生物群系调色板的说明，基于McPatcher的自定义
 >
 > assets/minecraft/textures/colormap/foliage.png
 
-每个文件都是一张 256x256 的颜色映射图，应用于基础的草和树叶材质（通常是灰色的）。
+每个文件都是一张 256x256 的颜色映射，应用于基础的草和树叶材质（通常是灰色的）。
 
 OptiFine 将这个功能极大地扩展到其它方块以及环境天空和迷雾的颜色。
 
 艺术家们可以将这一功能发挥到极致，让每个生物群系拥有独特的感觉。
 
-这个页面被分为两个部分，第一部分描述颜色映射格式本身，第二部分展示如何将它们应用于Minecraft中的各种元素。
+这个页面被分为两个部分，第一部分描述颜色映射的格式，第二部分展示如何将它们应用于Minecraft中的各种元素。
 
 
 
-## 颜色映射格式
+## 颜色映射的格式
 
-**原版颜色映射格式**
+**原版格式**
 
 原版 Minecraft 使用的格式是一张 256x256 的颜色映射，两个轴分别表示温度和湿度。
 
@@ -32,11 +32,11 @@ OptiFine 将这个功能极大地扩展到其它方块以及环境天空和迷�
 
 随着y轴坐标的增大，它在颜色映射中的位置缓慢地向右下方移动。
 
-一个由khanador撰写的论坛帖子阐述了这是如何工作的：
+khanador 撰写的一篇帖子阐述了这是如何工作的：
 
 [http://www.minecraftforum.net/forums/mapping-and-modding/resource-packs/resource-pack-discussion/1256322-new-biome?comment=124](http://www.minecraftforum.net/forums/mapping-and-modding/resource-packs/resource-pack-discussion/1256322-new-biome?comment=124)
 
-原版格式将应用于所有的自定义颜色映射，除非你在属性文件中覆盖这个行为。
+如果你没在属性文件里说明使用哪种格式的话，默认按照原版格式读取。
 
 **OptiFine "网格" 格式**
 
@@ -47,9 +47,9 @@ OptiFine 将这个功能极大地扩展到其它方块以及环境天空和迷�
 
 此外，OptiFine提供了一种简单的 "固定" 颜色映射格式。这种格式不需要图片；
 
-它只是应用于所有方块的单一颜色，不考虑位置。
+它只是用于某种方块的单一颜色，不会随着位置而变化。
 
-它的主要目的是覆盖某些硬编码方块的颜色，如芦苇(甘蔗)。
+它的主要目的是覆盖某些硬编码方块的颜色，如芦苇（甘蔗）。
 
 
 
