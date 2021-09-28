@@ -1,9 +1,9 @@
 <center><h1>系统属性</h1><p>System Properties</p></center>
 
 系统属性必须添加到启动程序配置文件 (launcher profile) 中的 "JVM Arguments" 字段中。
-例如，要启用扩展日志记录，请在JVM参数中添加 "-Dlog.detail=true"。
+例如，要启用扩展日志，请在JVM参数中添加 "-Dlog.detail=true"。
 
-启用扩展日志记录
+启用扩展日志
 
 ```properties
 log.detail=<true|false>
@@ -41,3 +41,33 @@ player.models.local=<true|false>
 player.models.reload=<true|false>
 ```
 
+显示 frame time (ms) 而不是 FPS（2021.1.16新增）
+
+```properties
+frame.time=<true|false>
+```
+
+OpenGL debug groups（2021.1.20新增）
+
+```properties
+gl.debug.groups=<true|false>
+```
+
+忽略 OpenGL 错误（2021.1.20新增）
+\<ids\> - 逗号分隔的错误id列表
+
+```properties
+gl.ignore.errors=<ids>
+```
+
+CEM debug models（2021.5.21新增）
+
+Automatically generate CEM models for all supported entities using different colors for each model part
+
+The part names and colors are written in the log
+
+译注：不清楚效果所以原文放这，如果您知道效果，望告知
+
+```properties
+cem.debug.models=<true|false>
+```

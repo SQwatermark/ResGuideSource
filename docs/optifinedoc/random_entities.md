@@ -1,18 +1,18 @@
-<center><h1>随机实体材质</h1><p>Random Entities</p></center>
+<center><h1>随机实体纹理</h1><p>Random Entities</p></center>
 
 ## 概述丨Overview
 
-随机实体材质基于MCPatcher的 Random Mobs 模组
+随机实体纹理基于MCPatcher的 Random Mobs 模组
 
-可以向下兼容随机怪物（Random Mobs），仍然支持在 "assets/minecraft/optifine/mob" 中的材质和配置文件。
+可以向下兼容随机怪物（Random Mobs），仍然支持在 "assets/minecraft/optifine/mob" 中的纹理和配置文件。
 
-你可以把备选材质放在资源包的 "optifine/random" 文件夹下，和 "textures" 文件夹中的原版材质是对应的:
+你可以把备选纹理放在资源包的 "optifine/random" 文件夹下，和 "textures" 文件夹中的原版纹理是对应的:
 
-基础材质：
+基础纹理：
 
 > assets/minecraft/textures/entity/creeper/creeper.png
 
-备选材质：
+备选纹理：
 
 > assets/minecraft/optifine/random/entity/creeper/creeper2.png
 >
@@ -26,11 +26,11 @@
 
 > assets/minecraft/optifine/random/entity/creeper/creeper.properties
 
-基础材质：
+基础纹理：
 
 > assets/minecraft/textures/painting/paintings_kristoffer_zetterstrand.png
 
-备选材质：
+备选纹理：
 
 > assets/minecraft/optifine/random/painting/paintings_kristoffer_zetterstrand2.png
 >
@@ -46,15 +46,15 @@
 
 属性文件由一系列规则组成，这些规则从1开始编号。
 
-每一组规则都指定了一些要使用的实体材质，以及一个或多个使用它们的条件。
+每一组规则都指定了一些要使用的实体纹理，以及一个或多个使用它们的条件。
 
 单人游戏中怪物生成的坐标或者多人游戏中怪物第一次被玩家发现时的坐标会依次与每一条规则进行匹配，第一个匹配的规则将被使用。
 
-如果没有匹配的规则，将使用默认材质 (例如 creeper.png)。
+如果没有匹配的规则，将使用默认纹理 (例如 creeper.png)。
 
 如果某个实体没有设置 ".properties" 文件，那么所有可以使用的皮肤都将应用于该实体。
 
-有多张材质的实体将使用基础材质的 ".properties" 文件，也就是说，你不需要新建
+有多张纹理的实体将使用基础纹理的 ".properties" 文件，也就是说，你不需要新建
 
 > wolf.properties
 >
@@ -62,7 +62,7 @@
 >
 > wolf_angry.properties
 
-如果每张材质都有相同数量的备选材质，只需要 wolf.properties 就可以应用于这三者。
+如果每张纹理都有相同数量的备选纹理，只需要 wolf.properties 就可以应用于这三者。
 
 "\_eyes" 和 "\_overlay" 类似。
 
@@ -74,12 +74,12 @@
 
 ## 属性文件丨random_entities.properties
 
-**(必须) 材质的序号**
+**(必须) 纹理的序号**
 
-材质序号 "1" 表示 "assets/minecraft/texture" 中的默认材质。
+纹理序号 "1" 表示 "assets/minecraft/texture" 中的默认纹理。
 
 ```properties
-textures.<n>=<材质序号列表>
+textures.<n>=<纹理序号列表>
 ```
 
 
@@ -94,7 +94,7 @@ skins.<n>=<皮肤列表>
 
 **(可选) 随机选项的权重**
 
-权重之和不需要正好为100或者其他特定数字。权重的数量应该和材质的数量一致。
+权重之和不需要正好为100或者其他特定数字。权重的数量应该和纹理的数量一致。
 
 ```properties
 weights.<n>=<等数量的权重列表>
@@ -122,7 +122,7 @@ heights.<n>=<高度范围>
 
 **(可选) 实体名**
 
-使用和自定义物品材质NBT标签相似的语法。
+使用和自定义物品纹理NBT标签相似的语法。
 
 以 "!" 开头的值表示匹配相反的东西 (非)。
 
@@ -294,8 +294,8 @@ heights.2=80-255
 
 
 
-没有其他规则匹配这些材质时，需要额外列出剩余的材质，这样他们会等概率地随机出现在上述情况以外的区域。
-请记住，如果没有这部分，这些材质就不会被使用，实体材质就只会显示为 creeper/creeper.png。
+没有其他规则匹配这些纹理时，需要额外列出剩余的纹理，这样他们会等概率地随机出现在上述情况以外的区域。
+请记住，如果没有这部分，这些纹理就不会被使用，实体纹理就只会显示为 creeper/creeper.png。
 
 ```properties
 skins.3=1-4 6 8 15-20
@@ -305,5 +305,5 @@ skins.3=1-4 6 8 15-20
 
 ## 译注
 
-绘制实体的材质，推荐使用BlockBench，自带MC原版生物的模型，甚至可以导入模组生物的 .java 格式模型（不过我估计模组生物是不能用随机实体材质的，大概）
+绘制实体的纹理，推荐使用BlockBench，自带MC原版生物的模型，甚至可以导入模组生物的 .java 格式模型（不过我估计模组生物是不能用随机实体纹理的，大概）
 

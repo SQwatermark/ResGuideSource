@@ -1,15 +1,19 @@
+能力所限，无翻译，如有能力科学上网，请直接阅读原文
+
+https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/shaders.properties
+
 ```properties
 ###############################################################################
-# OptiFine光影功能的示例配置文件
+# Sample configuration for OptiFine's Shaders feature.
 #
 ###############################################################################
 # shaders.properties
 ###############################################################################
-# 将这个文件放在光影包的 "shaders" 文件夹下
+# Place this file in the "shaders" folder of the shader pack
 # 
 # This file can use conditional preprocessor directives (#ifdef, #if, etc.)
-# For more details see "shaders.txt", section "Standard Macros" A to G.
-# Option macros are not available.
+# For more details see "shaders.txt", section "Standard Macros" A to I.
+# The settings version, oldLighting, separateAo, sliders, profiles and screen are parsed without option macros.
 #
 # Set clouds type or turn clouds off
 # The clouds are also controlled by "Video Settings -> Details -> Clouds" with higher priority
@@ -29,16 +33,25 @@ dynamicHandLight=true|false
 # The old block lighting is also controlled by "Video Settings -> Shaders -> Old Lighting" with higher priority
 oldLighting=true|false
 
+# Enable or disable rendering of terrain (solid, cutout, cutout_mipped) in the shadow pass
+shadowTerrain=true|false
+
 # Enable or disable rendering of translucent blocks (water, stained glass) in the shadow pass
 shadowTranslucent=true|false
+
+# Enable or disable rendering of entities in the shadow pass
+shadowEntities=true|false
+
+# Enable or disable rendering of block entities in the shadow pass
+shadowBlockEntities=true|false
 
 # Enable or disable underwater screen overlay
 underwaterOverlay=true|false
 
-# 启用或禁用太阳渲染
+# Enable or disable sun rendering
 sun=true|false
 
-# 启用或禁用月亮渲染
+# Enable or disable moon rendering
 moon=true|false
 
 # Enable or disable vignette rendering
@@ -67,10 +80,10 @@ separateAo=true|false
 # Enable or disable frustum culling
 frustum.culling=true|false
 
-# OptiFine 版本
-# 光影包需要的最低OptiFine版本
-# 每个Minecraft版本都需要分别说明
-# 示例:
+# OptiFine version
+# The minimum OptiFine version which is required by the shader pack
+# Each Minecraft version has to be specified separately.
+# For example:
 #   version.1.12.2=D1
 #   version.1.10.2=F1
 #   version.1.8=J1
@@ -311,7 +324,7 @@ screen.columns=2
 # Sub-screen
 screen.NAME.columns=2
 
-# 示例:
+# Example:
 # screen=<profile> <empty> BLOOM CELLSHADING [SUN_EFFECTS] [WAVING_GRASS]
 # screen.SUN_EFFECTS=SUN_EFFECTS GOD_RAYS LENS_FLARE RAINDROPS
 # screen.WAVING_GRASS=WAVING_GRASS WAVING_LEAVES WAVING_VINES
@@ -417,7 +430,7 @@ screen.NAME.columns=2
 #   vec3(x, y, z) 
 #   vec4(x, y, z, w)
 #
-# 示例:
+# Example:
 #   variable.bool.isBiomeDark=in(biome, BIOME_RIVER, BIOME_FOREST)
 #   variable.float.valBiomeDark=smooth(1, if(isBiomeDark, 1, 0), 5)
 #   variable.float.valHurtDark=smooth(2, if(is_hurt, 1.3, 0), 0, 10)
@@ -441,6 +454,12 @@ alphaTest.<program>=<off|func ref>
 # SRC_ALPHA, ONE_MINUS_SRC_ALPHA, DST_ALPHA, ONE_MINUS_DST_ALPHA, SRC_ALPHA_SATURATE
 blend.<program>=<off|src dst srcA dstA>
 
+# Blend mode per buffer
+# The blend mode can be configured per program and buffer
+# Where src, dst, srcA and dstA are one of: ZERO, ONE, SRC_COLOR, ONE_MINUS_SRC_COLOR, DST_COLOR, ONE_MINUS_DST_COLOR, 
+# SRC_ALPHA, ONE_MINUS_SRC_ALPHA, DST_ALPHA, ONE_MINUS_DST_ALPHA, SRC_ALPHA_SATURATE
+blend.<program>.<buffer>=<off|src dst srcA dstA>
+
 # Composite render scale
 # Defines a custom viewport to be used when rendering composite and deferred programs.
 # The scale, offsetX and offsetY should be between 0.0 and 1.0.
@@ -453,6 +472,15 @@ scale.<program>=<scale|scale offsetX ofsetY>
 # This can be used with composite render scale to allow several composite programs to write to different regions in the same buffer.
 # Forced buffer flip can be used to read from both ping-pong buffers.
 flip.<program>.<buffer>=<true|false>
+
+# Buffer size
+# Define custom fixed size for a specific buffer.
+# Only prepare, deferred and composite programs can render to fixed size buffers.
+# Rendering to fixed size and normal buffers at the same time is not possible.
+# When rendering to several fixed size buffers all of them must have the same size.
+# When width and height are floating point values, then the buffer size will be relative to the render size.
+# For example "size.buffer.colortex2=0.5 0.5" will create the buffer with widht and height half of the render width and height.
+size.buffer.<buffer>=width height
 
 # Enable or disable programs depending on shader options
 # Disabled progams are processed as not defined and instead their fallback programs will be used.
@@ -473,7 +501,7 @@ program.<program>.enabled=<expression>
 #   /shaders/world1  - end shaders
 #
 # Dimension folders are also scanned for options.
-# The options in dimension foldes may be given different names to avoid conflict with default values.
+# The options in dimension folders may be given different names to avoid conflict with default values.
 
 # The "#include" directive found in ".vsh" and ".fsh" files is replaced with the contents of the included file
 # Relative, look in same folder

@@ -4,7 +4,7 @@
 
 这是OptiFine的自定义天空功能的配置模板，基于MCPatcher的Better Skies mod的配置。
 
-将属性文件放置在材质包的如下位置
+将属性文件放置在纹理包的如下位置
 
 > ~/sky/world0/sky0.properties
 >
@@ -22,11 +22,11 @@ OptiFine将持续加载直到找不到属性文件为止。属性文件的加载
 >
 > ~/sky/world0/moon_phases.properties （取代 moon_phases.png）
 
-替换材质应该和 sun.png 或 moon_phases.png 相对应，而不是一个完整的天空盒。
+替换纹理应该和 sun.png 或 moon_phases.png 相对应，而不是一个完整的天空盒。
 
 所有的属性名都区分大小写。
 
-在属性文件中可以使用下列任何一种语法来指定一个材质文件的路径：
+在属性文件中可以使用下列任何一种语法来指定一个纹理文件的路径：
 
 相对于 assets/minecraft：
 
@@ -54,14 +54,14 @@ OptiFine将持续加载直到找不到属性文件为止。属性文件的加载
 
 ## 天空属性丨Sky properties
 
-**(可选) 替换材质**
+**(可选) 替换纹理**
 
-它可以在材质包的任何位置。
+它可以在纹理包的任何位置。
 
-而且多个属性文件可以共用相同的材质。如果未指定，会使用相同目录下的 sky\<n>.png。
+而且多个属性文件可以共用相同的纹理。如果未指定，会使用相同目录下的 sky\<n>.png。
 
 ```properties
-source=<材质>
+source=<纹理>
 ```
 
 

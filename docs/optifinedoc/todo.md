@@ -1,6 +1,6 @@
 <center><h1>尚未完成的事</h1><p>Todo</p></center>
 
-<center><b>连接材质</b></center>
+<center><b>连接纹理</b></center>
 
 <center>- innerSeams<br>- renderpass</center>
 

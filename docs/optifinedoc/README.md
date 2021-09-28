@@ -14,6 +14,10 @@
 首先你要对Minecraft原版的资源包有一定了解，如果你想从基础学起，建议看看Minecraft wiki的 "资源包" 章节
 如果使用本文档过程中遇到疑难，或者发现文档中有错误的地方，请回帖提出疑问/指出错误。这也会给接下来的阅读者很大帮助。
 
-非常经典的例子：Conquest_ 材质包，cocricot材质包，解压看看，非常有助于理解这篇文档的内容。
+非常经典的例子：Conquest_ 纹理包，cocricot纹理包，解压看看，非常有助于理解这篇文档的内容。
 
 感谢[墨浅南城](https://www.mcbbs.net/home.php?mod=space&uid=1671404)和[renyunzhong](https://www.mcbbs.net/home.php?mod=space&uid=424912)协助转换了文档格式。
+
+最后更新：2021年9月28日，如无失误，本文档的所有内容对应原文档该日期的版本，如需旧版文档，请至原文档的历史记录中查看。
+
+texture已统一翻译为“纹理”

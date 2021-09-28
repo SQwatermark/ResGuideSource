@@ -1,11 +1,11 @@
-<center><h1>自定义物品材质</h1><p>Custom Item Textures</p></center>
+<center><h1>自定义物品纹理</h1><p>Custom Item Textures</p></center>
 
 ## 全局属性丨cit.properties
 
 基于 MCPatcher 的 Custom Item Textures mod 的配置
 
-这个文件包含自定义物品材质的全局属性，它应该被放在材质包的 optifine/cit 文件夹下。
-关于单个物品材质，参阅 cit_single.properties。
+这个文件包含自定义物品纹理的全局属性，它应该被放在纹理包的 optifine/cit 文件夹下。
+关于单个物品纹理，参阅 cit_single.properties。
 
 所有的属性名都区分大小写。
 除非另作说明，所有的路径都相对于 assets/minecraft。
@@ -70,13 +70,13 @@ useGlint=<true | false>
 
 
 
-## 单个物品材质丨cit_single.properties
+## 单个物品纹理丨cit_single.properties
 
 基于 MCPatcher 的 Custom Item Textures mod 的配置
 
-对于每一个想要使用自定义材质的物品，使用这个模板在材质包的 optifine/cit 文件夹下创建一个 .properties 文件。属性（properties）文件可以放在 optifine/cit 的任意一层子文件夹下。
+对于每一个想要使用自定义纹理的物品，使用这个模板在纹理包的 optifine/cit 文件夹下创建一个 .properties 文件。属性（properties）文件可以放在 optifine/cit 的任意一层子文件夹下。
 
-每个属性文件都指定一个匹配的物品ID或物品名列表，一个替换材质，和一系列可选的用于指定伤害、堆叠数或NBT标签的规则。
+每个属性文件都指定一个匹配的物品ID或物品名列表，一个替换纹理，和一系列可选的用于指定伤害、堆叠数或NBT标签的规则。
 
 所有的属性名都区分大小写。除非另作说明，所有的路径都相对于assets/minecraft。
 
@@ -86,21 +86,21 @@ useGlint=<true | false>
 
 ---
 
-**(可选) 材质替换类型**
+**(可选) 纹理替换类型**
 
-- item:     简单的物品材质替换。适用于GUI中的物品，手持的物品，和世界中的物品。
+- item:     简单的物品纹理替换。适用于GUI中的物品，手持的物品，和世界中的物品。
             如果多个属性文件匹配相同的物品，只会使用第一个匹配的属性文件。
             (先按照权重排序，在权重相同的情况下按照物品名排序)
 
-- enchantment: 附魔的覆盖材质（替换 misc/glint.png）。
+- enchantment: 附魔的覆盖纹理（替换 misc/glint.png）。
                 如果多个属性文件匹配相同的物品，
                 它们将按照全局属性 cit.properties 文件中指定的规则来进行混合。
 
-- armor:    盔甲材质替换，应用于玩家和怪物穿戴的盔甲模型。
+- armor:    盔甲纹理替换，应用于玩家和怪物穿戴的盔甲模型。
             如果多个属性文件匹配相同的物品，只有第一个属性文件会被使用。
             (先按照权重排序，在权重相同的情况下按照物品名排序)
 
-- elytra:    鞘翅材质替换，应用于玩家和怪物穿戴的鞘翅模型。
+- elytra:    鞘翅纹理替换，应用于玩家和怪物穿戴的鞘翅模型。
             如果多个属性文件匹配相同的物品，只有第一个属性文件会被使用。
             (先按照权重排序，在权重相同的情况下按照物品名排序)
 
@@ -112,7 +112,7 @@ type=<item | enchantment | armor | elytra>
 
 
 
-使用替换材质的物品列表（对于 type=enchantment 类型可选，对于其他类型是必需的）
+使用替换纹理的物品列表（对于 type=enchantment 类型可选，对于其他类型是必需的）
 
 ```properties
 items=<物品ID列表>
@@ -120,7 +120,7 @@ items=<物品ID列表>
 
 
 
-**(可选) 替换材质**
+**(可选) 替换纹理**
 
 可以是完整路径也可以只是文件名：
 
@@ -128,21 +128,21 @@ items=<物品ID列表>
 >
 > excalibur                  -> optifine/cit/excalibur.png
 
-根据种类，包括动画在内的材质格式被通过不同方式处理。详见下面的 "特定种类属性" 章节。
+根据种类，包括动画在内的纹理格式被通过不同方式处理。详见下面的 "特定种类属性" 章节。
 
-如果不提供任何材质，OptiFine将按照属性文件名在属性文件所在的同一层文件夹中寻找材质，
+如果不提供任何纹理，OptiFine将按照属性文件名在属性文件所在的同一层文件夹中寻找纹理，
 
 > optifine/cit/excalibur.properties -> optifine/cit/excalibur.png
 
 ```properties
-texture=<替换材质>
+texture=<替换纹理>
 ```
 
 
 
 **(可选) 损害值**
 
-仅当物品损害值是特定值或者在特定区间内时使用替换材质。
+仅当物品损害值是特定值或者在特定区间内时使用替换纹理。
 
 对于有耐久度的新物品，损害值从零开始，当使用它时损害值升高（和耐久度相反且一一对应）。
 物品能承受的最大损害值各不相同，参阅 [http://www.minecraftwiki.net/wiki/Item_durability](http://www.minecraftwiki.net/wiki/Item_durability)
@@ -193,7 +193,7 @@ damageMask=<位元掩码>
 
 **(可选) 堆叠数**
 
-仅当堆叠数是特定值或在特定范围内时使用备选材质。
+仅当堆叠数是特定值或在特定范围内时使用备选纹理。
 
 ```properties
 stackSize=<堆叠数 0-65535>
@@ -251,7 +251,7 @@ hand=any|main(主手)|off(副手)
 
 **(可选) 基于NBT的规则**
 
-只有当NBT标签具有特定值时才使用替换材质。如果提供了多个规则，则所有规则都必须匹配。
+只有当NBT标签具有特定值时才使用替换纹理。如果提供了多个规则，则所有规则都必须匹配。
 
 可以使用像NBTExplorer这样的实用程序来查看不同物品的NBT标签。
 
@@ -413,23 +413,23 @@ nbt.<tag>=<值>
 
 ---
 
-**材质格式:**
+**纹理格式:**
 
-物品的替换材质是覆盖到原始的items.png上的，因此遵循与正常物品材质相同的规则。
+物品的替换纹理是覆盖到原始的items.png上的，因此遵循与正常物品纹理相同的规则。
 
 尤其是，这意味着动画必须使用 Mojang 的 .mcmeta 文件系统来实现正常播放。
 
 ```properties
-texture=<替换材质>
+texture=<替换纹理>
 ```
 
 
 
-**(可选) 多张材质的替换**
+**(可选) 多张纹理的替换**
 
-对于有多张材质的物品，这允许你为每张材质指定替换材质。
+对于有多张纹理的物品，这允许你为每张纹理指定替换纹理。
 
-例如，根据其状态，原版弓有四种可能的材质：
+例如，根据其状态，原版弓有四种可能的纹理：
 
 > bow_standby, bow_pulling_0, bow_pulling_1, bow_pulling_2. 
 
@@ -443,7 +443,7 @@ texture=<替换材质>
 >
 > texture.bow_pulling_2=my_special_bow_pulling_2
 
-药水也有两张材质，要替换它们，使用
+药水也有两张纹理，要替换它们，使用
 
 > texture.potion_bottle_drinkable=...
 
@@ -456,7 +456,7 @@ texture=<替换材质>
 如果没有匹配的texture.\<name>属性，则使用通用的texture属性。
 
 ```properties
-texture.<name>=<替换材质>
+texture.<name>=<替换纹理>
 ```
 
 
@@ -469,7 +469,7 @@ texture.<name>=<替换材质>
 >
 > ./mymodel  -> 和属性文件相同文件夹下的mymodel.json
 
-模型可以从相同文件夹下引用材质，例如: "./mytexture"
+模型可以从相同文件夹下引用纹理，例如: "./mytexture"
 
 ```properties
 model=<替换模型>  
@@ -511,21 +511,21 @@ weight=<整型>
 
 ---
 
-**材质格式:**
+**纹理格式:**
 
-附魔材质可以是任何分辨率。
+附魔纹理可以是任何分辨率。
 
 想要动态化一个附魔效果，则在anim/*.properties中使用如下方法
 
-> to=<附魔材质的完整路径>
+> to=<附魔纹理的完整路径>
 
 ```properties
-texture=<附魔材质>
+texture=<附魔纹理>
 ```
 
 
 
-**(可选) 将材质覆盖到底层材质时使用的混合方法**
+**(可选) 将纹理覆盖到底层纹理时使用的混合方法**
 
 查看Better Skies(sky.properties)来获取有效的方法列表。默认为add。
 
@@ -535,7 +535,7 @@ blend=<混合方法>
 
 
 
-**(可选) 材质的滚动速度**
+**(可选) 纹理的滚动速度**
 
 默认值为0 (无滚动)。
 
@@ -545,9 +545,9 @@ speed=<值>
 
 
 
-**(可选) 附魔材质相对于物品的角度**
+**(可选) 附魔纹理相对于物品的角度**
 
-如果speed不为0，材质会沿这个方向滚动。
+如果speed不为0，纹理会沿这个方向滚动。
 
 默认值为0。
 
@@ -609,17 +609,17 @@ duration=<秒>
 
 ---
 
-**材质格式:**
+**纹理格式:**
 
-替换材质应该符合对应的盔甲材质格式。
+替换纹理应该符合对应的盔甲纹理格式。
 
-对于动态材质，则在 anim/*.properties 中使用如下方法
+对于动态纹理，则在 anim/*.properties 中使用如下方法
 
-> to=<替换材质的路径>
+> to=<替换纹理的路径>
 
-**(必需) 替换材质**
+**(必需) 替换纹理**
 
-你需要为textures/models/armor中该类型盔甲的所有材质创建替换材质。
+你需要为textures/models/armor中该类型盔甲的所有纹理创建替换纹理。
 
 对于钻石盔甲，
 
@@ -662,7 +662,7 @@ weight=<整数>
 
 http://www.minecraftwiki.net/wiki/Data_values#Potions
 
-你可以不指定药水损害值，而使用一种基于文件名的系统为药水指定替换材质。
+你可以不指定药水损害值，而使用一种基于文件名的系统为药水指定替换纹理。
 
 注意这里描述的每一件事**都可以**(CAN)通过cit属性文件实现。
 
@@ -736,7 +736,7 @@ http://www.minecraftwiki.net/wiki/Data_values#Potions
 
 所以替换图像中一定要包括有颜色的液体。
 
-类似地，你可以替换各种 "无效果" 药水的材质。
+类似地，你可以替换各种 "无效果" 药水的纹理。
 
 它们只有非喷溅版本，同样只有标记(*)的版本在游戏中实际存在。
 
@@ -798,13 +798,13 @@ http://www.minecraftwiki.net/wiki/Data_values#Potions
 >
 >  uninteresting.png
 
-如果你宁愿所有的 "无效果" 药水都用一张单独的材质，
+如果你宁愿所有的 "无效果" 药水都用一张单独的纹理，
 
-这个文件可用于任何没有设置上列指定的替换材质的药水：
+这个文件可用于任何没有设置上列指定的替换纹理的药水：
 
 > optifine/cit/potion/normal/other.png
 
-另外两个材质(非喷溅型)也可以设置：
+另外两个纹理(非喷溅型)也可以设置：
 
 > optifine/cit/potion/normal/water.png - 水瓶 (item 373:0)
 >

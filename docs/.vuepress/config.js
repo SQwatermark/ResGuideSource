@@ -47,6 +47,7 @@ module.exports = {
             ['shaders.properties', '属性文件'],
           ]
         },
+        ['debug_keys', '调试快捷键'],
         ['todo', '尚未完成的事'],
       ],
       

@@ -1,14 +1,14 @@
-<center><h1>连接材质</h1><p>Connected Textures</p></center>
+<center><h1>连接纹理</h1><p>Connected Textures</p></center>
 
 ## CTM丨Connected Textures mod
 
-连接材质，原先是 MCPatcher 的功能，它提供了一系列连接方块材质的方法。
+连接纹理，原先是 MCPatcher 的功能，它提供了一系列连接方块纹理的方法。
 
-如果你想要某个方块（block）或者图块（tile）覆盖上连接材质或者随机材质，请在材质包的optifine/ctm文件夹下新建一个后缀为 .properties 的文件。属性（properties）文件可以放在 optifine/ctm 的任意一层子文件夹下。
+如果你想要某个方块（block）或者图块（tile）覆盖上连接纹理或者随机纹理，请在纹理包的optifine/ctm文件夹下新建一个后缀为 .properties 的文件。属性（properties）文件可以放在 optifine/ctm 的任意一层子文件夹下。
 
 译注：这里所谓的 "图块（tile）" 指的就是 assets 里面的一张张图片，虽然[译名标准化](https://minecraft-zh.gamepedia.com/Minecraft_Wiki:%E8%AF%91%E5%90%8D%E6%A0%87%E5%87%86%E5%8C%96)里 tile 是不翻译的，但是 tile 在某些情境下可以翻译成"方块"，为了避免混淆，还是按照感觉给出个译名。
 
-针对不同需求和限制，可以使用不同的连接方块材质的方法。下面将介绍如何使用每种方法。
+针对不同需求和限制，可以使用不同的连接方块纹理的方法。下面将介绍如何使用每种方法。
 
 ::: warning
 所有属性名称都区分大小写。除非另有说明，否则所有的路径都相对于assets/minecraft。
@@ -100,7 +100,7 @@ weight=<整数>
 
 
 
-**(必需) 替换材质的方法**
+**(必需) 替换纹理的方法**
 
 可选的方法：
 
@@ -146,7 +146,7 @@ method=<方法名>
 
 **(必需) 图块列表**
 
-就像方块和物品材质。每一个图块必须是一张独立的图片，
+就像方块和物品纹理。每一个图块必须是一张独立的图片，
 可以用以下几种格式来表示图块：
 
 > 0               -> 0.png
@@ -159,7 +159,7 @@ method=<方法名>
 >
 > \<skip>         -> 跳过图块，继续使用下一个CTM属性
 >
-> \<default>      -> 对方块/图块使用默认材质
+> \<default>      -> 对方块/图块使用默认纹理
 >
 > full/path/name.png -> 完整路径/文件名.png
 
@@ -181,7 +181,7 @@ tiles=<图块列表>
 
 **(可选) 连接类型**
 
-即连接到毗邻方块的条件，告诉游戏在什么情况下应该连接两个方块的材质。
+即连接到毗邻方块的条件，告诉游戏在什么情况下应该连接两个方块的纹理。
 
 > block: 当这个方块的id = 相邻方块的id时连接
 >
@@ -257,7 +257,7 @@ name=<名字>
 ```
 
 ::: warning
-下文所有内容都针对特定连接材质方法。
+下文所有内容都针对特定连接纹理方法。
 
 每一个 .properties 文件都应该仅包含其中一个小节列出的属性。
 :::
@@ -335,7 +335,7 @@ ctm.17=6
 
 
 
-## 水平连接材质丨Horizontal-only connected textures
+## 水平连接纹理丨Horizontal-only connected textures
 
 > method=horizontal
 
@@ -353,7 +353,7 @@ tiles=<4 tiles>
 
 
 
-## 垂直连接材质丨Vertical-only connected textures
+## 垂直连接纹理丨Vertical-only connected textures
 
 > method=vertical
 
@@ -371,7 +371,7 @@ tiles=<4 tiles>
 
 
 
-## 顶部连接材质丨Top connected textures
+## 顶部连接纹理丨Top connected textures
 
 > method=top
 
@@ -385,7 +385,7 @@ tiles=<单个图块>
 
 
 
-## 随机材质丨Random textures
+## 随机纹理丨Random textures
 
 > method=random
 
@@ -423,7 +423,7 @@ weights=<对应的权重>
 **(可选) 随机循环**
 
 重复随机函数的次数，用于增加随机性。
-可以使不同的材质使用不同的随机样式。
+可以使不同的纹理使用不同的随机样式。
 较高的值可能会降低区块加载速度。
 默认值为0。
 
@@ -437,11 +437,11 @@ randomLoops=<0-9>
 
 只适用于标准的六面体方块。
 
-> none: 所有6个面都是独立材质。这是默认值。
+> none: 所有6个面都是独立纹理。这是默认值。
 >
-> opposite: 双向对称；相反的面有相同的材质，但其他面可能有不同的材质。
+> opposite: 双向对称；相反的面有相同的纹理，但其他面可能有不同的纹理。
 >
-> all: 六个面拥有相同的材质。
+> all: 六个面拥有相同的纹理。
 
 ```properties
 symmetry=<none | opposite | all>
@@ -449,16 +449,16 @@ symmetry=<none | opposite | all>
 
 
 
-**(可选) 相邻方块之间的材质连接**
+**(可选) 相邻方块之间的纹理连接**
 
 如果为 true，OptiFine 对所有多方块对象的所有部分使用相同的随机数种子，
 例如，高草丛的顶部和底部。
 
-这允许你为多方块对象创建统一的随机材质。
-如果该属性为 false，这两部分会被 "打乱"，也就是说，这两张材质可能会不匹配。
+这允许你为多方块对象创建统一的随机纹理。
+如果该属性为 false，这两部分会被 "打乱"，也就是说，这两张纹理可能会不匹配。
 
 注: 要使其正常工作，你需要多个 links =true 的属性文件，
-以及相同数量的替换材质和相同数量的权重。
+以及相同数量的替换纹理和相同数量的权重。
 
 例如，
 
@@ -488,7 +488,7 @@ linked=<true | false>
 
 
 
-## 重复图案材质丨Repeat pattern textures
+## 重复图案纹理丨Repeat pattern textures
 
 > method=repeat
 
@@ -522,9 +522,9 @@ tiles=<图块列表>
 
 只适用于标准的六面体方块。默认值为none
 
-> none: 6个面都有材质，这样图块从所有面看上去都是一样的。
+> none: 6个面都有纹理，这样图块从所有面看上去都是一样的。
 >
-> opposite: 双向对称；相反的面具有相同的材质，这意味着与北面和西面相比，南面和东面的图块将左右镜像。
+> opposite: 双向对称；相反的面具有相同的纹理，这意味着与北面和西面相比，南面和东面的图块将左右镜像。
 
 ```properties
 symmetry=<none | opposite>
@@ -532,7 +532,7 @@ symmetry=<none | opposite>
 
 
 
-## 固定材质丨Fixed textures
+## 固定纹理丨Fixed textures
 
 > method=fixed
 
@@ -544,7 +544,7 @@ tiles=<单个图块>
 
 
 
-## 覆盖材质丨Overlay textures
+## 覆盖纹理丨Overlay textures
 
 > method=overlay
 
@@ -570,7 +570,7 @@ connectBlocks=<方块列表>
 
 **(可选) Tint index**
 
-图块材质的Tint index，默认为-1（禁用）
+图块纹理的Tint index，默认为-1（禁用）
 
 ```properties
 tintIndex=<index>
@@ -580,7 +580,7 @@ tintIndex=<index>
 
 **(可选) Tint block**
 
-用于图块材质着色的方块。
+用于图块纹理着色的方块。
 对于相同的tint index，不同方块使用不同颜色。
 
 ```properties
@@ -591,15 +591,15 @@ tintBlock=<block>
 
 **(可选) Layer**
 
-覆盖材质应该在哪一层上被渲染。
+覆盖纹理应该在哪一层上被渲染。
 
 值：
 
-> cutout_mipped - 有多级纹理的透明材质
+> cutout_mipped - 有多级纹理的透明纹理
 >
-> cutout - 没有多级纹理的透明材质
+> cutout - 没有多级纹理的透明纹理
 >
-> translucent - 有多级纹理的半透明材质
+> translucent - 有多级纹理的半透明纹理
 
 默认值为 "cutout_mipped"
 

@@ -2,7 +2,7 @@
 
 ## 概述丨Overview
 
-让低坡度草地的侧面覆盖上草方块顶部的材质，可以在视频设置里开启或关闭。
+让低坡度草地的侧面覆盖上草方块顶部的纹理，可以在视频设置里开启或关闭。
 
 
 
@@ -41,7 +41,7 @@ podzol.snow=true
 >
 > layer 2 = grass（由生物群系着色）
 
-允许用透明草地材质做草地侧面的覆盖层
+允许用透明草地纹理做草地侧面的覆盖层
 
 ```properties
 grass.multilayer=false
@@ -49,9 +49,9 @@ grass.multilayer=false
 
 
 
-**材质**
+**纹理**
 
-更好的草地使用的材质贴图。
+设置更好的草地使用的纹理。
 "texture.grass" 由生物群系着色。
 
 ```properties

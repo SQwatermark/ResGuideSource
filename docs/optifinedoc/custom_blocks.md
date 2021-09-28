@@ -12,9 +12,9 @@
 
 | 渲染层        | 说明                                                      |
 | ------------- | --------------------------------------------------------- |
-| solid         | 无alpha通道，无混合 （固体材质）                          |
-| cutout        | 有alpha通道，无混合（cutout材质/裁切图案）                |
-| cutout_mipped | 有alpha通道，无混合，有多级纹理（有多级纹理的cutout材质） |
+| solid         | 无alpha通道，无混合 （固体纹理）                          |
+| cutout        | 有alpha通道，无混合（cutout纹理/裁切图案）                |
+| cutout_mipped | 有alpha通道，无混合，有多级纹理（有多级纹理的cutout纹理） |
 | translucent   | 有alpha通道，有混合，有多级纹理（水, 彩色玻璃）           |
 
 ```properties

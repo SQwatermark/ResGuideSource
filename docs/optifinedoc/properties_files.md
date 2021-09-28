@@ -23,11 +23,11 @@ OptiFine的许多功能需要用到属性文件（Properties Files），它们�
 
 很多属性文件中有一些相同类型的属性。下面对它们作出说明，在其余章节中就不再赘述了。
 
-## 材质丨Textures
+## 纹理丨Textures
 
-OptiFine 常常会要求你填写一个路径，指向某个图形文件或者其他资源。这指的是材质包的 zip 文件（或者文件夹）中的路径。
+OptiFine 常常会要求你填写一个路径，指向某个图形文件或者其他资源。这指的是纹理包的 zip 文件（或者文件夹）中的路径。
 
-材质包中的文件夹结构可以多层嵌套。所以 OptiFine 提供了一些便捷的方法来简化操作。
+纹理包中的文件夹结构可以多层嵌套。所以 OptiFine 提供了一些便捷的方法来简化操作。
 如果OptiFine要求你提供一个文件路径，你可以使用下列任意一种方法：
 
 > 直接的方法是指出文件相对于 assets/minecraft 的路径：
@@ -37,7 +37,7 @@ OptiFine 常常会要求你填写一个路径，指向某个图形文件或者�
 > texture=textures/entity/creeper/creeper.png
 > ```
 >
-> 这表示在材质包的 zip 文件或文件夹中的 "assets/minecraft/textures/entity/creeper/creeper.png"。
+> 这表示在纹理包的 zip 文件或文件夹中的 "assets/minecraft/textures/entity/creeper/creeper.png"。
 >
 > 请始终使用斜杠 "/" 分隔文件夹。无论你的操作系统是什么，都不要使用反斜杠 "\\"，否则 OptiFine 将无法正确识别路径。
 >
@@ -63,7 +63,7 @@ OptiFine 常常会要求你填写一个路径，指向某个图形文件或者�
 >
 > <br>
 >
-> 仅用于 OptiFine 的材质应该放在 "assets/minecraft/optifine" 文件夹中。
+> 仅用于 OptiFine 的纹理应该放在 "assets/minecraft/optifine" 文件夹中。
 > 由于被频繁使用，它可以被波浪号 "~" 表示。
 >
 > 下面两个表示同一文件：
@@ -102,7 +102,7 @@ OptiFine 常常会要求你填写一个路径，指向某个图形文件或者�
 >
 > 如果属性文件在另一个位置，例如 ~/misc，那么相对路径将基于该文件夹，但是绝对路径仍然指向dial文件夹。
 
-总而言之，请尽量把属性文件和它所用到的材质放在同一个路径下。你需要写的路径会更短，当你需要移动文件时，也更容易维持结构。
+总而言之，请尽量把属性文件和它所用到的纹理放在同一个路径下。你需要写的路径会更短，当你需要移动文件时，也更容易维持结构。
 
 ## 方块丨Blocks
 
@@ -110,7 +110,7 @@ OptiFine 常常会要求你填写一个路径，指向某个图形文件或者�
 
 虽然数字ID仍然存在于游戏内部，但由于它们不稳定，所以不能在配置文件中使用。（译注：1.13版本前可以，用法参考 conquest 之类的资源包）
 
-例如，以前你可以用1指代石头方块，但现在你得用 "minecraft:stone"。和材质一样，前缀 "minecraft:" 是可省略的，所以只有 "stone" 也是可以的。模组的命名空间并非 "minecraft"，在这种情况下需要前缀。参阅[Dinnerbone的方块、物品ID和名称列表](http://media.dinnerbone.com/uploads/2013-09/files/28_00-44-23_YfmAkomVI.txt)。
+例如，以前你可以用1指代石头方块，但现在你得用 "minecraft:stone"。和纹理一样，前缀 "minecraft:" 是可省略的，所以只有 "stone" 也是可以的。模组的命名空间并非 "minecraft"，在这种情况下需要前缀。参阅[Dinnerbone的方块、物品ID和名称列表](http://media.dinnerbone.com/uploads/2013-09/files/28_00-44-23_YfmAkomVI.txt)。
 
 在1.13中，许多有复杂变体的方块被 "扁平化" 为几个简单方块，方块的元数据（metadata）被删除。参阅[Minecraft Wiki 的有关条目](https://minecraft-zh.gamepedia.com/1.13/扁平化)。
 
@@ -166,20 +166,20 @@ biomes=minecraft:ocean biomesoplenty:highland
 
 ## 混合方法丨Blending methods
 
-当两个或多个材质组合在一起时，OptiFine提供了几种混合方法。
+当两个或多个纹理组合在一起时，OptiFine提供了几种混合方法。
 
-下面描述了有效的混合方法。"当前材质" 表示正在使用这个混合方法的材质。
-"原材质" 表示到目前为止已经渲染出的东西，可能是原始的材质，也可能是之前的混合操作得到的结果。
+下面描述了有效的混合方法。"当前纹理" 表示正在使用这个混合方法的纹理。
+"原纹理" 表示到目前为止已经渲染出的东西，可能是原始的纹理，也可能是之前的混合操作得到的结果。
 
 | 混合方法 | 效果                                                         |
 | -------- | ------------------------------------------------------------ |
-| replace  | 用当前材质完全替换原材质。没有任何混合，只有透明与不透明的选项。 |
-| alpha    | 按照当前材质的透明度混合材质。这是最常见的混合方法。         |
+| replace  | 用当前纹理完全替换原纹理。没有任何混合，只有透明与不透明的选项。 |
+| alpha    | 按照当前纹理的透明度混合纹理。这是最常见的混合方法。         |
 | overlay  | RGB 值大于0.5 时，会使原图片变亮，小于0.5时变暗。这个方法别名为color。 |
-| add      | 将当前材质的RGB值乘alpha值，将所得的结果加到原材质上。       |
-| subtract | 从原材质减去当前材质的RGB值。                                |
-| multiply | 将当前材质和原材质的RGB值相乘。                              |
-| dodge    | 将当前材质的RGB值直接加到原材质上。                          |
+| add      | 将当前纹理的RGB值乘alpha值，将所得的结果加到原纹理上。       |
+| subtract | 从原纹理减去当前纹理的RGB值。                                |
+| multiply | 将当前纹理和原纹理的RGB值相乘。                              |
+| dodge    | 将当前纹理的RGB值直接加到原纹理上。                          |
 | burn     | 新RGB = (1 - 当前RGB) * 原RGB                                |
 | screen   | 新RGB = 1 - (1 - 当前RGB) * (1 - 原RGB)                      |
 
