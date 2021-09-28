@@ -1,9 +1,5 @@
 # 动态纹理（前篇）
 
-<iframe src="//player.bilibili.com/player.html?aid=926013473&bvid=BV1TT4y1J7rz&cid=202859551&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-本节我们将实现上面的视频展示的~~土嗨KTV~~动态纹理。
-
 ![自己动手做一台老式放映机，放一场默片老电影_胶片](README.assets/0b49e5b5212444509e87ec77524cfd10.gif)
 
 动态纹理就像老式电影的胶卷一样，实际上是逐帧绘制，竖向连接成长条的单张图案。在游戏中，自上而下逐帧播放，反复循环。一共有多少帧，每一帧播放多长时间，都是可以自定义的。
