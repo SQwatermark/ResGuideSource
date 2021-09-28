@@ -2,13 +2,13 @@
 
 ## 概述丨Overview
 
-译注：这个全景图指的就是Minecraft主菜单背景中的全景图
+译注：这个全景图指的就是 Minecraft 主菜单背景的全景图
 
 
 
 ## 属性文件丨background.properties
 
-文件 "/assets/minecraft/optifine/gui/background.properties" 控制主菜单全景图（panorama）的行为
+文件 "/assets/minecraft/optifine/gui/background.properties" 控制主菜单全景图（panorama）的行为。
 
 备选全景图文件夹：
 
@@ -20,7 +20,7 @@
 >
 > ...
 
-译注：当你打开主菜单时，OptiFine会随机抓一个备选文件夹，播放里面的全景图。
+译注：当你打开主菜单时，OptiFine 会随机选取一个备选文件夹，播放里面的全景图。
 
 备选全景图文件夹应该包含以下纹理：
 
@@ -38,7 +38,7 @@
 
 备选全景图文件夹内可以创建 "background.properties" 来定义此全景图的自定义属性。
 
-**权重 (可选)**
+**权重（可选）**
 
 权重越高，越容易被选中，默认为 1。
 
@@ -48,7 +48,7 @@ weight=<权重>
 
 
 
-**模糊等级(Blur level) (可选)**
+**模糊等级（可选）**
 
 主菜单背景使用三种模糊，模糊等级过高可能会降低主菜单FPS。
 
@@ -60,9 +60,9 @@ blur3=<1-3>
 
 
 
-**覆盖层颜色(Overlay colors) (可选)**
+**覆盖层颜色（可选）**
 
-在背景图像上有两个渐变覆盖层，当顶部和底部颜色为0时，覆盖被禁用。
+在全景图上有两个渐变覆盖层，当 top 和 bottom 颜色都为 0 时，覆盖层被禁用。
 
 颜色格式为 ARGB （十六进制）
 

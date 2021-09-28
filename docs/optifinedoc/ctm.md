@@ -17,7 +17,7 @@
 
 ## 公共属性丨General properties
 
-**(可选) 列出这个方法所应用于的方块/图块**
+**（可选）列出这个方法所应用于的方块/图块**
 
 同一个方块/图块可以有多个属性文件，它们会按照文件名的字母顺序依次加载。所有用于图块的属性文件会在用于方块的属性文件之前被检测，第一个匹配的属性文件会被加载。
 
@@ -74,7 +74,7 @@ matchBlocks=<方块列表 + 可选属性>
 
 
 
-**(可选) metadata**
+**（可选）metadata**
 
 限制匹配的方块的metadata，可以是 0 到 31 的任意值。仅限 1.13 之前的版本。
 
@@ -86,7 +86,7 @@ metadata=<metadata 列表>
 
 
 
-**(可选) 权重**
+**（可选）权重**
 
 如果多个属性文件匹配相同的方块，会使用拥有最大权重的属性文件。如果权重相同，会接着比较属性文件名。
 
@@ -100,7 +100,7 @@ weight=<整数>
 
 
 
-**(必需) 替换纹理的方法**
+**（必需）替换纹理的方法**
 
 可选的方法：
 
@@ -144,7 +144,7 @@ method=<方法名>
 
 
 
-**(必需) 图块列表**
+**（必需）图块列表**
 
 就像方块和物品纹理。每一个图块必须是一张独立的图片，
 可以用以下几种格式来表示图块：
@@ -179,7 +179,7 @@ tiles=<图块列表>
 
 
 
-**(可选) 连接类型**
+**（可选）连接类型**
 
 即连接到毗邻方块的条件，告诉游戏在什么情况下应该连接两个方块的纹理。
 
@@ -199,7 +199,7 @@ connect=<block | tile | material | state>
 
 
 
-**(可选) 面**
+**（可选）面**
 
 将方法的作用范围限制在方块确定的面。
 
@@ -227,7 +227,7 @@ faces=<以下的组合: north south east west top bottom sides all>
 
 
 
-**(可选) 生物群系和高度范围**
+**（可选）生物群系和高度范围**
 
 限定生物群系或高度范围。
 
@@ -242,7 +242,7 @@ heights=<高度范围>
 
 
 
-**(可选) 名字**
+**（可选）名字**
 
 只适用于具有对应的可命名的方块实体的方块。
 
@@ -266,7 +266,7 @@ name=<名字>
 
 > method=ctm
 
-**(必需) 47个图块**
+**（必需）47个图块**
 
 ```properties
 tiles=<47 tiles>
@@ -274,7 +274,7 @@ tiles=<47 tiles>
 
 
 
-**(可选) 连接相邻方块时，是否显示内边缘接缝**
+**（可选）连接相邻方块时，是否显示内边缘接缝**
 
 ```properties
 innerSeams=false
@@ -282,7 +282,7 @@ innerSeams=false
 
 **模板：**
 
-![模板](https://attachment.mcbbs.net/forum/201909/12/201902abt22lpjiy5204t5.png)
+![ctm_template.png](ctm.assets/ctm_template.png)
 
 译注：如果你疑惑为什么需要这么多张图片，不妨亲自尝试一下
 
@@ -294,7 +294,7 @@ innerSeams=false
 
 
 
-**(必需) 5个图块**
+**（必需）5个图块**
 
 ```properties
 tiles=<5 tiles>
@@ -302,7 +302,7 @@ tiles=<5 tiles>
 
 
 
-**(可选) 连接相邻方块时，是否显示内边缘接缝**
+**（可选）连接相邻方块时，是否显示内边缘接缝**
 
 ```properties
 innerSeams=false
@@ -310,7 +310,7 @@ innerSeams=false
 
 **模板：**
 
-![模板](https://attachment.mcbbs.net/forum/201909/12/201916s6q2zj2fh11nia6f.png)
+![ctm_compact_template.png](ctm.assets/ctm_compact_template.png)
 
 
 
@@ -318,7 +318,7 @@ innerSeams=false
 
 > method=ctm_compact
 
-**(必需) 简化CTM方法使用的5个图块**
+**（必需）简化CTM方法使用的5个图块**
 
 ```properties
 tiles=<5 tiles> <额外的图块>
@@ -326,7 +326,7 @@ tiles=<5 tiles> <额外的图块>
 
 
 
-**(可选) 让CTM的一些情况使用指定的图块**
+**（可选）让CTM的一些情况使用指定的图块**
 
 ```properties
 ctm.46=5
@@ -341,7 +341,7 @@ ctm.17=6
 
 
 
-**(必需) 4个图块**
+**（必需）4个图块**
 
 ```properties
 tiles=<4 tiles>
@@ -349,7 +349,7 @@ tiles=<4 tiles>
 
 **模板：**
 
-![模板](https://attachment.mcbbs.net/forum/201909/12/201931f9xowx0o0tclc6jw.png)
+![horizontal_template.png](ctm.assets/horizontal_template.png)
 
 
 
@@ -359,7 +359,7 @@ tiles=<4 tiles>
 
 
 
-**(必需) 4个图块**
+**（必需）4个图块**
 
 ```properties
 tiles=<4 tiles>
@@ -367,7 +367,7 @@ tiles=<4 tiles>
 
 **模板：**
 
-![模板](https://attachment.mcbbs.net/forum/201909/12/201942s7olvxbv26pv7046.png)
+![vertical_template.png](ctm.assets/vertical_template.png)
 
 
 
@@ -377,7 +377,7 @@ tiles=<4 tiles>
 
 
 
-**(必需) 只需要1个图块**
+**（必需）只需要1个图块**
 
 ```properties
 tiles=<单个图块>
@@ -391,7 +391,7 @@ tiles=<单个图块>
 
 
 
-**(必需) 任意数量的图块**
+**（必需）任意数量的图块**
 
 ```properties
 tiles=<图块列表>
@@ -399,7 +399,7 @@ tiles=<图块列表>
 
 
 
-**(可选) 权重**
+**（可选）权重**
 
 例如，如果
 
@@ -420,7 +420,7 @@ weights=<对应的权重>
 
 
 
-**(可选) 随机循环**
+**（可选）随机循环**
 
 重复随机函数的次数，用于增加随机性。
 可以使不同的纹理使用不同的随机样式。
@@ -433,7 +433,7 @@ randomLoops=<0-9>
 
 
 
-**(可选) 方块的各个面的对称性**
+**（可选）方块的各个面的对称性**
 
 只适用于标准的六面体方块。
 
@@ -449,7 +449,7 @@ symmetry=<none | opposite | all>
 
 
 
-**(可选) 相邻方块之间的纹理连接**
+**（可选）相邻方块之间的纹理连接**
 
 如果为 true，OptiFine 对所有多方块对象的所有部分使用相同的随机数种子，
 例如，高草丛的顶部和底部。
@@ -494,7 +494,7 @@ linked=<true | false>
 
 
 
-**(必需) 重复图案的宽度**
+**（必需）重复图案的宽度**
 
 ```properties
 width=<图案宽度>
@@ -502,7 +502,7 @@ width=<图案宽度>
 
 
 
-**(必需) 重复图案的高度**
+**（必需）重复图案的高度**
 
 ```properties
 height=<图案高度>
@@ -510,7 +510,7 @@ height=<图案高度>
 
 
 
-**(必需) 图块列表**（也就是按从左到右，从上到下的顺序列出所有图块）
+**（必需）图块列表**（也就是按从左到右，从上到下的顺序列出所有图块）
 
 ```properties
 tiles=<图块列表>
@@ -518,7 +518,7 @@ tiles=<图块列表>
 
 
 
-**(可选) 方块的各个面的对称性**
+**（可选）方块的各个面的对称性**
 
 只适用于标准的六面体方块。默认值为none
 
@@ -536,7 +536,7 @@ symmetry=<none | opposite>
 
 > method=fixed
 
-**(必需) 单个图块**
+**（必需）单个图块**
 
 ```properties
 tiles=<单个图块>
@@ -548,7 +548,7 @@ tiles=<单个图块>
 
 > method=overlay
 
-**(可选) 连接图块**
+**（可选）连接图块**
 
 只连接使用指定图块的方块
 
@@ -558,7 +558,7 @@ connectTiles=<图块列表>
 
 
 
-**(可选) 连接方块**
+**（可选）连接方块**
 
 只连接指定的方块
 
@@ -568,7 +568,7 @@ connectBlocks=<方块列表>
 
 
 
-**(可选) Tint index**
+**（可选）Tint index**
 
 图块纹理的Tint index，默认为-1（禁用）
 
@@ -578,7 +578,7 @@ tintIndex=<index>
 
 
 
-**(可选) Tint block**
+**（可选）Tint block**
 
 用于图块纹理着色的方块。
 对于相同的tint index，不同方块使用不同颜色。
@@ -589,7 +589,7 @@ tintBlock=<block>
 
 
 
-**(可选) Layer**
+**（可选）Layer**
 
 覆盖纹理应该在哪一层上被渲染。
 
@@ -609,5 +609,5 @@ layer=<cutout_mipped|cutout|translucent>
 
 **模板：**
 
-![模板](https://attachment.mcbbs.net/forum/201909/12/201957oug1gtbufnbuo7kf.png)
+![overlay_template.png](ctm.assets/overlay_template.png)
 

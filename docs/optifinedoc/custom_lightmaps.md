@@ -50,7 +50,7 @@ OptiFine让你可以自定义游戏中的光照，基于McPatcher的自定义光
 
 两个列，上半部分的16个像素和下半部分的16个像素，被选择来形成最终用于渲染的16x16光照图的轴线。
 
-![img](https://attachment.mcbbs.net/forum/201911/14/102150fthud0hvbucotdvb.png)
+![lightmap_template.png](custom_lightmaps.assets/lightmap_template.png)
 模板: images/lightmap_template.png
 
 蓝色代表夜晚，橙色代表黄昏/黎明，青色代表白天，黄色代表闪电。在上半部分，左边代表夜晚，右边代表白天，其间有黄昏/黎明的过渡。调色板的最右边代表闪电。
@@ -58,7 +58,7 @@ OptiFine让你可以自定义游戏中的光照，基于McPatcher的自定义光
 重申，调色板没有固定的宽度，但是更宽意味着过渡中更多的细节空间。
 
 译注：OptiFine提供的示例看不出对应的颜色了，可以参考下面这张图片，来源于[https://bitbucket.org/prupe/mcpatcher/wiki/Lightmaps](https://bitbucket.org/prupe/mcpatcher/wiki/Lightmaps)
-![img](https://attachment.mcbbs.net/forum/201911/14/102201q619dfdfw962wv9d.png)
+![Template by Misa](custom_lightmaps.assets/lightmap_template2.png)
 
 火把的工作原理类似，但在这种情况下，x坐标只是一个模拟火把闪烁的随机值。沿x轴的变化将决定火炬闪烁有多明显。要使火把光线完全稳定，没有闪烁，就要让每一行的所有像素具有相同的颜色。
 

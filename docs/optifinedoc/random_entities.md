@@ -2,11 +2,9 @@
 
 ## 概述丨Overview
 
-随机实体纹理基于MCPatcher的 Random Mobs 模组
+随机实体纹理基于 MCPatcher 的 Random Mobs 模块，可以向下兼容随机怪物（Random Mobs），仍然支持在 "assets/minecraft/optifine/mob" 中的纹理和配置文件。
 
-可以向下兼容随机怪物（Random Mobs），仍然支持在 "assets/minecraft/optifine/mob" 中的纹理和配置文件。
-
-你可以把备选纹理放在资源包的 "optifine/random" 文件夹下，和 "textures" 文件夹中的原版纹理是对应的:
+你可以把备选纹理放在资源包的 "optifine/random" 文件夹下，和 "textures" 文件夹中的原版纹理对应:
 
 基础纹理：
 
@@ -20,7 +18,7 @@
 >
 > assets/minecraft/optifine/random/entity/creeper/creeper4.png
 
-诸如此类
+以此类推
 
 属性文件（可选）：
 
@@ -38,7 +36,7 @@
 >
 > assets/minecraft/optifine/random/painting/paintings_kristoffer_zetterstrand4.png
 
-诸如此类
+以此类推
 
 属性文件（可选）：
 
@@ -50,7 +48,7 @@
 
 单人游戏中怪物生成的坐标或者多人游戏中怪物第一次被玩家发现时的坐标会依次与每一条规则进行匹配，第一个匹配的规则将被使用。
 
-如果没有匹配的规则，将使用默认纹理 (例如 creeper.png)。
+如果没有匹配的规则，将使用默认纹理（例如 creeper.png）。
 
 如果某个实体没有设置 ".properties" 文件，那么所有可以使用的皮肤都将应用于该实体。
 
@@ -66,7 +64,7 @@
 
 "\_eyes" 和 "\_overlay" 类似。
 
-（译者注：原文写的就不明不白，对此感到困惑的可以看一下[这个帖子](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=975656&pid=16713190)）
+（译注：原文写的就不明不白，对此感到困惑的可以看一下[这个帖子](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=975656&pid=16713190)）
 
 所有的属性名都区分大小写。除非另作说明，所有的路径都相对于assets/minecraft。
 
@@ -74,7 +72,7 @@
 
 ## 属性文件丨random_entities.properties
 
-**(必须) 纹理的序号**
+**（必需）纹理的序号**
 
 纹理序号 "1" 表示 "assets/minecraft/texture" 中的默认纹理。
 
@@ -92,7 +90,7 @@ skins.<n>=<皮肤列表>
 
 
 
-**(可选) 随机选项的权重**
+**（可选）随机选项的权重**
 
 权重之和不需要正好为100或者其他特定数字。权重的数量应该和纹理的数量一致。
 
@@ -102,7 +100,7 @@ weights.<n>=<等数量的权重列表>
 
 
 
-**(可选) 生物群系列表**
+**（可选）生物群系列表**
 
 这里列出了原版生物群系名：[https://minecraft.gamepedia.com/Biome#Biome_IDs](https://minecraft.gamepedia.com/Biome#Biome_IDs)，也可以使用模组添加的生物群系。
 
@@ -112,7 +110,7 @@ biomes.<n>=<生物群系列表>
 
 
 
-**(可选) 高度范围**
+**（可选）高度范围**
 
 取代了旧的 minHeight 和 maxHeight 属性。
 
@@ -120,7 +118,7 @@ biomes.<n>=<生物群系列表>
 heights.<n>=<高度范围>
 ```
 
-**(可选) 实体名**
+**（可选）实体名**
 
 使用和自定义物品纹理NBT标签相似的语法。
 
@@ -159,7 +157,7 @@ name.<n>=<实体名>
 
 
 
-**职业 (可选)**
+**职业（可选）**
 
 列出村民职业，可选填等级。
 
@@ -190,7 +188,7 @@ professions.<n>=<职业>
 
 
 
-**项圈颜色 (可选)**
+**项圈颜色（可选）**
 
 列出狼/猫的项圈颜色
 
@@ -212,7 +210,7 @@ colarColors=pink magenta purple
 
 
 
-**是否为幼崽 (可选)**
+**是否为幼崽（可选）**
 
 只对怪物有效
 
@@ -305,5 +303,5 @@ skins.3=1-4 6 8 15-20
 
 ## 译注
 
-绘制实体的纹理，推荐使用BlockBench，自带MC原版生物的模型，甚至可以导入模组生物的 .java 格式模型（不过我估计模组生物是不能用随机实体纹理的，大概）
+推荐使用 BlockBench 绘制实体的纹理，可以直接在模型上绘制。
 
