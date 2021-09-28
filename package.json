@@ -1,7 +1,7 @@
 {
   "name": "vuepress-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "这个仓库由两部分组成",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,5 +27,16 @@
     "markdown-it-disable-url-encode": "^1.0.1",
     "medium-zoom": "^1.0.6",
     "vssue": "^1.4.6"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SQwatermark/ResGuideSource.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SQwatermark/ResGuideSource/issues"
+  },
+  "homepage": "https://github.com/SQwatermark/ResGuideSource#readme"
 }

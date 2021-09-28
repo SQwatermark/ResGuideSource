@@ -2,9 +2,7 @@
 
 ## 概述丨Overview
 
-此页面是 OptiFine 的自定义生物群系调色板的说明，基于McPatcher的自定义生物群系调色板。
-
-在原版Minecraft中，生物群系不同，草和树叶的纹理会显示不同颜色。
+在原版 Minecraft 中，生物群系不同，草和树叶的纹理会显示不同颜色。
 
 这是由以下两个文件控制的：
 
@@ -12,7 +10,7 @@
 >
 > assets/minecraft/textures/colormap/foliage.png
 
-每个文件都是一张 256x256 的颜色映射图（colormap），应用于基础的草和树叶纹理（通常是灰色的）。
+每个文件都是一张 256x256 的颜色映射图（colormap），应用于基础的草和树叶的纹理（通常是灰色的）。
 
 OptiFine 极大地扩展了这个功能，使其适用于其它方块、环境天空和迷雾的颜色。
 
@@ -32,11 +30,11 @@ OptiFine 极大地扩展了这个功能，使其适用于其它方块、环境�
 
 随着y轴坐标的增大，它在 colormap 中的位置缓慢地向右下方移动。
 
-khanador 撰写的一篇帖子阐述了这是如何工作的：
+khanador 撰写的一篇帖子阐述了其逻辑：
 
 [http://www.minecraftforum.net/forums/mapping-and-modding/resource-packs/resource-pack-discussion/1256322-new-biome?comment=124](http://www.minecraftforum.net/forums/mapping-and-modding/resource-packs/resource-pack-discussion/1256322-new-biome?comment=124)
 
-如果你没在属性文件里说明使用哪种格式的话，默认按照原版格式读取。
+如果你没在属性文件里说明使用哪种格式，默认按照原版格式读取。
 
 **OptiFine "网格" 格式**
 
@@ -45,7 +43,7 @@ khanador 撰写的一篇帖子阐述了这是如何工作的：
 
 **其他格式**
 
-此外，OptiFine提供了一种简单的 "固定" colormap 格式。这种格式不需要图片；
+此外，OptiFine 提供了一种简单的 "固定" colormap 格式。这种格式不需要图片；
 
 它只是用于某种方块的单一颜色，不会随着位置而变化。
 

@@ -54,7 +54,8 @@ gl.debug.groups=<true|false>
 ```
 
 忽略 OpenGL 错误（2021.1.20新增）
-\<ids\> - 逗号分隔的错误id列表
+
+> \<ids\> - 逗号分隔的错误id列表
 
 ```properties
 gl.ignore.errors=<ids>
