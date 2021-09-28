@@ -2,10 +2,8 @@
 
 ## 全局属性丨cit.properties
 
-基于 MCPatcher 的 Custom Item Textures mod 的配置
-
-这个文件包含自定义物品纹理的全局属性，它应该被放在纹理包的 optifine/cit 文件夹下。
-关于单个物品纹理，参阅 cit_single.properties。
+cit.properties 用于设置自定义物品纹理的全局属性，它应该被放在纹理包的 optifine/cit 文件夹下。
+关于单个物品的纹理，参阅 cit_single.properties。
 
 所有的属性名都区分大小写。
 除非另作说明，所有的路径都相对于 assets/minecraft。
