@@ -75,7 +75,7 @@ palette.format=grid
 
 注意，此设置不影响在 "assets/minecraft/textures/colormap" 中的原版 "grass.png" 和 "foliage.png" 文件。
 
-为了保持非optifine用户的兼容性，它们总是以原版格式解释执行。
+为了保持非 optifine 用户的兼容性，它们总是以原版格式解释执行。
 
 参阅下面的 "Grass and foliage"，了解如何使用网格格式和它使用的纹理。
 
@@ -125,7 +125,7 @@ color=<rgb值>
 
 对于 "format=fixed"，这只是应用于所有匹配的方块块的固定颜色。
 
-如果没有给出值，默认值是白色"ffffff"。
+如果没有给出值，默认值是白色 "ffffff"。
 
 对于 "format=vanilla" 或 "format=grid"，此颜色用于手持或掉落的方块。
 
@@ -145,7 +145,7 @@ color=<rgb值>
 
 它们也可以应用于环境的迷雾，天空和水下的颜色。
 
-基于方块的colormap可按照以下方式被应用：
+基于方块的 colormap 可按照以下方式被应用：
 
 - 作为 "assets/minecraft/optifine/color.properties" 中的列表
 - 作为 "assets/minecraft/optifine/colormap/blocks" 下分开的文件
@@ -172,8 +172,8 @@ palette.block.~/colormap/tall_grass_low.png=tall_grass:half=lower
 
 这种方法的两个局限：
 
-- source和blocks属性可以被设置；其余为默认。
-- 如果玩家在使用多个资源包，只有第一个color.properties文件会被游戏读取。
+- source 和 blocks 属性可以被设置；其余为默认。
+- 如果玩家在使用多个资源包，只有第一个 color.properties 文件会被游戏读取。
 
 另一种方法是在 "assets/minecraft/optifine/colormap/blocks" 下使用单独的文件。
 
@@ -204,13 +204,13 @@ blocks=tall_grass:half=lower
 
 **单个方块**
 
-最简单的情况是，自定义colormap应用于没有属性值的单个方块类型，它不需要属性文件。
+最简单的情况是，自定义 colormap 应用于没有属性值的单个方块类型，它不需要属性文件。
 
 例如，"assets/minecraft/optifine/colormap/blocks/sand.png" 应用于沙子方块而不需要声明"blocks=sand"。
 
 **多个方块**
 
-要对所有石头和矿石应用相同的colormap，请使用属性文件。
+要对所有石头和矿石应用相同的 colormap，请使用属性文件。
 
 在 "assets/minecraft/optifine/colormap/blocks/stone_and_ore.properties" 中：
 
@@ -219,7 +219,7 @@ blocks=tall_grass:half=lower
 blocks=stone gold_ore iron_ore 诸如此类
 ```
 
-如果使用新格式，则添加 "format=grid"。如果colormap图片也被命名为 "stone_and_ore.png"，则source属性是不必要的。
+如果使用新格式，则添加 "format=grid"。如果 colormap 图片也被命名为 "stone_and_ore.png"，则 source 属性是不必要的。
 
 在 "color.properties" 中这也可以写成：
 
@@ -228,13 +228,13 @@ blocks=stone gold_ore iron_ore 诸如此类
 palette.block.~/colormap/custom/stone.png=stone gold_ore iron_ore 诸如此类
 ```
 
-添加 "palette.format=grid" 让所有自定义colormap使用网格格式（除了原版的 "grass.png" 和 "foliage.png"）。
+添加 "palette.format=grid" 让所有自定义 colormap 使用网格格式（除了原版的 "grass.png" 和 "foliage.png"）。
 
 **草和树叶**
 
-自定义colormap将会覆盖原版的grass.png和foliage.png。
+自定义 colormap 将会覆盖原版的 grass.png 和 foliage.png。
 
-这意味着你可以保留原版映射以保持兼容性，并为OptiFine用户创建自定义映射：
+这意味着你可以保留原版映射以保持兼容性，并为 OptiFine 用户创建自定义映射：
 
 在 "assets/minecraft/optifine/colormap/blocks/grass.properties" 中：
 
@@ -255,13 +255,13 @@ blocks=oak_leaves
 
 
 
-**1.7中的固定reeds(甘蔗)**
+**1.7 中的固定甘蔗**
 
-从1.7开始，Minecraft将 "grass.png" 应用于甘蔗颜色，给很多艺术创作者造成了困扰。
+从1.7开始，Minecraft 将 "grass.png" 应用于甘蔗颜色，给很多艺术创作者造成了困扰。
 
-一张 "fixed" "ffffff"(白色) colormap可以将这个行为恢复到版本1.6。
+一张 "fixed" "ffffff"(白色) colormap 可以将这个行为恢复到版本1.6。
 
-一个256x256全白色的colormap当然可以完成同样的事情，但是这种方法更有效。
+一个 256x256 全白色的 colormap 当然可以完成同样的事情，但是这种方法更有效。
 
 最简单的方法是创建一个只包含一行的属性文件：
 
@@ -272,11 +272,11 @@ blocks=oak_leaves
 format=fixed
 ```
 
-这样就可以生效，因为blocks属性默认为文件名(reeds)，而color属性默认为固定colormap的 "ffffff"。
+这样就可以生效，因为 blocks 属性默认为文件名（reeds），而 color 属性默认为固定 colormap 的 "ffffff"。
 
 **环境迷雾、天空和水下颜色**
 
-这些特别命名的colormap覆盖默认的固定环境颜色：
+这些特别命名的 colormap 覆盖默认的固定环境颜色：
 
 > 主世界迷雾: "assets/minecraft/optifine/colormap/fog0.png"
 >
@@ -286,7 +286,7 @@ format=fixed
 
 每一个都可以有对应的属性文件来指定格式或其他设置。
 
-这些colormap与基于地形的colormap一样，只是它们不关心方块属性。
+这些 colormap 与基于地形的 colormap 一样，只是它们无关方块属性。
 
 
 

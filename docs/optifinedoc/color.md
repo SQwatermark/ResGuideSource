@@ -2,19 +2,19 @@
 
 ## 属性文件丨color.properties
 
-你只需要为你想要修改的属性提供数值。方便起见，下面列出Minecraft中每个属性的默认值。
+你只需要设置需要修改的属性。方便起见，下面列出 Minecraft 中每个属性的默认值。
 
 所有的属性名都区分大小写。
 
-所有颜色都是十六进制rgb格式，从000000到ffffff。
+所有颜色都是从 000000 到 ffffff 的十六进制 rgb 格式。
 
 除非另有说明，否则所有路径都相对于assets/minecraft。
 
-**水的粒子效果(飞溅的水花, 气泡, 水滴)的底色**
+**水的粒子效果（飞溅的水花, 气泡, 水滴）的底色**
 
 生物群系水体颜色乘数应用于该值。该值应该与基础水纹理的颜色匹配。
 
-如果你的基础水纹理是灰色的，那么你可以通过misc/watercolorX.png进行着色，并且把这个值设置为为ffffff。
+如果你的基础水纹理是灰色的，那么你可以通过 misc/watercolorX.png 进行着色，并且把这个值设置为 ffffff。
 
 ```properties
 particle.water=334cff
@@ -24,7 +24,7 @@ particle.water=334cff
 
 **传送门颗粒的底色**
 
-RGB值都会乘一个0.4到1.0之间的随机乘数
+RGB 值都会乘一个 0.4 到 1.0 之间的随机乘数
 
 ```properties
 particle.portal=ff4ce5

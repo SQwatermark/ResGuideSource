@@ -1,4 +1,4 @@
-<center><h1>OptiFine帮助文档翻译</h1><p>OptiFine Documenton</p></center>
+<center><h1>OptiFine文档翻译</h1><p>OptiFine Documenton</p></center>
 
 ## 概述丨Overview
 
