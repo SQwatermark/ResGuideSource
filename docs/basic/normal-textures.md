@@ -1,6 +1,6 @@
-# 简单地修改一张材质
+# 简单地修改一张纹理
 
-让我们打开assets/minecraft/textures/block，然后找到我们要修改的材质，这里我们选择了acacia_log.png。
+让我们打开assets/minecraft/textures/block，然后找到我们要修改的纹理，这里我们选择了acacia_log.png。
 
 ::: tip
 
@@ -14,6 +14,6 @@
 
 ![image-20200618151513955](https://i.loli.net/2020/11/18/RkXvZhLQfuGtKqO.png)
 
-重载资源包，放出金合欢木，看看修改后的材质吧！
+重载资源包，放出金合欢木，看看修改后的纹理吧！
 
 ![image-20200708101328142](https://i.loli.net/2020/07/28/Ny8IpD74nbHdc2O.png)

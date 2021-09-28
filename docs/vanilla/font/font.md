@@ -14,7 +14,7 @@
 
 此外，在assets\minecraft\font 文件夹下还有名为 `glyph_sizes.bin` 的十六进制文件，用于存储字符的宽度
 
-> Minecraft 渲染 Unicode 文字的思路是把`0x00000000`到`0xFFFFFFFF`的每个文字都做成材质贴图，按照高 16 位进行分割，形成`assets/minectaft/textures/font/unicode_page_ff.png`这样的图片，每个文字都是方格的；
+> Minecraft 渲染 Unicode 文字的思路是把`0x00000000`到`0xFFFFFFFF`的每个文字都做成纹理贴图，按照高 16 位进行分割，形成`assets/minectaft/textures/font/unicode_page_ff.png`这样的图片，每个文字都是方格的；
 >
 > 为了解决文字宽度不同的问题，设置了一个文件(`assets/minecraft/font/glyph_sizes.bin`)来保存对应图像的水平坐标区间，采用一个字节来保存（高 4 位保存 xMin ，低 4 位保存 xMax ，当然精度方面也就只有 4 位了，但是考虑到 mc 的马赛克性质，确实足够用了），这些字节直接按照 Unicode 值作为文件中位置。
 >

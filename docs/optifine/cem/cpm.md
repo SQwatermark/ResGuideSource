@@ -32,7 +32,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 
 ## 制作模型
 
-在.minecraft文件夹下新建名为playermodels的文件夹，然后在playermodels文件夹里新建items文件夹和users文件夹，其中items文件夹用于存放模型和材质，users文件加用于存放玩家信息。
+在.minecraft文件夹下新建名为playermodels的文件夹，然后在playermodels文件夹里新建items文件夹和users文件夹，其中items文件夹用于存放模型和纹理，users文件加用于存放玩家信息。
 
 ![image-20200717172311583](https://i.loli.net/2020/07/28/GQeNRsHdb2tMwSa.png)
 
@@ -44,8 +44,8 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 {
   // 这不是一个有效的配置文件，仅用于讲解概念
   "type" : "PlayerItem", // 固定的，不要改
-  "usePlayerTexture": <true|false>, //是否使用玩家材质，一般填false
-  "textureSize": [<width>, <height>], //材质的尺寸
+  "usePlayerTexture": <true|false>, //是否使用玩家纹理，一般填false
+  "textureSize": [<width>, <height>], //纹理的尺寸
   "models": //子模型列表
   [
     { //这是一个子模型
@@ -56,7 +56,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 	  "invertAxis": <axis_to_invert>, //反转轴
       "translate": [<x>, <y>, <z>], //平移
       "rotate": [<angle_x>, <angle_y>, <angle_z>], //旋转
-      "mirrorTexture": <axis_to_mirror>, //镜像材质，通常不需要
+      "mirrorTexture": <axis_to_mirror>, //镜像纹理，通常不需要
       "scale": <scale>, //缩放比例，默认值为1.0
       // 部件模型的定义，详见自定义实体模型部件
       ...
@@ -73,7 +73,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
   // 这不是一个有效的配置文件，仅用于讲解概念
   "type" : "PlayerItem",
   "usePlayerTexture": false,
-  "textureSize": [<width>, <height>], //材质的尺寸
+  "textureSize": [<width>, <height>], //纹理的尺寸
   "models": //子模型列表
   [
     {
@@ -135,13 +135,13 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 }
 ```
 
-然后在model.cfg旁边放上材质，我们注意到model.cfg本身只规范了材质的大小，没写具体用什么材质，也就是说我们可以给不同的玩家用不同的模型，也可以给不同玩家用相同的模型，不同的材质。
+然后在model.cfg旁边放上纹理，我们注意到model.cfg本身只规范了纹理的大小，没写具体用什么纹理，也就是说我们可以给不同的玩家用不同的模型，也可以给不同玩家用相同的模型，不同的纹理。
 
 ![image-20200717192813160](https://i.loli.net/2020/07/28/ol9fVp7UTQ6indO.png)
 
 ## 使用模型
 
-我们的素材准备好了，接下来要让具体的玩家使用上模型和材质，进入先前创建的users文件夹，新建文件名为username.cfg，username换成自己的游戏id，我的游戏id是SQwatermark，所以文件名为SQwatermark.cfg。
+我们的素材准备好了，接下来要让具体的玩家使用上模型和纹理，进入先前创建的users文件夹，新建文件名为username.cfg，username换成自己的游戏id，我的游戏id是SQwatermark，所以文件名为SQwatermark.cfg。
 
 **username.cfg**
 
@@ -152,7 +152,7 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
     {
       "type": "stone", //type和items文件夹下的子文件夹相对应
       //"model": "<model.cfg>", //填playermodels文件夹下的路径，默认路径就是我们刚刚用的路径。
-      //texture的默认路径看下面的文档，不建议用默认路径，因为默认路径的材质要命名为玩家名。
+      //texture的默认路径看下面的文档，不建议用默认路径，因为默认路径的纹理要命名为玩家名。
 	  "texture": "items/stone/stone.png", 
       "active": true //一般填true就行了，填false就是不显示
     }
