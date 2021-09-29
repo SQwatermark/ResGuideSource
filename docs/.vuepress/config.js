@@ -56,6 +56,7 @@ module.exports = {
         ['custom_panorama', '自定义全景图'],
         ['hd_fonts', '高清字体'],
         ['system_properties', '系统属性'],
+        ['texture.properties', '纹理属性'],
         {
           title: '光影',   // 必要的
           children: [

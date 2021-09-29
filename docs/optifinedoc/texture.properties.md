@@ -1,6 +1,6 @@
 <center><h1>纹理属性</h1><p>texture.properties</p></center>
 
-2021年1月11日增加的文件，其用途见 [https://github.com/rre36/lab-pbr/wiki](https://github.com/rre36/lab-pbr/wiki)
+2021/1/11增加的文件，用于一种社区约定的PBR格式，详见 [https://github.com/rre36/lab-pbr/wiki](https://github.com/rre36/lab-pbr/wiki)
 
 ```properties
 ###############################################################################
