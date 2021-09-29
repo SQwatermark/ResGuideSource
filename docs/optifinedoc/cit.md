@@ -70,9 +70,7 @@ useGlint=<true | false>
 
 ## 单个物品纹理丨cit_single.properties
 
-基于 MCPatcher 的 Custom Item Textures mod 的配置
-
-对于每一个想要使用自定义纹理的物品，使用这个模板在纹理包的 optifine/cit 文件夹下创建一个 .properties 文件。属性（properties）文件可以放在 optifine/cit 的任意一层子文件夹下。
+对于每一个想要使用自定义纹理的物品，参照此模板在资源包的 optifine/cit 文件夹下创建一个 .properties 文件。属性（properties）文件可以放在 optifine/cit 的任意一层子文件夹下。
 
 每个属性文件都指定一个匹配的物品ID或物品名列表，一个替换纹理，和一系列可选的用于指定伤害、堆叠数或NBT标签的规则。
 

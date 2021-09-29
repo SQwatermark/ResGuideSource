@@ -2,19 +2,19 @@
 
 ## 概述丨Overview
 
-如果你想制作一个自定义GUI，请在 "assets/minecraft/optifine/GUI/container" 文件夹或者其任意一层子文件夹中创建一个.properties文件，并按照下面的模板编辑属性文件。
+如果你想制作一个自定义 GUI，请在 "assets/minecraft/optifine/GUI/container" 文件夹或者其任意一层子文件夹中创建一个 .properties 文件，并按照下面的模板编辑属性文件。
 
 不同类型的容器有不同的要求和限制。详见下方。
 
 ## 常规属性丨General properties
 
-**容器 (必需)**
+**容器（必需）**
 
 这是什么容器的GUI？
 
 可能的值：
 
-| 容器名        | 中文翻译       |
+| 容器名        | 中文译名       |
 | ------------- | -------------- |
 | anvil         | 铁砧           |
 | beacon        | 信标           |
@@ -37,17 +37,17 @@ container=<容器名>
 
 
 
-**纹理 (必需)**
+**纹理（必需）**
 
-GUI纹理的替换。
+GUI 纹理的替换。
 
-- "texture" 属性替换默认的GUI纹理。
+- "texture" 属性替换默认的 GUI 纹理。
 
-- "texture.<路径>" 属性可以用于替换任何GUI纹理。
+- "texture.<路径>" 属性可以用于替换任何 GUI 纹理。
 
   <路径> 相对于 "/assets/minecraft/textures/gui"
 
-创造模式物品栏GUI没有默认纹理，所以必须使用路径纹理。
+创造模式物品栏 GUI 没有默认纹理，所以必须使用路径纹理。
 
 创造模式物品栏的例子：
 
@@ -74,9 +74,9 @@ texture.<路径>=<纹理>
 
 **自定义实体或方块实体名称 (可选)**
 
-也许你想让特定名称的容器显示这个GUI，就需要用到这个属性。
+如果你想让特定名称的容器显示这个 GUI，就需要用到这个属性。
 
-该名称使用与自定义物品纹理的NBT标签类似的语法。
+该名称使用与自定义物品纹理的 NBT 标签类似的语法。
 
 以 "!" 开头的值表示匹配相反的东西（非）。
 
@@ -121,7 +121,7 @@ texture.<路径>=<纹理>
 
 
 
-**Java正则表达式**
+**Java 正则表达式**
 
 （参阅 [http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html](http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html)）
 
@@ -141,7 +141,7 @@ texture.<路径>=<纹理>
 
 
 
-**Java正则表达式, 不区分大小写**
+**Java 正则表达式, 不区分大小写**
 
 > name=iregex:Letter (to|from) .*
 
@@ -177,7 +177,7 @@ name=<名称>
 
 
 
-**生物群系 (可选)**
+**生物群系（可选）**
 
 这里列出了原版生物群系：[https://minecraft.gamepedia.com/Biome#Biome_IDs](https://minecraft.gamepedia.com/Biome#Biome_IDs)。
 
@@ -189,7 +189,7 @@ biomes=<生物群系列表>
 
 
 
-**高度 (可选)**
+**高度（可选）**
 
 ```properties
 heights=<高度范围>
@@ -199,7 +199,7 @@ heights=<高度范围>
 
 ## 箱子的特定属性丨Chest specific properties
 
-**是否为大箱子 (可选)**
+**是否为大箱子（可选）**
 
 ```properties
 large=<true|false>
@@ -207,7 +207,7 @@ large=<true|false>
 
 
 
-**是否为陷阱箱 (可选)**
+**是否为陷阱箱（可选）**
 
 ```properties
 trapped=<true|false>
@@ -215,7 +215,7 @@ trapped=<true|false>
 
 
 
-**是否为圣诞节箱子 (可选)**
+**是否为圣诞节箱子（可选）**
 
 ```properties
 christmas=<true|false>
@@ -223,7 +223,7 @@ christmas=<true|false>
 
 
 
-**是否为末影箱 (可选)**
+**是否为末影箱（可选）**
 
 ```properties
 ender=<true|false>
@@ -233,7 +233,7 @@ ender=<true|false>
 
 ## 信标的特定属性丨Beacon specific properties
 
-**等级 (可选)**
+**等级（可选）**
 
 ```properties
 levels=<等级>
@@ -243,7 +243,7 @@ levels=<等级>
 
 ## 村民的特定属性丨Villager specific properties
 
-**职业 (可选)**
+**职业（可选）**
 
 列出村民职业，可选填等级
 
@@ -292,11 +292,11 @@ professions.<n>=<职业>
 
 ## 马和发射器的特定属性丨Horse and dispenser specific properties
 
-**变体 (可选)**
+**变体（可选）**
 
-马的变体: horse donkey mule llama
+马的变体：horse donkey mule llama
 
-发射器的变体: dispenser dropper
+发射器的变体：dispenser dropper
 
 ```properties
 variants=<变体>
@@ -306,11 +306,11 @@ variants=<变体>
 
 ## 羊驼和潜影盒的特定属性丨Lllama and shulker box specific properties
 
-**颜色 (可选)**
+**颜色（可选）**
 
-写出潜影盒颜色或羊驼背上的地毯颜色。
+列出潜影盒颜色或羊驼背上的地毯颜色。
 
-颜色列表: white orange magenta light_blue yellow lime pink gray light_gray（原为silver） cyan purple blue brown green red black
+颜色列表：white orange magenta light_blue yellow lime pink gray light_gray cyan purple blue brown green red black
 
 ```properties
 colors=<颜色>

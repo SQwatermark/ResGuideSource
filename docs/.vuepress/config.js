@@ -2,6 +2,22 @@ module.exports = {
   title: '森罗万象',
   description: 'Minecraft资源包指南',
   base: "/resguide/",
+  head: [
+    // 添加百度统计
+    [
+      "script",
+      {},
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?44385f6ef211c79514f92be967b317e2";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+        `
+    ]
+  ],
   themeConfig: {
     nav: [
       { text: '教程', link: '/' },
@@ -166,7 +182,8 @@ module.exports = {
             '/vanilla/texture/gui/loading',
           ]
         },
-        ['/optifine/shader/pbr', '视差和高光'],
+        ['/optifine/shader/pbr', 'PBR纹理'],
+        ['/vanilla/shader/', '着色器/光影'],
         {
           title: '附录',
           //path: '/appendix/',

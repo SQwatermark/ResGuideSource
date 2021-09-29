@@ -1,4 +1,4 @@
-# 排错
+# 调试
 
 用notepad++打开.minecraft/logs/latest.log，
 
