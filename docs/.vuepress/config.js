@@ -2,28 +2,12 @@ module.exports = {
   title: '森罗万象',
   description: 'Minecraft资源包指南',
   base: "/resguide/",
-  head: [
-    // 添加百度统计
-    [
-      "script",
-      {},
-      `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?44385f6ef211c79514f92be967b317e2";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-        `
-    ]
-  ],
   themeConfig: {
     nav: [
       { text: '教程', link: '/' },
       { text: 'OptiFine文档', link: '/optifinedoc/' },
       { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
-      { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
+      { text: '下载示例', link: 'https://gitee.com/sqwatermark/ResGuideSource' },
     ],
     sidebar: {
     
@@ -215,17 +199,5 @@ module.exports = {
 	['vuepress-plugin-container',{type: 'bv',before: info => `<iframe src="//player.bilibili.com/player.html?bvid=BV${info}&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="650" height="450">`,after: '</iframe>'}],
 	['vuepress-plugin-zooming',{selector: '.theme-default-content img',delay: 500,options: {bgColor: 'black',bgOpacity: 0.8,scrollThreshold: 200}}],
 	['minimal-analytics', {ga: 'UA-172352215-1'}],
-	['@vssue/vuepress-plugin-vssue',{
-      // 设置 `platform` 而不是 `api`
-      platform: 'github',
-	  locale: 'zh',
-      // 其他的 Vssue 配置
-      owner: 'SQwatermark',
-      repo: 'resguide',
-      clientId: '0e0e3e9e3509802c1e02',
-      clientSecret: 'd571da19b622a436037022e2fa56e3b8cfd1509a',
-	  autoCreateIssue:true,
-    }]
-	
   ]
 }
