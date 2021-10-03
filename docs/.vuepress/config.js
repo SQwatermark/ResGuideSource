@@ -10,7 +10,6 @@ module.exports = {
       { text: '下载示例', link: 'https://gitee.com/sqwatermark/ResGuideSource' },
     ],
     sidebar: {
-    
       '/optifinedoc/': [
         ['properties_files', '属性文件说明'],
         ['ctm', '连接纹理'],
