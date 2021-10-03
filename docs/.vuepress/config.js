@@ -133,6 +133,7 @@ module.exports = {
           children: [
             '/optifine/cem/random_entities',
             '/optifine/cem/random_creeper',
+            '/optifine/cem/example',
             '/optifine/cem/cpm',
           ]
         },

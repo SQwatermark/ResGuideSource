@@ -29,7 +29,9 @@
 
 [如何使Optifine CTM连接纹理仅对一张贴图生效](https://www.mcbbs.net/thread-1060861-1-1.html)
 
-[关于_n的反光效果贴图（PBR纹理相关）](https://www.mcbbs.net/thread-1226021-1-1.html)
+[关于_n的反光效果贴图](https://www.mcbbs.net/thread-1226021-1-1.html)（PBR纹理相关）
+
+[optifine能不能通过名字自定义多种材质的熔炉和工作台](https://www.mcbbs.net/thread-983914-1-1.html)（很遗憾只有单机能用）
 
 ## 关于物品纹理
 
@@ -39,12 +41,16 @@
 
 [optifine随机实体材质关于狼的使用](https://www.mcbbs.net/thread-975656-1-1.html)
 
+[1.14.4  Optifine 如何配合 Mythicmob 来自定义怪物的材质？](https://www.mcbbs.net/thread-980391-1-1.html)（五楼我的回答写的是最详细的）
+
+[关于optifine的cem找不到附魔台上的书本](https://www.mcbbs.net/thread-1202652-1-1.html)
+
 ## 关于字体
 
-[字体材质包字体汇总（实际上是所有字体纹理对应的文本）](https://www.mcbbs.net/thread-900822-1-1.html)
+[字体材质包字体汇总](https://www.mcbbs.net/thread-900822-1-1.html)（实际上是所有字体纹理对应的文本）
 
 [bitmap使用问题](https://www.mcbbs.net/thread-1202498-1-1.html)
 
 ## 其他问题
 
-[关于材质的一些问题（如何渲染方块斜视图）](https://www.mcbbs.net/thread-1097003-1-1.html)
+[关于材质的一些问题](https://www.mcbbs.net/thread-1097003-1-1.html)（如何渲染方块斜视图）
