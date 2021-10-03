@@ -50,6 +50,8 @@ pack.memeta 编写示例：
 
 **[Minecraft中文wiki：语言](https://minecraft-zh.gamepedia.com/%E8%AF%AD%E8%A8%80)**
 
+**[制作自定义语言包：从入门到入完门](https://www.mcbbs.net/thread-997830-1-1.html)**
+
 ## 圈内笑话
 
 拆包 1.3.1 的 jar 文件，在 lang 文件夹中找到 zh_CN.lang（那时候中文语言文件是被包装在 jar 里的，文件名还允许大写字母）

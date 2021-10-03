@@ -191,6 +191,7 @@ module.exports = {
           children: [
             '/appendix/fragments',
             '/appendix/tools',
+            '/appendix/questions',
           ]
         }
       ]

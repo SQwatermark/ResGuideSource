@@ -1,6 +1,6 @@
 <center><h1>自定义颜色</h1><p>Custom Colors</p></center>
 
-## 综述丨Overview
+## 概述丨Overview
 
 **完整文件列表**
 
