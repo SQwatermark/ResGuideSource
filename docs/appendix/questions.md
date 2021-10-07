@@ -3,13 +3,16 @@
 如果在制作资源包的过程中出现问题，请先检查一下有没有犯以下错误：
 
 * 文件位置错误，例如在[1.13以上的版本依然使用mcpatcher文件夹](https://www.mcbbs.net/thread-1264082-1-1.html)。
-
 * 文件名出现[中文](https://www.mcbbs.net/thread-1226450-1-1.html)、奇怪的字符、[大写英文字母](https://www.mcbbs.net/thread-1249642-1-1.html)。
 * 单词拼写错误。
 
 然后确认你的问题别人是不是已经问过了。
 
+如果你认为你遇到了漏洞，可以到 https://github.com/sp614x/optifine/issues 看看有没有人问过。
+
 最后，请把资源包发出来，不要发零碎的截图，问题很可能在意想不到的地方出现。
+
+**如果你还没有为你的问题做出努力，请不要浪费别人的时间。**
 
 下面记录mcbbs问答版以及群里的一些有价值（或者常出现）的问题：
 
@@ -44,6 +47,8 @@
 [1.14.4  Optifine 如何配合 Mythicmob 来自定义怪物的材质？](https://www.mcbbs.net/thread-980391-1-1.html)（五楼我的回答写的是最详细的）
 
 [关于optifine的cem找不到附魔台上的书本](https://www.mcbbs.net/thread-1202652-1-1.html)
+
+[1.15.2CEM漏洞合集](https://github.com/sp614x/optifine/issues/3971)
 
 ## 关于字体
 
