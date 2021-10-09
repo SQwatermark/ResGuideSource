@@ -176,6 +176,7 @@ module.exports = {
             '/appendix/fragments',
             '/appendix/tools',
             '/appendix/questions',
+            '/appendix/compatibility',
           ]
         }
       ]

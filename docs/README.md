@@ -30,11 +30,9 @@ Minecraft java版 1.15.2，如果你的版本号不同，需要自己解决版�
 
 ::: warning
 
-目前1.14和1.15的 OptiFine 与 Forge 兼容性不佳，有些功能会直接丢失。
+关于OptiFine在高版本与Forge、Fabric的兼容问题，见[此页面](appendix/compability.md)。
 
-目前已知的问题：
-
-- cit 功能无法使用。（1.16已修复）
+1.15.2是个bug奇多的版本，或许我该找个稳定的版本重写教程了。
 
 :::
 

@@ -2,12 +2,13 @@
 
 ### 建模软件教程
 
-- **[【建模教程】Cubik Studio使用教程：功能强大的付费软件！](https://www.mcbbs.net/thread-687670-1-1.html)**
 - **[【建模教程】Block bench使用教程：免费的mc3D建模软件！](https://www.mcbbs.net/thread-941067-1-1.html)**
 - **[[教程]Blockbench教程-做出属于自己的模型](https://www.mcbbs.net/thread-833634-1-1.html)**
 - **[【教程】[Blockbench]如何免费简单地制作原版3D模型！](https://www.mcbbs.net/thread-846639-1-1.html)**
-- **[Sithme 的 Cubik Studio 模型制作过程系列视频](https://www.bilibili.com/video/av94357570)**
 - **[酒石酸的Blockbench视频教程](https://www.bilibili.com/video/BV1fk4y127qg)**
+- **[[RMA]Blockbench WIKI节译：建模与材质绘制指南](https://www.mcbbs.net/thread-1221277-1-1.html)**
+- **[Sithme 的 Cubik Studio 模型制作过程系列视频](https://www.bilibili.com/video/av94357570)**
+- **[【建模教程】Cubik Studio使用教程：功能强大的付费软件！](https://www.mcbbs.net/thread-687670-1-1.html)**
 
 ### 原版模型
 
