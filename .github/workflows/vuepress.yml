@@ -41,4 +41,4 @@ jobs:
       - name: Deploy docs
         # 发布文档 
         # 推送dist的目录文件到对应存储桶，存储桶名字修改为最开始创建时的 `Bucket 名称`
-        run: ossutil cp -rf ./docs/.vuepress/dist/ oss://resguide/
+        run: ossutil cp -rf ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
