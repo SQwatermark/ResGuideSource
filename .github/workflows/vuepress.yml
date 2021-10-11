@@ -24,7 +24,7 @@ jobs:
           yarn install
 
           # 修改为你的packjson文件配置的编译命令
-          yarn run docs:build
+          yarn run build
 
       - name: Setup aliyun oss
         uses: manyuanrong/setup-ossutil@v1.0
