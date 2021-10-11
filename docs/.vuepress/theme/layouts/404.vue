@@ -6,7 +6,7 @@
       <blockquote>{{ getMsg() }}</blockquote>
 
       <RouterLink to="/">
-        Take me home.
+        回到首页
       </RouterLink>
     </div>
   </div>
@@ -14,10 +14,8 @@
 
 <script>
 const msgs = [
-  `There's nothing here.`,
-  `How did we get here?`,
-  `That's a Four-Oh-Four.`,
-  `Looks like we've got some broken links.`
+  `你已进入虚空。`,
+  `这里什么都没有！`,
 ]
 
 export default {

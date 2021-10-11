@@ -2,7 +2,20 @@ module.exports = {
   title: '森罗万象',
   description: 'Minecraft资源包指南',
   base: "/resguide/",
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        'optifinedoc': '/optifinedoc/'
+      }
+    }
+  },
   themeConfig: {
+    lastUpdated: '上次更新',
     nav: [
       { text: '教程', link: '/' },
       { text: 'OptiFine文档', link: '/optifinedoc/' },
@@ -182,7 +195,6 @@ module.exports = {
       ]
       
     }
-    
   },
   markdown: {
     extendMarkdown: md => {
@@ -191,14 +203,25 @@ module.exports = {
   },
   plugins: [
     '@vuepress/back-to-top',
-	//['@dovyp/vuepress-plugin-clipboard-copy', true],
-  ['vuepress-plugin-container',{type: 'right',defaultTitle: ''}],
-  ['vuepress-plugin-container',{type: 'theorem',before: info => `<div class="theorem"><p class="title">${info}</p>`,after: '</div>'}],
-	['vuepress-plugin-container',{type: 'tip',defaultTitle: {'/': '提示'}}],
-	['vuepress-plugin-container',{type: 'warning',defaultTitle: {'/': '注意'}}],
-	['vuepress-plugin-container',{type: 'danger',defaultTitle: {'/': '警告'}}],
-	['vuepress-plugin-container',{type: 'bv',before: info => `<iframe src="//player.bilibili.com/player.html?bvid=BV${info}&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="650" height="450">`,after: '</iframe>'}],
-	['vuepress-plugin-zooming',{selector: '.theme-default-content img',delay: 500,options: {bgColor: 'black',bgOpacity: 0.8,scrollThreshold: 200}}],
-	['minimal-analytics', {ga: 'UA-172352215-1'}],
+    'vuepress-plugin-smooth-scroll',
+    ['@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ],
+    //['@dovyp/vuepress-plugin-clipboard-copy', true],
+    ['vuepress-plugin-container',{type: 'right',defaultTitle: ''}],
+    ['vuepress-plugin-container',{type: 'theorem',before: info => `<div class="theorem"><p class="title">${info}</p>`,after: '</div>'}],
+    ['vuepress-plugin-container',{type: 'tip',defaultTitle: {'/': '提示'}}],
+    ['vuepress-plugin-container',{type: 'warning',defaultTitle: {'/': '注意'}}],
+    ['vuepress-plugin-container',{type: 'danger',defaultTitle: {'/': '警告'}}],
+    ['vuepress-plugin-container',{type: 'bv',before: info => `<iframe src="//player.bilibili.com/player.html?bvid=BV${info}&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="650" height="450">`,after: '</iframe>'}],
+    ['vuepress-plugin-zooming',{selector: '.theme-default-content img',delay: 500,options: {bgColor: 'black',bgOpacity: 0.8,scrollThreshold: 200}}],
+    ['minimal-analytics', {ga: 'UA-172352215-1'}],
   ]
 }
