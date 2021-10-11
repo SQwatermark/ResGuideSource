@@ -67,7 +67,7 @@ tiles=0-46
 matchBlocks=minecraft:iron_block
 ```
 
-举一反三，相信你已经可以根据[文档](https://www.mcbbs.net/forum.php?mod=viewthread&tid=896135&page=1#pid15602841)填写更多的属性（properties）了。
+举一反三，相信你已经可以根据[文档](../../optifinedoc/ctm.md)填写更多的属性（properties）了。
 
 ::: details 良好的习惯
 

@@ -11,19 +11,27 @@
 
 **此文档适合：想要制作具有高度自定义内容的资源包的人，想要魔改基于OptiFine的资源包的人。**
 
-首先你要对Minecraft原版的资源包有一定了解，如果你想从基础学起，建议看看Minecraft wiki的 "资源包" 章节
+首先你要对Minecraft原版的资源包有一定了解，如果你想从基础学起，建议看看 Minecraft wiki 的 "资源包" 词条。
 如果使用本文档过程中遇到疑难，或者发现文档中有错误的地方，请回帖提出疑问/指出错误。这也会给接下来的阅读者很大帮助。
 
 非常经典的例子：Conquest_ 纹理包，cocricot纹理包，解压看看，非常有助于理解这篇文档的内容。
 
-感谢[墨浅南城](https://www.mcbbs.net/home.php?mod=space&uid=1671404)和[renyunzhong](https://www.mcbbs.net/home.php?mod=space&uid=424912)协助转换了文档格式。
-
 最后更新：2021年9月28日，如无失误，本文档的所有内容对应原文档该日期的版本，如需旧版文档，请至原文档的历史记录中查看。
-
-texture已统一翻译为“纹理”
 
 ::: warning
 
-关于OptiFine在高版本与Forge、Fabric的兼容问题，见[此页面](../appendix/compability.md)。
+关于OptiFine在高版本与Forge、Fabric的兼容问题，见[此页面](../appendix/compatibility.md)。
 
 :::
+
+## 鸣谢
+
+感谢[墨浅南城](https://www.mcbbs.net/home.php?mod=space&uid=1671404)和[renyunzhong](https://www.mcbbs.net/home.php?mod=space&uid=424912)协助转换了文档格式。
+
+## 联系方式
+
+QQ群：1121783236（资源包制作交流群）
+
+MCBBS论坛：[https://www.mcbbs.net/?2603114](https://www.mcbbs.net/?2603114)
+
+欢迎提出建议和有价值的问题。

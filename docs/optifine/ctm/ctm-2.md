@@ -54,11 +54,11 @@ tiles=0-47
 
 ## 插曲——随机旋转的沙子
 
-我起初认为这是红沙拥有[自然纹理](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=896135&pid=15603178)，但是文档中并没有给沙子设置默认的自然纹理，游戏设置里甚至没有开启自然纹理的选项。
+我起初认为这是红沙拥有[自然纹理](../../optifinedoc/natural_textures.md)，但是文档中并没有给沙子设置默认的自然纹理，游戏设置里甚至没有开启自然纹理的选项。
 
 也就是说，红沙的随机旋转不是OptiFine造成的，而是原版的性质。
 
-这给了我一个方向，我打开了assets/minecraft/blockstates/red_sand.json，果不其然，沙子被设置了随机模型：
+打开 assets/minecraft/blockstates/red_sand.json，果然沙子被设置了随机模型：
 
 ```json
 {

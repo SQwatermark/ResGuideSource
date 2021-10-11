@@ -36,6 +36,6 @@ scaleMode=stretch
 
 ::: tip
 
-本节的属性文件的详细内容见[OptiFine帮助文档](../../../optifinedoc/custom_loading_screens.md)
+本节的属性文件的详细内容见[OptiFine文档](../../../optifinedoc/custom_loading_screens.md)
 
 :::

@@ -259,6 +259,6 @@ OptiFine的cem功能不包含玩家模型，但玩家模型并非不可以自定
 | ------------------------------- | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Armourer's Workshop（时装工坊） | 1.7.10,1.12.2 | 双端模组，制作可穿戴的时装                                   | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/armourers-workshop) |
 | Figura                          | 1.16.5~1.17.1，Fabric | 纯客户端模组<br />可加载BlockBench制作的玩家模型，<br />所有安装此模组的用户可见 | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/figura) |
-| CustomSteve（自定义史蒂夫）     | 1.7.10,1.10.2 | 纯客户端模组，<br />可加载mmd模组，<br />仅自己可见          | [MCBBS](https://www.mcbbs.net/thread-230546-1-1.html)        |
+| CustomSteve（自定义史蒂夫）     | 1.7.10,1.10.2 | 纯客户端模组，<br />可加载mmd模型，<br />仅自己可见        | [MCBBS](https://www.mcbbs.net/thread-230546-1-1.html)        |
 | Custom Player Model（自定义玩家模型） | 1,12.2,1.14.4 | 支持纯客户端和服务端<br />可加载JSON格式模型                 | [官网](http://cpmmod.top/)                                   |
 

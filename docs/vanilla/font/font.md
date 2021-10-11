@@ -120,7 +120,7 @@ p.s. 可以用这种方法将一些文字替换成形象的图画
 
 ### OptiFine 的改进
 
-参考：[OptiFine帮助文档：高清字体](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=896135&pid=15831179)，这部分没什么需要解释的。
+参考：[OptiFine文档：高清字体](../../optifinedoc/hd_fonts.md)，这部分没什么需要解释的。
 
 ## 拓展阅读
 

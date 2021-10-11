@@ -6,7 +6,7 @@
 
 ## PNGGauntlet
 
-**用途：** 无损压缩PNG格式的图片，可以大幅度压缩资源包的体积。
+**用途：** 无损压缩PNG格式的图片，可以一定程度上压缩资源包的体积。
 
 **地址：** [https://pnggauntlet.com/](https://pnggauntlet.com/)
 
@@ -27,5 +27,3 @@
 勾选“Overwrite Original Files”，这会覆盖原文件，所以请务必备份，点击Optimize!
 
 ![](https://i.loli.net/2020/11/18/gUEiZDPvSLaAf8F.png)
-
-我们2.38mb的资源包成功缩水为1.86mb！

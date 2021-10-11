@@ -26,7 +26,7 @@ tiles=1-4
 
 ::: tip 提示
 
-图片路径的详细说明请看[OptiFine帮助文档](https://www.mcbbs.net/forum.php?mod=redirect&goto=findpost&ptid=896135&pid=15601221)
+图片路径的详细说明请看[OptiFine文档](../../optifinedoc/properties_files.md)
 
 :::
 
