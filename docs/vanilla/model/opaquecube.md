@@ -4,7 +4,7 @@
 
 例如：
 
-![image-20200707131752103](opaque.assets/image-20200707131752103.png)
+![image-20200707131752103](https://i.loli.net/2021/10/12/VwmCUczfrLJWsDN.png)
 
 我们发现和我们的模型和其他方块接触的面出现“透视”了，而且一部分纹理出奇的黑。
 

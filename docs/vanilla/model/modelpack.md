@@ -20,15 +20,15 @@
 
 我把博丽神社的奉纳箱偷了过来（纹理是随便找的素材）：
 
-![image-20200711115558032](modelpack.assets/image-20200711115558032.png)
+![image-20200711115558032](https://i.loli.net/2021/10/12/DTKw6dplfHkjrWN.png)
 
 调整模型在物品展示框中的显示：
 
-![image-20200711123530207](modelpack.assets/image-20200711123530207.png)
+![image-20200711123530207](https://i.loli.net/2021/10/12/ymVDi7xuL89brIS.png)
 
 对于其他模型，点击默认方块——应用于此插槽就好了。
 
-![image-20200711124536071](modelpack.assets/image-20200711124536071.png)
+![image-20200711124536071](https://i.loli.net/2021/10/12/JBZPDd3WquO5TEN.png)
 
 导出为json模型，并改名为composer.json，替换掉原先的堆肥桶物品模型（注意是物品模型而不是方块模型），并把纹理放到对应位置。
 
@@ -51,15 +51,15 @@
 }
 ```
 
-![image-20200711125941227](modelpack.assets/image-20200711125941227.png)
+![image-20200711125941227](https://i.loli.net/2021/10/12/RLTtva9linJZON3.png)
 
 进入游戏，加载资源包，看看效果：
 
-![image-20200711130214220](modelpack.assets/image-20200711130214220.png)
+![image-20200711130214220](https://i.loli.net/2021/10/12/9WMsQ6bTrljNeqo.png)
 
 直接把它放出来，它还会是堆肥桶，因为方块模型没改，但是如果我们放出物品展示框，把它放到物品展示框里，模型就完全不一样了：
 
-![image-20200711130612635](modelpack.assets/image-20200711130612635.png)
+![image-20200711130612635](https://i.loli.net/2021/10/12/zjAnsbka2JfK96X.png)
 
 现在又出现两个问题，物品展示框会显示出来，物品展示框又必须依附于一个方块。
 
@@ -84,4 +84,4 @@
 
 模型直接消失了，大成功！
 
-![image-20200711132702370](modelpack.assets/image-20200711132702370.png)
+![image-20200711132702370](https://i.loli.net/2021/10/12/cV6awIm8HDyCbKE.png)

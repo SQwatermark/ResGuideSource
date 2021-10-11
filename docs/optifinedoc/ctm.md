@@ -282,7 +282,7 @@ innerSeams=false
 
 **模板：**
 
-![ctm_template.png](ctm.assets/ctm_template.png)
+![ctm_template.png](https://i.loli.net/2021/10/12/Sn6gvdVxsHuXwPI.png)
 
 译注：如果你疑惑为什么需要这么多张图片，不妨亲自尝试一下
 
@@ -310,7 +310,7 @@ innerSeams=false
 
 **模板：**
 
-![ctm_compact_template.png](ctm.assets/ctm_compact_template.png)
+![ctm_compact_template.png](https://i.loli.net/2021/10/12/isRHhzt8ZSGfLaI.png)
 
 
 
@@ -349,7 +349,7 @@ tiles=<4 tiles>
 
 **模板：**
 
-![horizontal_template.png](ctm.assets/horizontal_template.png)
+![horizontal_template.png](https://i.loli.net/2021/10/12/YwjJKBPZfipybLa.png)
 
 
 
@@ -367,7 +367,7 @@ tiles=<4 tiles>
 
 **模板：**
 
-![vertical_template.png](ctm.assets/vertical_template.png)
+![vertical_template.png](https://i.loli.net/2021/10/12/ylKdUM46gRAfkFQ.png)
 
 
 
@@ -609,5 +609,5 @@ layer=<cutout_mipped|cutout|translucent>
 
 **模板：**
 
-![overlay_template.png](ctm.assets/overlay_template.png)
+![overlay_template.png](https://i.loli.net/2021/10/12/SPAkBeVxtwifhvd.png)
 

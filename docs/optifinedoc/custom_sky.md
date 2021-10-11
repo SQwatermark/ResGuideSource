@@ -46,7 +46,7 @@ OptiFine 将持续加载直到找不到属性文件为止。属性文件的加�
 
 **天空盒模板：**
 
-![skybox.png](custom_sky.assets/skybox.png)
+![skybox.png](https://i.loli.net/2021/10/12/XzBVc7wofhOI95P.png)
 
 
 

@@ -12,7 +12,7 @@ colormap 的每一列表示一个生物群系。请注意此图片是垂直 "翻
 
 模板：
 
-![biome_grid_template.png](biome_palettes_grid_format.assets/biome_grid_template.png)
+![biome_grid_template.png](https://i.loli.net/2021/10/12/XK73eykVInv6CxG.png)
 
 
 

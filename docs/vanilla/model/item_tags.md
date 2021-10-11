@@ -33,11 +33,11 @@ custom_model_data标签是1.14加入的，对于1.14之后的版本，建议使�
 }
 ```
 
-![image-20200722140339694](item_tags.assets/image-20200722140339694.png)
+![image-20200722140339694](https://i.loli.net/2021/10/12/Cq8otRj6l1VhWcH.png)
 
 下面分别为Damage为1-9时，钻石锄显示的图案，Unbreakable标签设置为1，用于隐藏耐久度槽：
 
-![image-20200722140313561](item_tags.assets/image-20200722140313561.png)
+![image-20200722140313561](https://i.loli.net/2021/10/12/KPEFsOS6RUqTZdi.png)
 
 最令人头大的问题是，damage应该填哪些值，实际上游戏程序会将物品的实际damage值和predicate中给出的damage值作比较，predicate中给出的damage值可以比精确计算值小。[这里](https://geenium.github.io/damage-value-generator/)有一个工具，可以帮你计算并生成json文件。
 
@@ -61,6 +61,6 @@ custom_model_data标签是1.14加入的，对于1.14之后的版本，建议使�
 
 custom_model_data由CustomModelData整数NBT字段直接支持。
 
-![image-20200722151801895](item_tags.assets/image-20200722151801895.png)
+![image-20200722151801895](https://i.loli.net/2021/10/12/UTHgBhi35Nkdlfv.png)
 
-![image-20200722151851998](item_tags.assets/image-20200722151851998.png)
+![image-20200722151851998](https://i.loli.net/2021/10/12/VLqBgw9o8ikzUv5.png)

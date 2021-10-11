@@ -8,7 +8,7 @@
 
 这个资源包可以将命名为 koala 的猪显示为考拉的样子：
 
-![image-20211004025237495](example.assets/image-20211004025237495.png)
+![image-20211004025237495](https://i.loli.net/2021/10/12/DtxhgpsWSNGKqiR.png)
 
 不仅纹理改变了，还多了一对大耳朵。
 
@@ -24,7 +24,7 @@
 
 我们来看看 "random/entity/pig" 文件夹，圈起来的是考拉的纹理。
 
-![img](example.assets/170500frrcmvcomoovozrr.png)  
+![img](https://i.loli.net/2021/10/12/FYyNfJI5pWDlzPr.png)  
 
 打开 pig.properties，这个文件的名字告诉了 OptiFine，这里面的一切设置，都是用于 pig，也就是猪的。
 
@@ -66,7 +66,7 @@ iregex:(koala|.* p5) 是一个正则表达式，你可以从[这里](https://www
 
 让我们打开 cem 文件夹，里面和猪有关的是这几个文件：
 
-![img](example.assets/174718se2n74rt5r7qsmzm.png)  
+![img](https://i.loli.net/2021/10/12/u9Rh5Dyb13wJlfp.png)  
 
 其中 pig.jem 修改了猪的模型，具体来说，它为猪的模型添加了两个部件，其语法详见[此页面](../../optifinedoc/cem.md)。
 
@@ -122,7 +122,7 @@ red_panda_ears.jpm 和 red_panda_tail.jpm 内容如下：
 
 重新回到 "random/entity/pig/" 文件夹：
 
-![img](example.assets/175207jvjvbjbb091j4c2n.png) 
+![img](https://i.loli.net/2021/10/12/v4bXZfAJszFClH1.png) 
 
 我相信如果前面的部分可以看懂的话，这里也不难理解了。 
 

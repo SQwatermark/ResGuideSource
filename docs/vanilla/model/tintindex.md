@@ -30,7 +30,7 @@
 
 ::: details 展开查看图片
 
-![image-20200707100615893](tintindex.assets/image-20200707100615893.png)
+![image-20200707100615893](https://i.loli.net/2021/10/12/mi3RUdeuhcXNKs7.png)
 
 :::
 
@@ -42,7 +42,7 @@
 
 ::: details 展开查看图片
 
-![image-20200707102459192](tintindex.assets/image-20200707102459192.png)
+![image-20200707102459192](https://i.loli.net/2021/10/12/7OmHXeTUI3SdVJQ.png)
 
 :::
 
@@ -112,7 +112,7 @@ return tintindex > 0 ? -1 : PotionUtils.getColor(...);
 
 而刷怪蛋的两个渲染层都会被染色（下图来源于一个[Blog](http://greyminecraftcoder.blogspot.com/2013/08/rendering-items.html)）：
 
-![img](tintindex.assets/141229RvW-ItemLayerRenders.png)
+![img](https://i.loli.net/2021/10/12/CFtqOPVpE8rhlGY.png)
 
 受到类似的规则影响的物品还有**皮革盔甲，焰火之星，地图，药箭**等。
 

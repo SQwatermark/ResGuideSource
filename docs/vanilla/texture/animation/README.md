@@ -1,10 +1,10 @@
 # 动态纹理（前篇）
 
-![自己动手做一台老式放映机，放一场默片老电影_胶片](README.assets/0b49e5b5212444509e87ec77524cfd10.gif)
+![自己动手做一台老式放映机，放一场默片老电影_胶片](https://i.loli.net/2021/10/12/bPOGwZ3fHhoYDmp.gif)
 
 动态纹理就像老式电影的胶卷一样，实际上是逐帧绘制，竖向连接成长条的单张图案。在游戏中，自上而下逐帧播放，反复循环。一共有多少帧，每一帧播放多长时间，都是可以自定义的。
 
-![image-20200709190728020](README.assets/image-20200709190728020.png)
+![image-20200709190728020](https://i.loli.net/2021/10/12/kPXepv9Nafn1QyR.png)
 
 ::: tip
 
@@ -26,7 +26,7 @@
 
 ::: details 展开查看效果（闪烁图案警告）
 
-![img](README.assets/5f06ffe684eee_5f06ffe79fce6.gif)
+![img](https://i.loli.net/2021/10/12/d8uxQkrIWfzt7Kj.gif)
 
 :::
 
@@ -48,13 +48,13 @@
 
 ::: details 展开查看效果（辣眼GIF警告）
 
-![img](README.assets/5f070338c66e8_5f070339393a0.gif)
+![img](https://i.loli.net/2021/10/12/i9YbgspXltFUPqh.gif)
 
 :::
 
 接下来我们注意到这张纹理是上下对称的，下面的四张纹理显得有些浪费，我们作为清正廉洁的资源包作者，当然要能贪就贪，把这四张纹理给去掉。
 
-![image-20200712092435178](README.assets/image-20200712092435178.png)
+![image-20200712092435178](https://i.loli.net/2021/10/12/sghJnuTzKIvi1xF.png)
 
 然后我们要修改一下mcmeta文件：
 

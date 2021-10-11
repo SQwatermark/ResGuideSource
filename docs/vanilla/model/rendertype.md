@@ -4,7 +4,7 @@
 
 在旧版本中，渲染类型被称为渲染层（Render Layer），而渲染类型这个词表示另外的东西。
 
-![image-20200707133756597](renderlayer.assets/image-20200707133756597.png)
+![image-20200707133756597](https://i.loli.net/2021/10/12/cN5B4wGMqUyRSvm.png)
 
 我们看到竹叶原本是透明的，但是在这个例子里，透明的部分被渲染为白色了。这是方块的渲染类型导致的。
 
@@ -18,7 +18,7 @@
 
 下图来源于一个[Blog](https://greyminecraftcoder.blogspot.com/2020/04/block-rendering-1144.html)：
 
-![img](renderlayer.assets/141222RvW-BlockRenderLayers.png)
+![img](https://i.loli.net/2021/10/12/9siTnYzXqSgeJVb.png)
 
 ::: tip
 
@@ -32,7 +32,7 @@
 
 举个例子，我想让末地烛变成半透明的，先调整纹理的不透明度，查看效果：
 
-![image-20200715142808173](rendertype.assets/image-20200715142808173.png)
+![image-20200715142808173](https://i.loli.net/2021/10/12/4eBF2LkGsZNlvKw.png)
 
 由于其渲染类型为CUTOUT，理所当然没有显示出半透明纹理，现在我们在optifine文件夹下直接新建文件名为block.properties：
 
@@ -44,7 +44,7 @@ layer.translucent=end_rod
 
 现在它的确是半透明的了：
 
-![image-20200715143211150](rendertype.assets/image-20200715143211150.png)
+![image-20200715143211150](https://i.loli.net/2021/10/12/8JAxnTOsGbXlN6q.png)
 
 ## 拓展阅读
 

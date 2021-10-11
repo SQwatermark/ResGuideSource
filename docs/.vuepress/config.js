@@ -15,7 +15,6 @@ module.exports = {
     }
   },
   themeConfig: {
-    lastUpdated: '上次更新',
     nav: [
       { text: '教程', link: '/' },
       { text: 'OptiFine文档', link: '/optifinedoc/' },
