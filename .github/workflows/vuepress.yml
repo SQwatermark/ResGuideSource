@@ -41,4 +41,4 @@ jobs:
       - name: Deploy docs
         # 发布文档 
         # 推送dist的目录文件到对应存储桶，强制同步
-        run: ossutil sync ./docs/.vuepress/dist/ oss://sqwatermark/resguide/ -f，--delete
+        run: ossutil sync ./docs/.vuepress/dist/ oss://sqwatermark/resguide/ -f --delete
