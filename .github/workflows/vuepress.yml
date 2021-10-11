@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-    build-and-deploy:
+  build-and-deploy:
       runs-on: ubuntu-latest
     
       steps:
@@ -37,8 +37,8 @@ jobs:
 
           # 通过secrets隐藏你的阿里云 OSS_ACCESSKEYSECRET
           access-key-secret: ${{ secrets.OSS_ACCESSKEYSECRET }}
-    
+        
       - name: Deploy docs
         # 发布文档 
-        # 推送dist的目录文件到对应存储桶，存储桶名字修改为最开始创建时的 `Bucket 名称`
-        run: ossutil cp -rf ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
+        # 推送dist的目录文件到对应存储桶，强制同步
+        run: ossutil sync -f ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
