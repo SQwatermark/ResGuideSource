@@ -27,7 +27,7 @@ jobs:
           yarn run build
 
       - name: Setup aliyun oss
-        uses: manyuanrong/setup-ossutil@v2.0
+        uses: sqwatermark/setup-ossutil@v3.0
         with:
           # 对应你 oss存储桶endpoint，香港节点如下
           endpoint: "oss-cn-hongkong.aliyuncs.com" 
@@ -41,5 +41,4 @@ jobs:
       - name: Deploy docs
         # 发布文档 
         # 推送dist的目录文件到对应存储桶，强制同步
-        # run: ossutil sync -f ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
-        run: ossutil help
+        run: ossutil sync -f ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
