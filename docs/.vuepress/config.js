@@ -204,16 +204,6 @@ module.exports = {
   plugins: [
     '@vuepress/back-to-top',
     'vuepress-plugin-smooth-scroll',
-    ['@vuepress/last-updated',
-      {
-        transformer: (timestamp, lang) => {
-          // 不要忘了安装 moment
-          const moment = require('moment')
-          moment.locale(lang)
-          return moment(timestamp).fromNow()
-        }
-      }
-    ],
     //['@dovyp/vuepress-plugin-clipboard-copy', true],
     ['vuepress-plugin-container',{type: 'right',defaultTitle: ''}],
     ['vuepress-plugin-container',{type: 'theorem',before: info => `<div class="theorem"><p class="title">${info}</p>`,after: '</div>'}],
