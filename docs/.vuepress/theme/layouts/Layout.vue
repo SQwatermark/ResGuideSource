@@ -10,10 +10,10 @@
       @toggle-sidebar="toggleSidebar"
     />
 
-    <div
+    <!-- <div
       class="sidebar-mask"
       @click="toggleSidebar(false)"
-    />
+    /> -->
 
     <Sidebar
       :items="sidebarItems"
@@ -62,7 +62,7 @@ export default {
 
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: true
     }
   },
 
@@ -117,13 +117,13 @@ export default {
 
   mounted () {
     this.$router.afterEach(() => {
-      this.isSidebarOpen = false
+      this.isSidebarOpen = true
     })
   },
 
   methods: {
     toggleSidebar (to) {
-      //this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
       this.switchSidebar();
     },
     
@@ -136,12 +136,12 @@ export default {
           // 没获取到元素不执行方法
           return;
       }
-      if (window.screen.width < 719) {
-          // 手机屏幕，把样式恢复
-          sidebar.style.width = '';
-          page.style.paddingLeft = '';
-          return;
-      }
+      // if (window.screen.width < 719) {
+      //     // 手机屏幕，把样式恢复
+      //     sidebar.style.width = '';
+      //     page.style.paddingLeft = '';
+      //     return;
+      // }
       if (sidebar.offsetWidth > 100) {
           // 侧边栏是展开状态， 收起侧边栏
           sidebar.style.width = '0';
