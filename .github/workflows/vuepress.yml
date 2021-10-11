@@ -9,36 +9,9 @@ jobs:
       runs-on: ubuntu-latest
     
       steps:
-      - name: Checkout # checkout
-        uses: actions/checkout@v2
-    
-      # 如果需要使用Node 先安装Node
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-    
-      # 文档构建
-      - name: Build Docs
-        run: |
-          yarn install
-
-          # 修改为你的packjson文件配置的编译命令
-          yarn run build
-
-      - name: Setup aliyun oss
-        uses: manyuanrong/setup-ossutil@v2.0
-        with:
-          # 对应你 oss存储桶endpoint，香港节点如下
-          endpoint: "oss-cn-hongkong.aliyuncs.com" 
-
-          # 通过secrets隐藏你的阿里云 OSS_ACCESSKEYID
-          access-key-id: ${{ secrets.OSS_ACCESSKEYID }}
-
-          # 通过secrets隐藏你的阿里云 OSS_ACCESSKEYSECRET
-          access-key-secret: ${{ secrets.OSS_ACCESSKEYSECRET }}
         
       - name: Deploy docs
         # 发布文档 
         # 推送dist的目录文件到对应存储桶，强制同步
-        run: ossutil sync -f ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
+        # run: ossutil sync -f ./docs/.vuepress/dist/ oss://sqwatermark/resguide/
+        run: ossutil help
