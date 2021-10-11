@@ -27,7 +27,7 @@ jobs:
           yarn run build
 
       - name: Setup aliyun oss
-        uses: manyuanrong/setup-ossutil@v1.0
+        uses: manyuanrong/setup-ossutil@v2.0
         with:
           # 对应你 oss存储桶endpoint，香港节点如下
           endpoint: "oss-cn-hongkong.aliyuncs.com" 
