@@ -106,14 +106,6 @@ sounds.json最详细的说明当然得看看[Wiki](https://minecraft-zh.gamepedi
 
 ![image-20200706165159725](https://i.loli.net/2020/07/28/E3DsyMn6paYvHdg.png)
 
-::: tip 提示
-
-原版sounds.json文件是最好的老师。
-
-如果还不知道json文件怎么写的话，充分发挥你的学习能力吧，去学习一下json的基本语法。
-
-:::
-
 ::: warning 注意
 
 文件名不能含有小写英文字母、阿拉伯数字、下划线、横杠、小数点以外的字符（满足正则表达式[a-z0-9/._-]），也就是说不能含有大写字母（这一点对于资源包的所有文件都适用）。
