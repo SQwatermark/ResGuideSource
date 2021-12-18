@@ -16,7 +16,7 @@
 
 ```properties
 grass=true
-grass_path=true
+dirt_path=true
 mycelium=true
 podzol=true
 ```
@@ -57,10 +57,13 @@ grass.multilayer=false
 ```properties
 texture.grass=block/grass_block_top
 texture.grass_side=block/grass_block_side
-texture.grass_path=block/grass_path_top
-texture.grass_path_side=block/grass_path_side
+texture.dirt_path=block/dirt_path_top
+texture.dirt_path_side=block/dirt_path_side
 texture.mycelium=block/mycelium_top
 texture.podzol=block/podzol_top
 texture.snow=block/snow
 ```
 
+
+
+注：1.18起 grass_path 全部被更改为 dirt_path

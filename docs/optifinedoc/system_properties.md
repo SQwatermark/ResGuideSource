@@ -72,3 +72,12 @@ The part names and colors are written in the log
 ```properties
 cem.debug.models=<true|false>
 ```
+
+Chunk debug keys（2021.10.3新增）
+
+启用区块调试快捷键，见 "调试快捷键"
+
+```properties
+chunk.debug.keys=<true|false>
+```
+

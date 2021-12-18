@@ -8,3 +8,12 @@
 | `F3` + `O` | 光影（着色器）设置     |
 | `F3` + `R` | 重新加载光影（着色器） |
 
+## 区块调试快捷键，见系统属性 "chunk.debug.keys"
+| 快捷键         | 作用                   |
+| -------------- | ---------------------- |
+| F3 + E         | chunk path             |
+| F3 + L         | smart cull             |
+| F3 + U         | capture frustum        |
+| Alt + F3 + U   | capture shadow frustum |
+| Shift + F3 + U | release frustum        |
+| F3 + V         | chunk visibility       |

@@ -205,7 +205,7 @@ collarColors.<n>=<颜色>
 示例：
 
 ```properties
-colarColors=pink magenta purple
+collarColors=pink magenta purple
 ```
 
 
