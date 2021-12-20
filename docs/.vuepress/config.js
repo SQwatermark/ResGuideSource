@@ -145,6 +145,7 @@ module.exports = {
             '/optifine/cem/random_entities',
             '/optifine/cem/random_creeper',
             '/optifine/cem/example',
+            '/optifine/cem/cem_animation',
             '/optifine/cem/cpm',
           ]
         },
