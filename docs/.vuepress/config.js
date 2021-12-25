@@ -18,6 +18,7 @@ module.exports = {
     nav: [
       { text: '教程', link: '/' },
       { text: 'OptiFine文档', link: '/optifinedoc/' },
+      { text: '新闻', link: '/news/' },
       { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
       { text: '下载示例', link: 'https://gitee.com/sqwatermark/ResGuideSource' },
     ],
@@ -62,7 +63,7 @@ module.exports = {
         ['debug_keys', '调试快捷键'],
         ['todo', '尚未完成的事'],
       ],
-      'news': [
+      '/news/': [
         ['news_1', '2021年12月下半月刊'],
       ],
       '/': [
