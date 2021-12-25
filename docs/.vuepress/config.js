@@ -62,7 +62,9 @@ module.exports = {
         ['debug_keys', '调试快捷键'],
         ['todo', '尚未完成的事'],
       ],
-      
+      'news': [
+        ['news_1', '2021年12月下半月刊'],
+      ],
       '/': [
         '/propaedeutics/',
         {
