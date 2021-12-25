@@ -1,8 +1,8 @@
 # 【森罗万象新闻篇】2021年12月下半月刊
 
-【森罗万象新闻篇】开刊！将持续为各位带来资源包[1]相关资讯。每月10日，25日前后更新！
+【森罗万象新闻篇】开刊！将持续为各位带来资源包相关资讯。每月10日，25日前后更新！
 
-[1] 不仅仅是资源包，让MC变得更具美感的一切都可能出现在这里。所以你也能看到光影、建模软件、装饰类模组、甚至是建筑的相关资讯。
+不仅仅是资源包，让MC变得更具美感的一切都可能出现在这里。所以你也能看到光影、建模软件、装饰类模组、甚至是建筑的相关资讯。
 
 ## 社区事件
 
@@ -12,7 +12,7 @@
 
 为期一周，OptiFine捐献者的头上将会出现一顶圣诞帽！
 
-推文链接：https://twitter.com/OptiFineNews/status/1474433462463565835
+推文链接：[https://twitter.com/OptiFineNews/status/1474433462463565835](https://twitter.com/OptiFineNews/status/1474433462463565835)
 
 ![image-20211225111603172](https://s2.loli.net/2021/12/25/6IGwBkVLjlY1dDc.png)
 
@@ -30,9 +30,9 @@ Faithful，国内俗称原版高清资源包，最近被爆料。其原作者Vat
 
 12月11日，MiniaTuria发布了v1.2.0版本。更新了许多符合**圣诞节主题**的内容。
 
-更新日志：https://miniaturia.club/mt1122/120/
+更新日志：[https://miniaturia.club/mt1122/120/](https://miniaturia.club/mt1122/120/)
 
-新作发布会视频：https://www.youtube.com/watch?v=y0yAgbaCWvM
+新作发布会视频：[https://www.youtube.com/watch?v=y0yAgbaCWvM](https://www.youtube.com/watch?v=y0yAgbaCWvM)
 
 ![img](https://s2.loli.net/2021/12/25/wbDJoLqUNCB8aMX.jpg)
 
@@ -46,11 +46,11 @@ Faithful，国内俗称原版高清资源包，最近被爆料。其原作者Vat
 
 ![image 3](https://s2.loli.net/2021/12/25/WsXR4kCBLxy9ESF.jpg)
 
-下载地址：https://miniaturia.club/mt-extra-pack/
+下载地址：[https://miniaturia.club/mt-extra-pack/](https://miniaturia.club/mt-extra-pack/)
 
-介绍视频：https://www.youtube.com/watch?v=-uErZWXsHzE
+介绍视频：[https://www.youtube.com/watch?v=-uErZWXsHzE](https://www.youtube.com/watch?v=-uErZWXsHzE)
 
-关注作者推特了解更多与MiniaTuria有关的信息：https://twitter.com/bisukko_m
+关注作者推特了解更多与MiniaTuria有关的信息：[https://twitter.com/bisukko_m](https://twitter.com/bisukko_m)
 
 ### 适用于1.18.1的SEUS PTGI HRR3更新
 
@@ -58,7 +58,7 @@ Faithful，国内俗称原版高清资源包，最近被爆料。其原作者Vat
 
 与HRR2.1版本相比有**显著的性能和画面效果的提升**。
 
-下载地址：https://www.patreon.com/posts/download-seus-3-60268558
+下载地址：[https://www.patreon.com/posts/download-seus-3-60268558](https://www.patreon.com/posts/download-seus-3-60268558)
 
 ![image-20211224154925692](https://s2.loli.net/2021/12/25/vsUNB3MoXfIQ1gj.png)
 
@@ -74,7 +74,7 @@ Faithful，国内俗称原版高清资源包，最近被爆料。其原作者Vat
 
 12月22日，BlockBench发布了4.1.0版本，更新了以**逆运动学**为主的动画相关内容。
 
-更新日志：https://github.com/JannisX11/blockbench/releases/tag/v4.1.0
+更新日志：[https://github.com/JannisX11/blockbench/releases/tag/v4.1.0](https://github.com/JannisX11/blockbench/releases/tag/v4.1.0)
 
 ![图像](https://s2.loli.net/2021/12/25/1gfS3ijnLWH8Rxb.jpg)
 
@@ -94,7 +94,7 @@ https://www.bilibili.com/video/BV1Wq4y1m7PX
 
 12月12日，灵影Ghost展示了群青中式装饰模组的最新进度。
 
-推文链接：https://twitter.com/Ghost773748999/status/1469936462955433989
+推文链接：[https://twitter.com/Ghost773748999/status/1469936462955433989](https://twitter.com/Ghost773748999/status/1469936462955433989)
 
 ![image-20211225093010407](https://s2.loli.net/2021/12/25/TGUp4nZOoiK683d.png)
 
@@ -106,9 +106,9 @@ https://www.bilibili.com/video/BV1Wq4y1m7PX
 
 12月13日，hananacraft作者宣布将发布名为Heritage CIT的新资源包。
 
-推文链接：https://twitter.com/hanaling_art/status/1470391517181214720
+推文链接：[https://twitter.com/hanaling_art/status/1470391517181214720](https://twitter.com/hanaling_art/status/1470391517181214720)
 
-官网链接：https://hana-the-banana.tumblr.com/
+官网链接：[https://hana-the-banana.tumblr.com/](https://hana-the-banana.tumblr.com/)
 
 ![image-20211225101114996](https://s2.loli.net/2021/12/25/JiKXWxVAzF1aqZ8.png)
 
@@ -124,7 +124,7 @@ PlanetMinecraft用户Rhines于12月18日发布了一款名为【Kitsune Mask CIT
 
 ![Take a Carved Pumpkin and place it in an anvil. Rename this Carved Pumpkin to Fox Mask A, B, C, D, E, or F to obtain the corresponding texture!](https://s2.loli.net/2021/12/25/noZRgGOKFmPt8bh.jpg)
 
-下载地址：https://www.planetminecraft.com/texture-pack/kitsune-masks-cit-pack/
+下载地址：[https://www.planetminecraft.com/texture-pack/kitsune-masks-cit-pack/](https://www.planetminecraft.com/texture-pack/kitsune-masks-cit-pack/)
 
 ### 武器物品纹理包
 
@@ -132,9 +132,9 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 下载地址：
 
-- 完整纹理包：https://www.planetminecraft.com/texture-pack/grimdark-battlepack/
-- 仅武器和工具：https://www.planetminecraft.com/texture-pack/grimdark-tools/
-- 仅盔甲：https://www.planetminecraft.com/texture-pack/grimdark-armor/
+- 完整纹理包：[https://www.planetminecraft.com/texture-pack/grimdark-battlepack/](https://www.planetminecraft.com/texture-pack/grimdark-battlepack/)
+- 仅武器和工具：[https://www.planetminecraft.com/texture-pack/grimdark-tools/](https://www.planetminecraft.com/texture-pack/grimdark-tools/)
+- 仅盔甲：[https://www.planetminecraft.com/texture-pack/grimdark-armor/](https://www.planetminecraft.com/texture-pack/grimdark-armor/)
 
 ![img](https://s2.loli.net/2021/12/25/rh8oJRmn7yDKb5F.jpg)
 
@@ -150,7 +150,7 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 ![xfpxh-obk3v](https://s2.loli.net/2021/12/25/ZkLvuOT46E8JDfd.gif)
 
-教程地址：https://www.youtube.com/watch?v=vXtnj59fvvA
+教程地址：[https://www.youtube.com/watch?v=vXtnj59fvvA](https://www.youtube.com/watch?v=vXtnj59fvvA)
 
 其实就是用white_ash粒子，但效果真的很棒。
 
@@ -169,7 +169,7 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 使用了[yuushya](https://yuushya.gitee.io/page/index.html)和[hananacraft](https://hana-the-banana.tumblr.com/)。
 
-推文链接：https://twitter.com/ikuyuk_/status/1474128024261988353
+推文链接：[https://twitter.com/ikuyuk_/status/1474128024261988353](https://twitter.com/ikuyuk_/status/1474128024261988353)
 
 ![image-20211225102622385](https://s2.loli.net/2021/12/25/piTK5OPNRBrI7SH.png)
 
@@ -187,7 +187,7 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 使用了MiniaTuria。
 
-推文链接：https://twitter.com/bisukko_m/status/1473569329451266049
+推文链接：[https://twitter.com/bisukko_m/status/1473569329451266049](https://twitter.com/bisukko_m/status/1473569329451266049)
 
 ![image-20211225102152684](https://s2.loli.net/2021/12/25/2lJGRa1ikhCQfvq.png)
 
@@ -203,7 +203,7 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 使用了[MiniaTuria](https://miniaturia.club/en/)、[cocricot](https://cocricot.pics/)和[Mizunos16Craft](https://mizunomcmemo.blogspot.com/p/resourcepack.html)。
 
-推文链接：https://twitter.com/chikuwalecker/status/1472531487774117891
+推文链接：[https://twitter.com/chikuwalecker/status/1472531487774117891](https://twitter.com/chikuwalecker/status/1472531487774117891)
 
 ![image-20211225104910803](https://s2.loli.net/2021/12/25/AELIiDXmxBqwN6z.png)
 
@@ -223,7 +223,7 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 地形软件不是常见的WorlMachine而是[Gaea](https://quadspinner.com/)，相比之下拥有更美观的界面和更强大的侵蚀效果。
 
-推文链接：https://twitter.com/TIME__TSS/status/1472234050760839171
+推文链接：[https://twitter.com/TIME__TSS/status/1472234050760839171](https://twitter.com/TIME__TSS/status/1472234050760839171)
 
 ![image-20211225105642692](https://s2.loli.net/2021/12/25/qu7P2OJ4eMgnDF3.png)
 
@@ -234,3 +234,4 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 ![图像](https://s2.loli.net/2021/12/25/4x2oAcjIslgyuNG.jpg)
 
 ![图像](https://s2.loli.net/2021/12/25/eY4uTbVvF2NiaqL.jpg)
+
