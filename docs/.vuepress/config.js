@@ -65,6 +65,8 @@ module.exports = {
       ],
       '/news/': [
         ['news_1', '2021年12月下半月刊'],
+        ['news_2', '2022年1月上半月刊'],
+        ['special_1', 'Faithful事件'],
       ],
       '/': [
         '/propaedeutics/',

@@ -84,6 +84,8 @@ Faithful，国内俗称原版高清资源包，最近被爆料。其原作者Vat
 
 12月23日，几何发布了视频【Yuushya 方块小镇 Beta 1.10.0 中心旋转特性前瞻】演示了开发中的功能。
 
+Yuushya Forge版本已大体完成，只需要再完成一些测试即可正式发布，敬请期待！
+
 ::: bv 1Wq4y1m7PX
 
 https://www.bilibili.com/video/BV1Wq4y1m7PX
@@ -217,7 +219,7 @@ PlanetMinecraft用户Kalam0n于12月2日发布了一款名为【Kal's Grimdark B
 
 ### Time__的地形作品
 
-国人MC地形师Time__展示了大气蓬勃的地形作品。
+国人MC地形师Time__展示了大气磅礴的地形作品。
 
 使用了[Conquest Reforged](https://conquestreforged.com/)。
 
