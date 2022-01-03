@@ -179,7 +179,7 @@ module.exports = {
         },
         {
           title: 'GUI',
-          //path: '/vanilla/texture/gui/',
+          path: '/vanilla/texture/gui/',
           children: [
             '/vanilla/texture/gui/panorama',
             '/vanilla/texture/gui/loading',
