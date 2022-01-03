@@ -2,7 +2,7 @@
 
 ## 概述丨Overview
 
-如果你想制作一个自定义 GUI，请在 "assets/minecraft/optifine/GUI/container" 文件夹或者其任意一层子文件夹中创建一个 .properties 文件，并按照下面的模板编辑属性文件。
+如果你想制作一个自定义 GUI，请在 "assets/minecraft/optifine/gui/container" 文件夹或者其任意一层子文件夹中创建一个 .properties 文件，并按照下面的模板编辑属性文件。
 
 不同类型的容器有不同的要求和限制。详见下方。
 
