@@ -56,7 +56,7 @@ MCBBS转载帖：[https://www.mcbbs.net/thread-1285936-1-1.html](https://www.mcb
 
 ![image-20220110122229676](news_2.assets/image-20220110122229676.png)
 
-![Pc4xb3gH_2q6fG-K(5)](C:/Users/12/Desktop/迅捷视频转换器/Pc4xb3gH_2q6fG-K(5).gif)
+![Pc4xb3gH_2q6fG-K(5)](news_2.assets/Pc4xb3gH_2q6fG-K(5).gif)
 
 ### Chichi在Twitter上展示新创作的物品纹理
 
