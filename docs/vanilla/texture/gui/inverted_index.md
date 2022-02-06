@@ -237,7 +237,7 @@ gui\container\crafting_table.png
 
 ## 右上角相关
 
-![进度](https://s4.ax1x.com/2022/02/06/Hu2fDP.png)
+![进度](https://s4.ax1x.com/2022/02/06/Hu2dnx.png)
 
 配方书提示：左上角容器+物品+文字描述
 
