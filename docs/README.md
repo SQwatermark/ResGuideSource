@@ -30,9 +30,9 @@ Minecraft java版 1.15.2，如果你的版本号不同，需要自己解决版�
 
 ::: warning
 
-关于OptiFine在高版本与Forge、Fabric的兼容问题，见[此页面](appendix/compatibility.md)。
+关于 OptiFine 在高版本与 Forge、Fabric 的兼容问题，见[此页面](appendix/compatibility.md)。
 
-1.15.2是个bug奇多的版本，或许我该找个稳定的版本重写教程了。
+1.15.2 是个 bug 很多的版本，或许我该找个稳定的版本重写教程了。
 
 :::
 
@@ -48,8 +48,8 @@ Minecraft java版 1.15.2，如果你的版本号不同，需要自己解决版�
 
 ## 联系方式
 
-QQ群：1121783236（资源包制作交流群）
+QQ群：260517137（纹理资源官方群）
 
-MCBBS论坛：[https://www.mcbbs.net/?2603114](https://www.mcbbs.net/?2603114)
+MCBBS论坛：[SQwatermark ](https://www.mcbbs.net/?2603114)& [Xiao2](https://www.mcbbs.net/?703042)
 
 欢迎提出建议和有价值的问题。
