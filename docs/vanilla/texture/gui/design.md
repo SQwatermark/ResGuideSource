@@ -17,13 +17,13 @@ GUI设计思路上大致有3个要求：功能相符、前后一致、浑然一�
 
 ## 一些GUI参考
 
-Colourful Containers Dark Mode GUI https://www.mcbbs.net/thread-1299897-1-1.html
+Colourful Containers Dark Mode GUI [https://www.mcbbs.net/thread-1299897-1-1.html](https://www.mcbbs.net/thread-1299897-1-1.html)
 
 ![](https://s2.loli.net/2022/01/31/iv2HZaxQymCWJzd.png)
 
-纯净致简Pure Simplicity-TexturePack https://www.mcbbs.net/thread-1035766-1-1.html
+纯净致简Pure Simplicity-TexturePack [https://www.mcbbs.net/thread-1035766-1-1.html](https://www.mcbbs.net/thread-1035766-1-1.html)
 
-盘灵古域 （地图）https://www.mcbbs.net/thread-434761-1-1.html
+盘灵古域 （地图）[https://www.mcbbs.net/thread-434761-1-1.html](https://www.mcbbs.net/thread-434761-1-1.html)
 
 ![盘灵古域](https://s4.ax1x.com/2022/02/06/Hu2rND.png)
 
@@ -31,17 +31,16 @@ Colourful Containers Dark Mode GUI https://www.mcbbs.net/thread-1299897-1-1.html
 
 （如有侵权立刻删除）
 
-Bewitched https://www.mcbbs.net/thread-928028-1-1.html
+Bewitched [https://www.mcbbs.net/thread-928028-1-1.html](https://www.mcbbs.net/thread-928028-1-1.html)
 
 （看一下视频里的GUI界面！）
 
-Diefault  https://www.bilibili.com/video/BV1tL411p7pg?share_source=copy_web
+Diefault  [https://www.bilibili.com/video/BV1tL411p7pg?share_source=copy_web](https://www.bilibili.com/video/BV1tL411p7pg?share_source=copy_web)
 
 （不仅修改了UI，还修改了物品放置的渲染，以适合UI的布局）
 
-原质化 Material https://www.mcbbs.net/thread-802516-1-1.html
+原质化 Material [https://www.mcbbs.net/thread-802516-1-1.html](https://www.mcbbs.net/thread-802516-1-1.html)
 
 ![](https://attachment.mcbbs.net/data/myattachment/forum/201809/18/100916v4pbpbiskp0600pw.png.thumb.jpg)
-
 
 
