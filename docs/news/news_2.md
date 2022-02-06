@@ -50,9 +50,25 @@
 
 ### Mizuno's 16 Craft 更新 1.18.1
 
+Mizuno资源包主包和CIT包均更新到了1.18.1版本，CIT包更新了数十个物品模型。
+
 > [官网更新日志&下载链接](https://mizunomcmemo.blogspot.com/2022/01/mizunos-16-craft-java-edition-1181.html)
 
 ![img](https://s2.loli.net/2022/01/10/oVajeAkDf7vQlhg.jpg)
+
+CIT包更新部分内容展示：
+
+::: details
+
+![image-20220110200624514](https://s2.loli.net/2022/01/10/WOkw5XDxBZpHjc8.png)
+
+![image-20220110200702591](https://s2.loli.net/2022/01/10/Dfhlr6sXuNHdnRc.png)
+
+![image-20220110200742115](https://s2.loli.net/2022/01/10/hf8XM3VBeJjdA6E.png)
+
+![image-20220110200949926](https://s2.loli.net/2022/01/10/c8kmGJIPsxB9T1a.png)
+
+:::
 
 ### Sildur 光影更新
 
