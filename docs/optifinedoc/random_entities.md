@@ -114,6 +114,8 @@ biomes.<n>=<生物群系列表>
 
 取代了旧的 minHeight 和 maxHeight 属性。
 
+从1.18开始高度可以使用负值，用于范围时需要将负数用小括号括起来。
+
 ```properties
 heights.<n>=<高度范围>
 ```
@@ -188,9 +190,9 @@ professions.<n>=<职业>
 
 
 
-**项圈颜色（可选）**
+**颜色（可选）**
 
-列出狼/猫的项圈颜色
+列出狼/猫的项圈颜色或羊/羊驼的颜色。
 
 可选的颜色：
 
@@ -199,20 +201,22 @@ professions.<n>=<职业>
 > pink gray light_gray cyan(青色) purple(紫色) blue brown green red black
 
 ```properties
-collarColors.<n>=<颜色>
+colors.<n>=<颜色>
 ```
 
 示例：
 
 ```properties
-collarColors=pink magenta purple
+colors=pink magenta purple
 ```
+
+旧属性 "collarColors" 依然可被识别。
 
 
 
 **是否为幼崽（可选）**
 
-只对怪物有效
+只对怪物有效。
 
 ```properties
 baby.<n>=<true/false>
@@ -240,7 +244,7 @@ health.<n>=<list>
 
 **月相（可选）**
 
-月相为0-7的整数
+月相为0-7的整数。
 
 示例：
 
@@ -256,12 +260,34 @@ moonPhase.<n>=<list>
 
 **天气（可选）**
 
-不同值可以用空格分隔
+不同值可以用空格分隔。
 
 例如 "weather=clear rain thunder"
 
 ```properties
 weather.<n>=<clear|rain|thunder>
+```
+
+
+
+**尺寸（可选）**
+
+仅适用于有多种尺寸的怪物。（史莱姆和岩浆怪的尺寸为 0-255，幻翼的尺寸为 0-64）
+
+自然生成的史莱姆和岩浆怪的尺寸只有三种：0=小, 1=中, 3=大。
+
+自然生成的幻翼的尺寸为0。
+
+```properties
+sizes.<n>=<list>
+```
+
+示例：
+
+```properties
+sizes.1=3
+sizes.2=0 1 3
+sizes.3=0-2 4-7
 ```
 
 
@@ -272,7 +298,7 @@ weather.<n>=<clear|rain|thunder>
 
 将 creeper10.png 到 creeper14.png 应用于所有位于地下的苦力怕。
 
-creeper13.png 当前出现的概率为 7.3% (3/(10+10+10+3+10)).
+creeper13.png 当前出现的概率为 7.3% (3/(10+10+10+3+10))。
 
 ```properties
 skins.1=10-14
@@ -282,7 +308,7 @@ heights.1=0-55
 
 
 
-将 5, 7, 9 应用于高于80的山区地带.
+将 5, 7, 9 应用于高于80的山区地带。
 
 ```properties
 skins.2=5 7 9

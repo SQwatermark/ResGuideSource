@@ -222,22 +222,22 @@ map.warped_wart_block=14b485
 > sheep.lightBlue=sheep.light_blue
 
 ```properties
-sheep.white=ffffff
-sheep.orange=f2b233
-sheep.magenta=e57fd8
-sheep.light_blue=99b2f2
-sheep.yellow=e5e533
-sheep.lime=7fcc19
-sheep.pink=f2b2cc
-sheep.gray=4c4c4c
-sheep.light_gray=999999
-sheep.cyan=4c99b2
-sheep.purple=b266e5
-sheep.blue=3366cc
-sheep.brown=7f664c
-sheep.green=667f33
-sheep.red=cc4c4c
-sheep.black=191919
+sheep.white=e6e6e6
+sheep.orange=ba6015
+sheep.magenta=953a8d
+sheep.light_blue=2b86a3
+sheep.yellow=bea22d
+sheep.lime=609517
+sheep.pink=b6687f
+sheep.gray=353b3d
+sheep.light_gray=757571
+sheep.cyan=107575
+sheep.purple=66258a
+sheep.blue=2d337f
+sheep.brown=623f25
+sheep.green=465d10
+sheep.red=84221c
+sheep.black=151518
 ```
 
 
@@ -251,22 +251,22 @@ sheep.black=191919
 > collar.lightBlue=collar.light_blue
 
 ```properties
-collar.white=ffffff
-collar.orange=f2b233
-collar.magenta=e57fd8
-collar.light_blue=99b2f2
-collar.yellow=e5e533
-collar.lime=7fcc19
-collar.pink=f2b2cc
-collar.gray=4c4c4c
-collar.light_gray=999999
-collar.cyan=4c99b2
-collar.purple=b266e5
-collar.blue=3366cc
-collar.brown=7f664c
-collar.green=667f33
-collar.red=cc4c4c
-collar.black=191919
+collar.white=f9fffe
+collar.orange=f9801d
+collar.magenta=c74ebd
+collar.light_blue=3ab3da
+collar.yellow=fed83d
+collar.lime=80c71f
+collar.pink=f38baa
+collar.gray=474f52
+collar.light_gray=9d9d97
+collar.cyan=169c9c
+collar.purple=8932b8
+collar.blue=3c44aa
+collar.brown=835432
+collar.green=5e7c16
+collar.red=b02e26
+collar.black=1d1d21
 ```
 
 

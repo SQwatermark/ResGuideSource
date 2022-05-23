@@ -16,6 +16,7 @@
 | 实体名              | 部件名                                                       |
 | ------------------- | ------------------------------------------------------------ |
 | armor_stand            | head, headwear, body, left_arm, right_arm, left_leg, right_leg, right, left, waist, base |
+| axolotl            | head, body, leg1 ... leg4, tail, top_gills, left_gills, right_gills |
 | banner                 | slate, stand, top                                                                                                                                                                                                                                                                         |
 | bat                    | head, body, right_wing, left_wing, outer_right_wing, outer_left_wing                                                                                                                                                                                                                      |
 | bee                    | body, torso, right_wing, left_wing, front_legs, middle_legs, back_legs, stinger, left_antenna, right_antenna                                                                                                                                                                              |
@@ -23,9 +24,10 @@
 | bell                   | body                                                                                                                                                                                                                                                                                      |
 | blaze                  | head, stick1 ... stick12                                                                                                                                                                                                                                                                  |
 | boat                   | bottom, back, front, right, left, paddle_left, paddle_right, bottom_no_water                                                                                                                                                                                                              |
-| cat                    | back_left_leg, back_right_leg, front_left_leg, front_right_leg, tail, tail2, head, body                                                                                                                                                                                                   |
-| cave_spider            | head, neck, body, leg1 ... leg8                                                                                                                                                                                                                                                           |
-| chest                  | lid, base, knob                                                                                                                                                                                                                                                                           |
+| cat                    | back_left_leg, back_right_leg, front_left_leg, front_right_leg, tail, tail2, head, body|
+| cat_collar                    | back_left_leg, back_right_leg, front_left_leg, front_right_leg, tail, tail2, head, body|
+| cave_spider            | head, neck, body, leg1 ... leg8|
+| chest                  | lid, base, knob |
 | chest_large            | lid_left, base_left, knob_left, lid_right, base_right, knob_right                                                                                                                                                                                                                         |
 | chest_minecart         | bottom, back, front, right, left                                                                                                                                                                                                                                                    |
 | chicken                | head, body, right_leg, left_leg, right_wing, left_wing, bill, chin                                                                                                                                                                                                                        |
@@ -50,6 +52,8 @@
 | furnace_minecart       | bottom, back, front, right, left                                                                                                                                                                                                                                                    |
 | ghast                  | body, tentacle1 ... tentacle9                                                                                                                                                                                                                                                             |
 | giant                  | head, headwear, body, left_arm, right_arm, left_leg, right_leg                                                                                                                                                                                                                            |
+| glow_squid                  | body, tentacle1 ... tentacle8 |
+| goat                  | head, body, leg1 ... leg4, left_horn, right_horn, nose |
 | guardian               | body, eye, spine1 ... spine12, tail1 ... tail3                                                                                                                                                                                                                                            |
 | head_dragon            | head, jaw                                                                                                                                                                                                                                                                                 |
 | head_player            | head                                                                                                                                                                                                                                                                                      |
@@ -110,6 +114,8 @@
 | trident                | body                                                                                                                                                                                                                                                                                      |
 | tropical_fish_a        | body, tail, fin_right, fin_left, fin_top                                                                                                                                                                                                                                                  |
 | tropical_fish_b        | body, tail, fin_right, fin_left, fin_top, fin_bottom                                                                                                                                                                                                                                      |
+| tropical_fish_pattern_a        | body, tail, fin_right, fin_left, fin_top                                                                                                                                                                                                                                                  |
+| tropical_fish_pattern_b        | body, tail, fin_right, fin_left, fin_top, fin_bottom                                                                                                                                                                                                                                      |
 | turtle                 | head, body, leg1 ... leg4, body2                                                                                                                                                                                                                                                          |
 | vex                    | head, headwear, body, left_arm, right_arm, left_leg, right_leg, left_wing, right_wing                                                                                                                                                                                                     |
 | villager               | head, headwear, headwear2, body, bodywear, arms, left_leg, right_leg, nose                                                                                                                                                                                                                |
@@ -120,6 +126,7 @@
 | wither_skeleton        | head, headwear, body, left_arm, right_arm, left_leg, right_leg                                                                                                                                                                                                                            |
 | wither_skull           | head                                                                                                                                                                                                                                                                                      |
 | wolf                   | head, body, leg1 ... leg4, tail, mane                                                                                                                                                                                                                                                     |
+| wolf_collar             | head, body, leg1 ... leg4, tail, mane                                                                                                                                                                                                                                                     |
 | zoglin                 | head, right_ear, left_ear, body, front_right_leg, front_left_leg, back_right_leg, back_left_leg, mane                                                                                                                                                                                     |
 | zombie                 | head, headwear, body, left_arm, right_arm, left_leg, right_leg                                                                                                                                                                                                                            |
 | zombie_horse           | \<same as horse\>                                                                                                                                                                                                                                                                         |
@@ -369,12 +376,16 @@
 > is_glowing
 >
 > is_hurt
-> 
-> is_in_hand（2021.5.21新增）
-> 
-> is_in_ground（2021.5.21新增）
-> 
-> is_in_gui（2021.5.21新增）
+>
+> is_in_hand
+>
+> is_in_item_frame
+>
+> is_in_ground
+>
+> is_on_head
+>
+> is_in_gui
 >
 > is_in_lava
 >
@@ -440,7 +451,7 @@
 >
 > log(x)
 >
-> pow(x)
+> pow(x, y)
 >
 > random(x)
 >

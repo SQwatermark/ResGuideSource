@@ -64,7 +64,7 @@ source=<纹理>
 
 
 
-**(必需) 淡入/淡出时间**
+**(可选) 淡入/淡出时间**
 
 所有时间都使用小时:分钟的24小时格式。
 
@@ -86,6 +86,8 @@ source=<纹理>
 > 在 endFadeOut 和 startFadeIn 之间: 固定为0
 
 注意你不需要指定startFadeOut的值；它是由其他三个值确定的。
+
+如果不设置时间，则这一层将一直渲染。
 
 ```properties
 startFadeIn=<小时:分钟>
@@ -172,6 +174,34 @@ axis=0.0 0.0 1.0
 
 
 
+**（可选）日期**
+
+这一层（在一个周期中）被渲染的日期。
+
+日期从 0 开始计数，最大值为循环天数-1。
+
+```properties
+days=<日期列表>
+```
+
+例如：
+
+```properties
+days=0 2-4 6
+```
+
+
+
+**（可选）一个周期的天数**
+
+一个循环周期的天数，默认为8。
+
+```properties
+daysLoop=8
+```
+
+
+
 **（可选）天气**
 
 渲染这一层所需要的天气条件，多个值可用空格键分隔。
@@ -193,6 +223,8 @@ weather=clear|rain|thunder
 这里列出了原版生物群系：[https://minecraft.gamepedia.com/Biome#Biome_IDs](https://minecraft.gamepedia.com/Biome#Biome_IDs)。
 
 也可以使用模组添加的生物群系。
+
+从1.18开始高度可以使用负值，用于范围时需要将负数用小括号括起来。
 
 ```properties
 biomes=<生物群系列表>

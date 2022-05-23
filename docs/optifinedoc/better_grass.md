@@ -19,6 +19,8 @@ grass=true
 dirt_path=true
 mycelium=true
 podzol=true
+crimson_nylium=true
+warped_nylium=true
 ```
 
 
@@ -61,6 +63,8 @@ texture.dirt_path=block/dirt_path_top
 texture.dirt_path_side=block/dirt_path_side
 texture.mycelium=block/mycelium_top
 texture.podzol=block/podzol_top
+texture.crimson_nylium=block/crimson_nylium
+texture.warped_nylium=block/warped_nylium
 texture.snow=block/snow
 ```
 

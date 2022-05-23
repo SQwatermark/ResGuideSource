@@ -235,6 +235,8 @@ faces=<以下的组合: north south east west top bottom sides all>
 
 旧属性 "minHeight" 和 "maxHeight" 也可以被识别。
 
+从1.18开始高度可以使用负值，用于范围时需要将负数用小括号括起来。
+
 ```properties
 biomes=<生物群系列表>
 heights=<高度范围>
