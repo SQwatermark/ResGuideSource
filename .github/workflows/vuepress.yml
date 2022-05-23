@@ -12,6 +12,19 @@ jobs:
       - name: Checkout # checkout
         uses: actions/checkout@v2
         
+      # 如果需要使用Node 先安装Node
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      # 文档构建
+      - name: Build Docs
+        run: |
+          yarn install
+          # 修改为你的packjson文件配置的编译命令
+          yarn run build
+        
       - name: Setup aliyun oss
         uses: sqwatermark/setup-ossutil@v3.0
         with:
