@@ -16,7 +16,7 @@
 
 管线首先处理G-Buffer着色器（gbuffer shaders）。它们将数据渲染成纹理（textures），而纹理会被发送到合成着色器（composite shaders）中。
 
-可选的延迟着色器（deferred shaders）可以被添加到地形和水的渲染之间。
+Optional composite shaders can be added after the shadow map (shadowcomp), before terrain (prepare) and before water rendering (deferred).
 
 接着合成着色器把接收到的内容渲染成纹理，并将结果发送到最终着色器（the final shader）中。
 
@@ -30,11 +30,15 @@
 
 | 扩展名 | 类型                          |
 | ------ | ----------------------------- |
+| .csh   | Compute shader                |
 | .vsh   | 顶点着色器（Vertex shader）   |
 | .gsh   | 几何着色器（Geometry shader） |
 | .fsh   | 片段着色器（Fragment shader） |
 
-几何着色器需要带布局限定符（layout qualifiers）的 OpenGL3.2 或者带有 "maxVerticesOut" 配置的 GL_ARB_geometry_shader4 拓展。
+Geometry shaders need either OpenGL 3.2 with layout qualifiers or the extension GL_ARB_geometry_shader4 (GL_EXT_geometry_shader4) 
+with configuration "maxVerticesOut".
+
+
 
 ## 颜色附件|Color Attachments
 
@@ -46,7 +50,7 @@ MacOS 限制为8个颜色附件，即便是 modern GPU。
 
 在延迟、合成、和最终着色器中，它们由 gcolor、gdepth、gnormal、composite、gaux1、gaux2、gaux3和gaux4 uniforms 引用。
 
-（colortex0 到 colortexF 可以替代 gcolor, gdepth 等）
+（colortex0 到 colortex15 可以替代 gcolor, gdepth 等）
 
 如果不谈名字的话，除了前两个以外，所有的颜色附件都是相同的，可以用于任何目的。
 
@@ -76,13 +80,24 @@ The virtual programs "deferred_pre" and "composite_pre" can be used for buffer f
 
 <br/>
 
-输出的颜色附件使用片段着色器中的 "/\* DRAWBUFFERS:XYZ \*/" 注释进行设置。
+Output color attachments are configured with the "/* DRAWBUFFERS:XYZ */" or "/* RENDERTARGETS: X,Y,Z */" comment, placed in the fragment shader.
 
 Gbuffers, deferred 和 composite 程序可以向任何颜色附件写入，但是同时不能超过8个。
 
 如果没有设置输出的颜色附件，程序将会对前8个颜色附件写入。
 
-<br/>
+
+
+In shaders using the modern syntax (130 and above) the outputs of the fragment shader should use the outColor\<n\> names. Example:
+
+```glsl
+/* DRAWBUFFERS:3,4,7 */
+out vec4 outColor0; // Writes to buffer 3
+out vec4 outColor1; // Writes to buffer 4
+out vec4 outColor2; // Writes to buffer 7
+```
+
+
 
 写入合成着色器（composite shader）中的颜色附件时，混合（blending）被禁用。
 
@@ -90,7 +105,7 @@ Writing to color attachments that the composite shader also reads from will gene
 
 <br/>
 
-The vertex and fragment configuration parsing is affected by the preprocessor conditional compilation directives.
+The shaders configuration parsing is affected by the preprocessor conditional compilation directives.
 
 The following preprocessor directives are currently recognized:
 
@@ -113,55 +128,112 @@ The following preprocessor directives are currently recognized:
 
 可以用 "F3+R" 或用 "/reloadShaders" 指令重载光影包。 
 
+## Compute Shaders
+
+A list of compute shaders can be attached to every program except gbuffers programs.
+They are named like the program with optional suffix, for example "composite.csh", "composite_a.csh" ... "composite_z.csh".
+Compute shaders run before the program and can read from all buffers using texture samplers.
+They can read and write to colortex0-5 and shadowcolor0-1 buffers as images using the aliases colorimg0-5 and shadowcolorimg0-1, 
+for example "layout (rgba8) uniform image2D colorimg0;"
+Compute shaders need at least "#version 430" and local size definition, for example: "layout (local_size_x = 16, local_size_y = 16) in;".
+Work groups are defined either fixed via "const ivec3 workGroups = ivec3(50, 30, 1);" or relative to render size 
+via "const vec2 workGroupsRender = vec2(0.5f, 0.5f);".
+The default configuration is "const vec2 workGroupsRender = vec2(1.0f, 1.0f);", which executes the compute shader once per pixel.
+
+## Image access
+
+All programs can read and write to colorimg0-5 and shadowcolorimg0-1 using imageLoad() and imageStore().
+
 
 
 ## 着色器程序|Shader Programs
 
-| 名字               | 渲染的对象 | 未定义时使用 |
-| ------------------ | ---------- | ------------ |
-| \<none\>           | GUI和菜单 | \<none\>     |
-| 以下为 Shadow map |  |  |
-| shadow | everything in shadow pass | \<none\> |
-| shadow_solid | \<not used\> | shadow |
-| shadow_cutout | \<not used\> | shadow |
-| 以下为 GBuffers |  |  |
-| gbuffers_basic | 栓绳、方块选择框 | \<none\> |
-| gbuffers_textured | 粒子 | gbuffers_basic |
-| gbuffers_textured_lit | lit_particles, 世界边界 | gbuffers_textured |
-| gbuffers_skybasic | 天空、地平线、星星、虚空 | gbuffers_basic |
-| gbuffers_skytextured | 日月 | gbuffers_textured |
-| gbuffers_clouds | 云 | gbuffers_textured |
-| gbuffers_terrain | solid, cutout, cutout_mip | gbuffers_textured_lit |
-| gbuffers_terrain_solid | \<not used\> | gbuffers_terrain |
-| gbuffers_terrain_cutout_mip | \<not used\> | gbuffers_terrain |
-| gbuffers_terrain_cutout | \<not used\> | gbuffers_terrain |
-| gbuffers_damagedblock | 被破坏的方块 | gbuffers_terrain |
-| gbuffers_block | 方块实体 | gbuffers_terrain |
-| gbuffers_beaconbeam | 信标光柱                            | gbuffers_textured |
-| gbuffers_item | \<not used\> | gbuffers_textured_lit |
-| gbuffers_entities | 实体 | gbuffers_textured_lit |
-| gbuffers_entities_glowing | glowing entities, spectral effect | gbuffers_entities |
-| gbuffers_armor_glint | glint on armor and handheld items | gbuffers_textured |
-| gbuffers_spidereyes | eyes of spider, enderman and dragon | gbuffers_textured |
-| gbuffers_hand | hand and opaque handheld objects | gbuffers_textured_lit |
-| gbuffers_weather | 雨雪 | gbuffers_textured_lit |
-| 以下为 Deferred |  |  |
-| deferred_pre | \<virtual\> flip ping-pong buffers | \<none\> |
-| deferred | \<deferred\> | \<none\> |
-| deferred1 | \<deferred\> | \<none\> |
-| ... |  |  |
-| deferred15 | \<deferred\> | \<none\> |
-| 以下为 GBuffers translucent |  |  |
-| gbuffers_water | translucent | gbuffers_terrain |
-| gbuffers_hand_water | translucent handheld objects | gbuffers_hand |
-| 以下为 Composite |  |  |
-| composite_pre | \<virtual\> flip ping-pong buffers | \<none\> |
-| composite | \<composite\> | \<none\> |
-| composite1 | \<composite\> | \<none\> |
-| ... |  |  |
-| composite15 | \<composite\> | \<none\> |
-| 以下为 Final |  |  |
-| final | \<final\> | \<none\> |
+GUI 和 Menu 无着色器
+
+**Shadow map **
+
+| 名字          | 渲染的对象                | 未定义时使用 |
+| ------------- | ------------------------- | ------------ |
+| shadow        | everything in shadow pass | \<none\>     |
+| shadow_solid  | \<not used\>              | shadow       |
+| shadow_cutout | \<not used\>              | shadow       |
+
+**Shadow composite**
+
+| 名字         | 渲染的对象     | 未定义时使用 |
+| ------------ | -------------- | ------------ |
+| shadowcomp   | \<shadowcomp\> | \<none\>     |
+| shadowcomp1  | \<shadowcomp\> | \<none\>     |
+| ...          |                |              |
+| shadowcomp99 | \<shadowcomp\> | \<none\>     |
+
+**Prepare**
+
+| 名字      | 渲染的对象  | 未定义时使用 |
+| --------- | ----------- | ------------ |
+| prepare   | \<prepare\> | \<none\>     |
+| prepare1  | \<prepare\> | \<none\>     |
+| ...       |             |              |
+| prepare99 | \<prepare\> | \<none\>     |
+
+**GBuffers**
+
+| 名字                        | 渲染的对象                          | 未定义时使用          |
+| --------------------------- | ----------------------------------- | --------------------- |
+| gbuffers_basic              | 栓绳、方块选择框                    | \<none\>              |
+| gbuffers_line               | block outline, fishing line         | gbuffers_basic        |
+| gbuffers_textured           | 粒子                                | gbuffers_basic        |
+| gbuffers_textured_lit       | lit_particles, 世界边界             | gbuffers_textured     |
+| gbuffers_skybasic           | 天空、地平线、星星、虚空            | gbuffers_basic        |
+| gbuffers_skytextured        | 日月                                | gbuffers_textured     |
+| gbuffers_clouds             | 云                                  | gbuffers_textured     |
+| gbuffers_terrain            | solid, cutout, cutout_mip           | gbuffers_textured_lit |
+| gbuffers_terrain_solid      | \<not used\>                        | gbuffers_terrain      |
+| gbuffers_terrain_cutout_mip | \<not used\>                        | gbuffers_terrain      |
+| gbuffers_terrain_cutout     | \<not used\>                        | gbuffers_terrain      |
+| gbuffers_damagedblock       | 被破坏的方块                        | gbuffers_terrain      |
+| gbuffers_block              | 方块实体                            | gbuffers_terrain      |
+| gbuffers_beaconbeam         | 信标光柱                            | gbuffers_textured     |
+| gbuffers_item               | \<not used\>                        | gbuffers_textured_lit |
+| gbuffers_entities           | 实体                                | gbuffers_textured_lit |
+| gbuffers_entities_glowing   | glowing entities, spectral effect   | gbuffers_entities     |
+| gbuffers_armor_glint        | glint on armor and handheld items   | gbuffers_textured     |
+| gbuffers_spidereyes         | eyes of spider, enderman and dragon | gbuffers_textured     |
+| gbuffers_hand               | hand and opaque handheld objects    | gbuffers_textured_lit |
+| gbuffers_weather            | 雨雪                                | gbuffers_textured_lit |
+
+**Differed**
+
+| 名字         | 渲染的对象                         | 未定义时使用 |
+| ------------ | ---------------------------------- | ------------ |
+| deferred_pre | \<virtual\> flip ping-pong buffers | \<none\>     |
+| deferred     | \<deferred\>                       | \<none\>     |
+| deferred1    | \<deferred\>                       | \<none\>     |
+| ...          |                                    |              |
+| deferred99   | \<deferred\>                       | \<none\>     |
+
+**GBuffers translucent**
+
+| 名字                | 渲染的对象                   | 未定义时使用     |
+| ------------------- | ---------------------------- | ---------------- |
+| gbuffers_water      | translucent                  | gbuffers_terrain |
+| gbuffers_hand_water | translucent handheld objects | gbuffers_hand    |
+
+**Composite**
+
+| 名字          | 渲染的对象                         | 未定义时使用 |
+| ------------- | ---------------------------------- | ------------ |
+| composite_pre | \<virtual\> flip ping-pong buffers | \<none\>     |
+| composite     | \<composite\>                      | \<none\>     |
+| composite1    | \<composite\>                      | \<none\>     |
+| ...           |                                    |              |
+| composite99   | \<composite\>                      | \<none\>     |
+
+**Final**
+
+| 名字  | 渲染的对象 | 未定义时使用 |
+| ----- | ---------- | ------------ |
+| final | \<final\>  | \<none\>     |
 
 备注：
 
@@ -173,11 +245,19 @@ Todo：
 
 ## 属性|Attributes
 
-| Source                         | Value                                | Comment                                                      |
-| ------------------------------ | ------------------------------------ | ------------------------------------------------------------ |
-| attribute vec3 mc_Entity;      | xy = blockId, renderType             | "blockId" is used only for blocks specified in "block.properties" |
-| attribute vec2 mc_midTexCoord; | st = midTexU, midTexV                | Sprite middle UV coordinates                                 |
-| attribute vec4 at_tangent;     | xyz = tangent vector, w = handedness |                                                              |
+| Source                  | Value                                 | Comment                                                      |
+| ----------------------- | ------------------------------------- | ------------------------------------------------------------ |
+| in vec3 vaPosition;     | position (x, y, z)                    | 1.17+, for terrain it is relative to the chunk origin, see "chunkOffset" |
+| in vec4 vaColor;        | color (r, g, b, a)                    | 1.17+                                                        |
+| in vec2 vaUV0;          | texture (u, v)                        | 1.17+                                                        |
+| in ivec2 vaUV1;         | overlay (u, v)                        | 1.17+                                                        |
+| in ivec2 vaUV2;         | lightmap (u, v)                       | 1.17+                                                        |
+| in vec3 vaNormal;       | normal (x, y, z)                      | 1.17+                                                        |
+| in vec3 mc_Entity;      | xy = blockId, renderType              | "blockId" is used only for blocks specified in "block.properties" |
+| in vec2 mc_midTexCoord; | st = midTexU, midTexV                 | Sprite middle UV coordinates                                 |
+| in vec4 at_tangent;     | xyz = tangent vector, w = handedness  |                                                              |
+| in vec3 at_velocity;    | vertex offset to previous frame       | In view space, only for entities and block entities          |
+| in vec3 at_midBlock;    | offset to block center in 1/64m units | Only for blocks                                              |
 
 ## 全局变量|Uniforms
 
@@ -188,6 +268,9 @@ Todo：
 | uniform int heldItemId2;                | held item ID (off hand), used only for items defined in "item.properties" |
 | uniform int heldBlockLightValue2;       | held item light value (off hand)                             |
 | uniform int fogMode;                    | GL_LINEAR, GL_EXP or GL_EXP2                                 |
+| uniform float fogStart;                 | fog start distance (m)                                       |
+| uniform float fogEnd;                   | fog end distance (m)                                         |
+| uniform int fogShape;                   | 0 = sphere, 1 = cylinder                                     |
 | uniform float fogDensity;               | 0.0-1.0                                                      |
 | uniform vec3 fogColor;                  | r, g, b                                                      |
 | uniform vec3 skyColor;                  | r, g, b                                                      |
@@ -227,19 +310,42 @@ Todo：
 | uniform ivec2 eyeBrightnessSmooth;      | eyeBrightness smoothed with eyeBrightnessHalflife            |
 | uniform ivec2 terrainTextureSize;       | not used                                                     |
 | uniform int terrainIconSize;            | not used                                                     |
-| uniform int isEyeInWater;               | 1 = camera is in water, 2 = camera is in lava                |
+| uniform int isEyeInWater;               | 1 = camera is in water, 2 = camera is in lava, 3 = camera is in powder snow |
 | uniform float nightVision;              | night vision (0.0-1.0)                                       |
 | uniform float blindness;                | blindness (0.0-1.0)                                          |
 | uniform float screenBrightness;         | screen brightness (0.0-1.0)                                  |
 | uniform int hideGUI;                    | GUI is hidden                                                |
 | uniform float centerDepthSmooth;        | centerDepth smoothed with centerDepthSmoothHalflife          |
 | uniform ivec2 atlasSize;                | texture atlas size (only set when the atlas texture is bound) |
+| uniform vec4 spriteBounds;              | sprite bounds in the texture atlas (u0, v0, u1, v1), set when MC_ANISOTROPIC_FILTERING is enabled |
 | uniform vec4 entityColor;               | entity color multiplier (entity hurt, creeper flashing when exploding) |
 | uniform int entityId;                   | entity ID                                                    |
 | uniform int blockEntityId;              | block entity ID (block ID for the tile entity, only for blocks specified in "block.properties") |
 | uniform ivec4 blendFunc;                | blend function (srcRGB, dstRGB, srcAlpha, dstAlpha)          |
 | uniform int instanceId;                 | instance ID when instancing is enabled (countInstances > 1), 0 = original, 1-N = copies |
 | uniform float playerMood;               | player mood (0.0-1.0), increases the longer a player stays underground |
+| uniform int renderStage;                | render stage, see "Standard Macros", "J. Render stages"      |
+| uniform int bossBattle;                 | 1 = custom, 2 = ender dragon, 3 = wither, 4 = raid           |
+
+**1.17+**
+
+| Source                                  | Value                                                        |
+| --------------------------------------- | ------------------------------------------------------------ |
+| uniform mat4 modelViewMatrix;           | model view matrix                                            |
+| uniform mat4 modelViewMatrixInverse;    | inverse model view matrix                                    |
+| uniform mat4 projectionMatrix;          | projection matrix                                            |
+| uniform mat4 projectionMatrixInverse;   | inverse projection matrix                                    |
+| uniform mat4 textureMatrix = mat4(1.0); | texture matrix, default is identity                          |
+| uniform mat3 normalMatrix;              | normal matrix                                                |
+| uniform vec3 chunkOffset;               | terrain chunk origin, used with attribute                    |
+| uniform float alphaTestRef;             | alpha test reference value, the check is "if (color.a < alphaTestRef) discard;" |
+
+## Constants
+
+```glsl
+// Lightmap texture matrix, 1.17+
+const mat4 TEXTURE_MATRIX_2 = mat4(vec4(0.00390625, 0.0, 0.0, 0.0), vec4(0.0, 0.00390625, 0.0, 0.0), vec4(0.0, 0.0, 0.00390625, 0.0), vec4(0.03125, 0.03125, 0.03125, 1.0));
+```
 
 ## GBuffers Uniforms
 
@@ -266,12 +372,12 @@ Todo：
 | uniform sampler2D colortex7;    | 10  \<custom texture or output from deferred programs\> |
 | uniform sampler2D colortex8;    | 16  \<custom texture or output from deferred programs\> |
 | uniform sampler2D colortex9;    | 17  \<custom texture or output from deferred programs\> |
-| uniform sampler2D colortexA;    | 18 \<custom texture or output from deferred programs\>  |
-| uniform sampler2D colortexB;    | 19 \<custom texture or output from deferred programs\>  |
-| uniform sampler2D colortexC;    | 20 \<custom texture or output from deferred programs\>  |
-| uniform sampler2D colortexD;    | 21 \<custom texture or output from deferred programs\>  |
-| uniform sampler2D colortexE;    | 22 \<custom texture or output from deferred programs\>  |
-| uniform sampler2D colortexF;    | 23 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex10;   | 18 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex11;   | 19 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex12;   | 20 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex13;   | 21 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex14;   | 22 \<custom texture or output from deferred programs\>  |
+| uniform sampler2D colortex15;   | 23 \<custom texture or output from deferred programs\>  |
 | uniform sampler2D depthtex1;    | 11                                                      |
 | uniform sampler2D shadowcolor;  | 13                                                      |
 | uniform sampler2D shadowcolor0; | 13                                                      |
@@ -303,12 +409,12 @@ Todo：
 | uniform sampler2D colortex7;    | 10  \<custom texture\>     |
 | uniform sampler2D colortex8;    | 16  \<custom texture\>     |
 | uniform sampler2D colortex9;    | 17  \<custom texture\>     |
-| uniform sampler2D colortexA;    | 18  \<custom texture\>     |
-| uniform sampler2D colortexB;    | 19  \<custom texture\>     |
-| uniform sampler2D colortexC;    | 20  \<custom texture\>     |
-| uniform sampler2D colortexD;    | 21  \<custom texture\>     |
-| uniform sampler2D colortexE;    | 22  \<custom texture\>     |
-| uniform sampler2D colortexF;    | 23  \<custom texture\>     |
+| uniform sampler2D colortex10;   | 18  \<custom texture\>     |
+| uniform sampler2D colortex11;   | 19  \<custom texture\>     |
+| uniform sampler2D colortex12;   | 20  \<custom texture\>     |
+| uniform sampler2D colortex13;   | 21  \<custom texture\>     |
+| uniform sampler2D colortex14;   | 22  \<custom texture\>     |
+| uniform sampler2D colortex15;   | 23  \<custom texture\>     |
 | uniform sampler2D shadowcolor;  | 13                         |
 | uniform sampler2D shadowcolor0; | 13                         |
 | uniform sampler2D shadowcolor1; | 14                         |
@@ -338,12 +444,12 @@ Todo：
 | uniform sampler2D colortex7;    | 10                         |
 | uniform sampler2D colortex8;    | 16                         |
 | uniform sampler2D colortex9;    | 17                         |
-| uniform sampler2D colortexA;    | 18                         |
-| uniform sampler2D colortexB;    | 19                         |
-| uniform sampler2D colortexC;    | 20                         |
-| uniform sampler2D colortexD;    | 21                         |
-| uniform sampler2D colortexE;    | 22                         |
-| uniform sampler2D colortexF;    | 23                         |
+| uniform sampler2D colortex10;   | 18                         |
+| uniform sampler2D colortex11;   | 19                         |
+| uniform sampler2D colortex12;   | 20                         |
+| uniform sampler2D colortex13;   | 21                         |
+| uniform sampler2D colortex14;   | 22                         |
+| uniform sampler2D colortex15;   | 23                         |
 | uniform sampler2D shadow;       | waterShadowEnabled ? 5 : 4 |
 | uniform sampler2D watershadow;  | 4                          |
 | uniform sampler2D shadowtex0;   | 4                          |
@@ -378,12 +484,12 @@ Todo：
 | 15   | noisetex     | \<custom texture or output from deferred programs\>          |
 | 16   | colortex8    | \<custom texture or output from deferred programs\>          |
 | 17   | colortex9    | \<custom texture or output from deferred programs\>          |
-| 18   | colortexA    | \<custom texture or output from deferred programs\>          |
-| 19   | colortexB    | \<custom texture or output from deferred programs\>          |
-| 20   | colortexC    | \<custom texture or output from deferred programs\>          |
-| 21   | colortexD    | \<custom texture or output from deferred programs\>          |
-| 22   | colortexE    | \<custom texture or output from deferred programs\>          |
-| 23   | colortexF    | \<custom texture or output from deferred programs\>          |
+| 18   | colortex10   | \<custom texture or output from deferred programs\>          |
+| 19   | colortex11   | \<custom texture or output from deferred programs\>          |
+| 20   | colortex12   | \<custom texture or output from deferred programs\>          |
+| 21   | colortex13   | \<custom texture or output from deferred programs\>          |
+| 22   | colortex14   | \<custom texture or output from deferred programs\>          |
+| 23   | colortex15   | \<custom texture or output from deferred programs\>          |
 
 ## Shadow Textures
 
@@ -404,12 +510,12 @@ Todo：
 | 15   | noisetex     |                                |
 | 16   | colortex8    | \<custom texture\>             |
 | 17   | colortex9    | \<custom texture\>             |
-| 18   | colortexA    | \<custom texture\>             |
-| 19   | colortexB    | \<custom texture\>             |
-| 20   | colortexC    | \<custom texture\>             |
-| 21   | colortexD    | \<custom texture\>             |
-| 22   | colortexE    | \<custom texture\>             |
-| 23   | colortexF    | \<custom texture\>             |
+| 18   | colortex10   | \<custom texture\>             |
+| 19   | colortex11   | \<custom texture\>             |
+| 20   | colortex12   | \<custom texture\>             |
+| 21   | colortex13   | \<custom texture\>             |
+| 22   | colortex14   | \<custom texture\>             |
+| 23   | colortex15   | \<custom texture\>             |
 
 ## Composite and Deferred Textures
 
@@ -433,12 +539,12 @@ Todo：
 | 15   | noisetex     |                                |
 | 16   | colortex8    |                                |
 | 17   | colortex9    |                                |
-| 18   | colortexA    |                                |
-| 19   | colortexB    |                                |
-| 20   | colortexC    |                                |
-| 21   | colortexD    |                                |
-| 22   | colortexE    |                                |
-| 23   | colortexF    |                                |
+| 18   | colortex10   |                                |
+| 19   | colortex11   |                                |
+| 20   | colortex12   |                                |
+| 21   | colortex13   |                                |
+| 22   | colortex14   |                                |
+| 23   | colortex15   |                                |
 
 ## Depth buffers usage
 
@@ -457,12 +563,12 @@ Todo：
 
 ## Vertex Shader Configuration
 
-| Source                             | Effect                                                       |
-| ---------------------------------- | ------------------------------------------------------------ |
-| attribute \<type\> mc_Entity;      | useEntityAttrib = true                                       |
-| attribute \<type\> mc_midTexCoord; | useMidTexCoordAttrib = true                                  |
-| attribute \<type\> at_tangent;     | useTangentAttrib = true                                      |
-| const int countInstances = 1;      | when "countInstances > 1" the geometry will be rendered several times, see uniform "instanceId" |
+| Source                        | Effect                                                       |
+| ----------------------------- | ------------------------------------------------------------ |
+| in vec3 mc_Entity;            | useEntityAttrib = true                                       |
+| in vec2 mc_midTexCoord;       | useMidTexCoordAttrib = true                                  |
+| in vec4 at_tangent;           | useTangentAttrib = true                                      |
+| const int countInstances = 1; | when "countInstances > 1" the geometry will be rendered several times, see uniform "instanceId" |
 
 ## Geometry Shader Configuration
 
@@ -545,21 +651,22 @@ Todo：
 | const int  \<shadowBufferIx\>Format = \<format\>; | shadowBufferFormats[index] = \<format\> |See "Shadow Buffer  Index" and "Texture Formats"|
 | const bool  \<shadowBufferIx\>Clear = false;     | shadowBuffersClear[index] = false |Skip glClear() for  the given shadow color buffer|
 | const vec4  \<shadowBufferIx\>ClearColor = vec4(); | shadowBuffersClearColor[index] = vec4(r, g, b, a) |Clear color for the given shadow  color buffer|
-| /* DRAWBUFFERS:02BF */                           | drawBuffers = "02BF" |Draw  buffers 0, 2, B and F|
+| /* DRAWBUFFERS:0257 */     | drawBuffers = {0, 2, 5, 7) |Only buffers 0 to 9 can be used.|
+| /* RENDERTARGETS: 0,2,11,15 */ | drawBuffers = {0, 2, 11, 15} |Buffers 0 to 15 can be used|
 
 ## Draw Buffer Index
 
-| Prefix          | Index |
-| --------------- | ----- |
-| colortex\<0-F\> | 0-F   |
-| gcolor          | 0     |
-| gdepth          | 1     |
-| gnormal         | 2     |
-| composite       | 3     |
-| gaux1           | 4     |
-| gaux2           | 5     |
-| gaux3           | 6     |
-| gaux4           | 7     |
+| Prefix           | Index |
+| ---------------- | ----- |
+| colortex\<0-15\> | 0-15  |
+| gcolor           | 0     |
+| gdepth           | 1     |
+| gnormal          | 2     |
+| composite        | 3     |
+| gaux1            | 4     |
+| gaux2            | 5     |
+| gaux3            | 6     |
+| gaux4            | 7     |
 
 ## Shadow Buffer Index
 
@@ -570,87 +677,34 @@ Todo：
 
 ## Texture Formats
 
-**1. 8-bit normalized**
+**1. 8-bit**
 
->  R8
->
->  RG8
->
->  RGB8
->
->  RGBA8
+| Normalized | Signed normalized | Integer | Unsigned integer |
+| ---------- | ----------------- | ------- | ---------------- |
+| R8         | R8_SNORM          | R8I     | R8I              |
+| RG8        | RG8_SNORM         | RG8I    | RG8I             |
+| RGB8       | RGB8_SNORM        | RGB8I   | RGB8I            |
+| RGBA8      | RGBA8_SNORM       | RGBA8I  | RGBA8I           |
 
-**2. 8-bit signed normalized**
+**2. 16-bit**
 
->  R8_SNORM
->
->  RG8_SNORM
->
->  RGB8_SNORM
->
->  RGBA8_SNORM
+| Normalized | Signed normalized | Float   | Integer | Unsigned integer |
+| :--------- | ----------------- | ------- | ------- | ---------------- |
+| R16        | R16_SNORM         | R16F    | R16I    | R16UI            |
+| RG16       | RG16_SNORM        | RG16F   | RG16I   | RG16UI           |
+| RGB16      | RGB16_SNORM       | RGB16F  | RGB16I  | RGB16UI          |
+| RGBA16     | RGBA16_SNORM      | RGBA16F | RGBA16I | RGBA16UI         |
 
-**3. 16-bit normalized**
+**3. 32-bit**
 
->  R16
->
->  RG16
->
->  RGB16
->
->  RGBA16
+| Float   | Integer | Unsigned integer |
+| ------- | ------- | ---------------- |
+| R32F    | R32I    | R32UI            |
+| RG32F   | RG32I   | RG32UI           |
+| RGB32F  | RGB32I  | RGB32UI          |
+| RGBA32F | RGBA32I | RGBA32UI         |
 
-**4. 16-bit signed normalized**
-
->  R16_SNORM
->
->  RG16_SNORM
->
->  RGB16_SNORM
->
->  RGBA16_SNORM
-
-**5. 16-bit float**
-
->  R16F
->
->  RG16F
->
->  RGB16F
->
->  RGBA16F
-
-**6. 32-bit float**
-
->  R32F
->
->  RG32F
->
->  RGB32F
->
->  RGBA32F
-
-**7. 32-bit integer**
-
->  R32I
->
->  RG32I
->
->  RGB32I
->
->  RGBA32I
-
-**8. 32-bit unsigned integer**
-
->  R32UI
->
->  RG32UI
->
->  RGB32UI
->
->  RGBA32UI
-
-**9. Mixed**
+**4. Mixed**
 
 >  R3_G3_B2
 >
@@ -742,7 +796,7 @@ Forge mods may add custom block mapping as "assets/\<modid\>/shaders/block.prope
 
 The "block.properties" file can use conditional preprocessor directives (#ifdef, #if, etc.)
 
-For more details see section "Standard Macros" A to G. Option macros are not available.
+For more details see section "Standard Macros" A to I. Option macros are also available.
 
 Format "block.\<id\>=\<block1\> \<block2\> ..."
 
@@ -800,7 +854,7 @@ Forge mods may add custom item mapping as "assets/\<modid\>/shaders/item.propert
 
 The "item.properties" file can use conditional preprocessor directives (#ifdef, #if, etc.)
 
-For more details see section "Standard Macros" A to G. Option macros are not available.
+For more details see section "Standard Macros" A to I. Option macros are also available.
 
 Format "item.\<id\>=\<item1\> \<item2\> ..."
 
@@ -823,7 +877,7 @@ Forge mods may add custom entity mapping as "assets/\<modid\>/shaders/entity.pro
 
 The "entity.properties" file can use conditional preprocessor directives (#ifdef, #if, etc.)
 
-For more details see section "Standard Macros" A to G. Option macros are not available.
+For more details see section "Standard Macros" A to I. Option macros are also available.
 
 Format "entity.\<id\>=\<entity1\> \<entity2\> ..."
 
@@ -879,19 +933,21 @@ One of the following:
 #define MC_OS_OTHER
 ```
 
-**E. GPU**
+**E. Driver**
 
 One of the following:
 
 ```glsl
+#define MC_GL_VENDOR_AMD
 #define MC_GL_VENDOR_ATI
 #define MC_GL_VENDOR_INTEL
+#define MC_GL_VENDOR_MESA
 #define MC_GL_VENDOR_NVIDIA
 #define MC_GL_VENDOR_XORG
 #define MC_GL_VENDOR_OTHER
 ```
 
-**F. Driver**
+**F. GPU**
 
 One of the following:
 
@@ -924,6 +980,7 @@ One of the following:
 #define MC_HAND_DEPTH <value>       // Values: 0.0625, 0.125, 0.25
 #define MC_OLD_HAND_LIGHT           // When Old Hand Light is enabled
 #define MC_OLD_LIGHTING             // When Old Lighting is enabled
+#define MC_ANISOTROPIC_FILTERING <value> // When anisotropic filtering is enabled
 ```
 
 **I. Textures**
@@ -934,6 +991,39 @@ One of the following:
 ```
 
 (see "texture.properties")
+
+**J. Render stages**
+
+```glsl
+// Constants for the uniform "renderStage"
+// The constants are given in the order in which the stages are executed
+#define MC_RENDER_STAGE_NONE <const>                    // Undefined
+#define MC_RENDER_STAGE_SKY <const>                     // Sky
+#define MC_RENDER_STAGE_SUNSET <const>                  // Sunset and sunrise overlay
+#define MC_RENDER_STAGE_CUSTOM_SKY <const>              // Custom sky
+#define MC_RENDER_STAGE_SUN <const>                     // Sun
+#define MC_RENDER_STAGE_MOON <const>                    // Moon
+#define MC_RENDER_STAGE_STARS <const>                   // Stars
+#define MC_RENDER_STAGE_VOID <const>                    // Void
+#define MC_RENDER_STAGE_TERRAIN_SOLID <const>           // Terrain solid
+#define MC_RENDER_STAGE_TERRAIN_CUTOUT_MIPPED <const>   // Terrain cutout mipped
+#define MC_RENDER_STAGE_TERRAIN_CUTOUT <const>          // Terrain cutout
+#define MC_RENDER_STAGE_ENTITIES <const>                // Entities
+#define MC_RENDER_STAGE_BLOCK_ENTITIES <const>          // Block entities
+#define MC_RENDER_STAGE_DESTROY <const>                 // Destroy overlay
+#define MC_RENDER_STAGE_OUTLINE <const>                 // Selection outline
+#define MC_RENDER_STAGE_DEBUG <const>                   // Debug renderers
+#define MC_RENDER_STAGE_HAND_SOLID <const>              // Solid handheld objects
+#define MC_RENDER_STAGE_TERRAIN_TRANSLUCENT <const>     // Terrain translucent
+#define MC_RENDER_STAGE_TRIPWIRE <const>                // Tripwire string
+#define MC_RENDER_STAGE_PARTICLES <const>               // Particles
+#define MC_RENDER_STAGE_CLOUDS <const>                  // Clouds
+#define MC_RENDER_STAGE_RAIN_SNOW <const>               // Rain and snow
+#define MC_RENDER_STAGE_WORLD_BORDER <const>            // World border
+#define MC_RENDER_STAGE_HAND_TRANSLUCENT <const>        // Translucent handheld objects
+```
+
+
 
 ## References
 
