@@ -44,7 +44,7 @@ layer.translucent=end_rod
 
 现在它的确是半透明的了：
 
-![image-20200715143211150](https://i.loli.net/2021/10/12/8JAxnTOsGbXlN6q.png)
+![image-20220606234405216](rendertype.assets/image-20220606234405216.png)
 
 ## 拓展阅读
 

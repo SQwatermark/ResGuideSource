@@ -10,7 +10,7 @@ CTM方法是最原始的连接纹理方法，以至于它和连接纹理同名�
 
 CTM方法看上去是这样的：
 
-![image-20200709102204833](https://s1.ax1x.com/2020/07/27/aiteX9.png)
+![image-20200709102204833](https://s2.loli.net/2022/06/06/n9h7SYbQZpxd4l5.png)
 
 在上面这张图片中，玻璃之间的接缝被完全抹除，只剩下作为整体的边框，这就是CTM的设计初衷，虽然现在许多创作者用CTM做出了完全不一样的东西，其实都是对这种方法的创新。
 
@@ -20,17 +20,17 @@ CTM方法本质上就是穷举，它根据纹理的位置，将所有可能的�
 
 这导致CTM的绘制非常繁琐，为了简化操作，OptiFine还提供了一种简化CTM方法，只需要5张纹理，将会在之后介绍。
 
-![](https://s1.ax1x.com/2020/07/27/aitZ6J.png)
+![](https://s2.loli.net/2022/06/06/yNPcbrgmdo8s2VI.png)
 
 方便起见，我们不妨就用OptiFine作者提供的模板制作一个CTM纹理，并用于铁块。
 
 先把这张图分割开：
 
-![image-20200707212143792](https://s1.ax1x.com/2020/07/27/aitikV.png)
+![image-20200707212143792](https://s2.loli.net/2022/06/06/RDJsOEvq8IZHNkp.png)
 
 现在让我们回到资源包文件夹，在assets文件夹下新建一个叫做optifine的文件夹，然后在optifine文件夹内新建名为ctm的文件夹，将图片拖进去。
 
-![image-20200707215740759](https://s1.ax1x.com/2020/07/27/aitCT0.png)
+![image-20200707215740759](https://s2.loli.net/2022/06/06/Swlb1YLf7ixToPB.png)
 
 ::: warning 注意
 
@@ -46,11 +46,11 @@ tiles=0-46
 matchBlocks=minecraft:iron_block
 ```
 
-![](https://s1.ax1x.com/2020/07/27/ait9wq.png)
+![](https://s2.loli.net/2022/06/06/bfEZpNJzXc7udmG.png)
 
 保存，进入游戏加载资源包，放出铁块：
 
-![image-20200708103746753](https://s1.ax1x.com/2020/07/27/aitFYT.png)
+![image-20200708103746753](https://s2.loli.net/2022/06/06/fuym83qQt9YMCwh.png)
 
 非常完美！通过这个例子，我们可以轻易看出CTM的每张纹理会出现在什么位置。
 
@@ -73,6 +73,6 @@ matchBlocks=minecraft:iron_block
 
 ctm纹理和相应的属性文件可以放在ctm文件夹的任意一级子文件夹下，所以分门别类进行整理是一个良好的习惯。
 
-![image-20200708104238452](https://s1.ax1x.com/2020/07/27/aitEpF.png)
+![image-20200708104238452](https://s2.loli.net/2022/06/06/Pas9JBuxHqEDf8r.png)
 
 :::

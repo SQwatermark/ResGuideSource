@@ -25,7 +25,7 @@ pack.memeta 编写示例：
 ```json
 {
   "pack":{
-    "pack_format":4,
+    "pack_format":8,
     "description":"添加自定义语言"
   },
   "language":{

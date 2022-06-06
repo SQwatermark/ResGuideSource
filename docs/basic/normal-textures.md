@@ -4,7 +4,7 @@
 
 ::: tip
 
-如果你实际看到的路径是 assets/minecraft/textures/blocks，别担心，Minecraft的不同版本的资源路径并不相同，用你实际看到的路径即可。
+在 1.12 以及之前的版本的路径可能是 assets/minecraft/textures/blocks，Minecraft 不同版本的资源路径并不相同，用你实际看到的路径即可。
 
 :::
 
@@ -16,4 +16,4 @@
 
 重载资源包，放出金合欢木，看看修改后的纹理吧！
 
-![image-20200708101328142](https://i.loli.net/2020/07/28/Ny8IpD74nbHdc2O.png)
+![image-20220606232653796](normal-textures.assets/image-20220606232653796.png)

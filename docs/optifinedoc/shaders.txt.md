@@ -150,7 +150,7 @@ All programs can read and write to colorimg0-5 and shadowcolorimg0-1 using image
 
 GUI 和 Menu 无着色器
 
-**Shadow map **
+**Shadow map**
 
 | 名字          | 渲染的对象                | 未定义时使用 |
 | ------------- | ------------------------- | ------------ |

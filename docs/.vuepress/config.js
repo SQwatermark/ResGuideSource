@@ -20,7 +20,7 @@ module.exports = {
       { text: 'OptiFine文档', link: '/optifinedoc/' },
       { text: '新闻', link: '/news/' },
       { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
-      { text: '下载示例', link: 'https://gitee.com/sqwatermark/ResGuideSource' },
+      { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
     ],
     sidebar: {
       '/optifinedoc/': [
