@@ -1,5 +1,7 @@
 # GUI设计摘要
 
+本文作者：Xiao2
+
 GUI最大的功能是信息显示和信息整理。
 
 GUI设计大致可以分为4个部分：背景设计、框架设计、图标设计、物品渲染设计。
@@ -42,5 +44,4 @@ Diefault  [https://www.bilibili.com/video/BV1tL411p7pg?share_source=copy_web](ht
 原质化 Material [https://www.mcbbs.net/thread-802516-1-1.html](https://www.mcbbs.net/thread-802516-1-1.html)
 
 ![](https://attachment.mcbbs.net/data/myattachment/forum/201809/18/100916v4pbpbiskp0600pw.png.thumb.jpg)
-
 

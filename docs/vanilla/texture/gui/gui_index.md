@@ -1,5 +1,7 @@
 # GUI文件对应的游戏内容
 
+本文作者：Xiao2
+
 ```
 ├<<<realms─textures─gui─realms
 │  │  news_notification_mainscreen.png
