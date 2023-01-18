@@ -18,11 +18,9 @@ Minecraft Wiki：[https://minecraft.fandom.com/zh/wiki/%E7%9D%80%E8%89%B2%E5%99%
 
 Minecraft Shaders guide：[https://github.com/ShockMicro/Minecraft-Shaders/wiki](https://github.com/ShockMicro/Minecraft-Shaders/wiki)
 
-## OptiFine 或 GLSL Shaders 着色器
+## OptiFine 或 GLSL Shaders 或 Iris 着色器
 
-亲测直到1.17.1都还适用的手把手教学：[http://blog.hakugyokurou.net/?page_id=1655](http://blog.hakugyokurou.net/?page_id=1655)
+shaderLabs Wiki：[https://wiki.shaderlabs.org/wiki/Main_Page]
 
-MINECRAFT JAVA版光影的开发资料整理：[https://www.hypercol.com/shader-developing/](https://www.hypercol.com/shader-developing/)
-
-p.s. 现在的光影API多了一个新选择：[IRIS](https://irisshaders.net/)
+有些陈旧以至于高版本mc会出问题的教学：[http://blog.hakugyokurou.net/?page_id=1655](http://blog.hakugyokurou.net/?page_id=1655)
 
