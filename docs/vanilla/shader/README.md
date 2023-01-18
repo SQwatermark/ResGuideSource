@@ -20,6 +20,8 @@ Minecraft Shaders guide：[https://github.com/ShockMicro/Minecraft-Shaders/wiki]
 
 ## OptiFine 或 GLSL Shaders 或 Iris 着色器
 
+MGC Docs：[https://mgcd.hypercol.com/creator/resources.html]
+
 shaderLabs Wiki：[https://wiki.shaderlabs.org/wiki/Main_Page]
 
 有些陈旧以至于高版本mc会出问题的教学：[http://blog.hakugyokurou.net/?page_id=1655](http://blog.hakugyokurou.net/?page_id=1655)
