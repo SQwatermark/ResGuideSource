@@ -42,6 +42,25 @@
 
 > assets/minecraft/optifine/random/painting/paintings_kristoffer_zetterstrand.properties
 
+Textures ending with a digit use the separator "."
+
+Primary (vanilla) texture:
+
+assets/minecraft/textures/entity/warden/warden_pulsating_spots_2.png
+
+Alts:
+
+> assets/minecraft/optifine/random/entity/warden/warden_pulsating_spots_2.2.png
+>
+> assets/minecraft/optifine/random/entity/warden/warden_pulsating_spots_2.3.png
+>
+> assets/minecraft/optifine/random/entity/warden/warden_pulsating_spots_2.4.png
+> etc.
+
+属性文件（可选）：
+
+> assets/minecraft/optifine/random/entity/warden/warden_pulsating_spots_2.properties
+
 属性文件由一系列规则组成，这些规则从1开始编号。
 
 每一组规则都指定了一些要使用的实体纹理，以及一个或多个使用它们的条件。
@@ -290,7 +309,23 @@ sizes.2=0 1 3
 sizes.3=0-2 4-7
 ```
 
+**NBT tags (optional)**
 
+See "cit_single.properties" for more details
+
+```properties
+nbt.<n>.<tag>=<value>
+```
+
+**Blocks (optional)**
+
+For entities checks the block on which the entity is standing
+For block entities checks the block of the block entity
+See "ctm.properties, matchBlocks" for more details. 
+
+```properties
+blocks.<n>
+```
 
 ## 示例丨Examples
 

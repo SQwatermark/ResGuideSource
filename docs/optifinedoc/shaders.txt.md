@@ -1090,6 +1090,12 @@ out vec4 outColor0; // Writes to buffer 3
 out vec4 outColor1; // Writes to buffer 4
 out vec4 outColor2; // Writes to buffer 7
 
+In shaders using the modern syntax (130 and above) the outputs of the fragment shader should use the outColor<n> names. Example:
+/* DRAWBUFFERS:3,4,7 */
+out vec4 outColor0; // Writes to buffer 3
+out vec4 outColor1; // Writes to buffer 4
+out vec4 outColor2; // Writes to buffer 7
+
 When writing to the color attachments in the composite shader, blending is disabled. 
 Writing to color attachments that the composite shader also reads from will generate artifacts (unless you just copy the original contents) 
 

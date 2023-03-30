@@ -269,6 +269,18 @@ nbt.<tag>=<值>
 
 列表大小被命名为 "count"。
 
+The value may use following prefixes:
+
+- "pattern:" - pattern matching using '*' and '?' wildcards
+- "ipattern:" - case insensitive pattern matching
+- "regex:" - regular expression matching 
+- "iregex:" - case insensitive regular expression matching
+- "range:" - list of integer values
+- "exists:<true|false>" - the value exists
+- "raw:" - use raw NBT to string conversion, this allows to match a whole NBT branch. 
+
+Raw can be combined with all other prefixes for example "raw:pattern:", "raw:regex:", etc. 
+
 示例：
 
 匹配物品显示名：
@@ -293,17 +305,21 @@ nbt.<tag>=<值>
 
 <big>字符串可以用多种方式匹配：</big>
 
-**精确值**
+**1. 精确值**
 
-> nbt.display.Name=Letter to Herobrine
+```properties
+nbt.display.Name=Letter to Herobrine
+```
 
 精确匹配字符串 "Letter to Herobrine" 而不会匹配其他的。
 
 
 
-**使用通配符 ? 和 \***
+**2. 使用通配符 ? 和 \***
 
-> nbt.display.Name=pattern:Letter to *
+```properties
+nbt.display.Name=pattern:Letter to *
+```
 
 匹配
 
@@ -317,9 +333,11 @@ nbt.<tag>=<值>
 
 
 
-**通配符，不区分大小写**
+**3. 通配符，不区分大小写**
 
-> nbt.display.Name=ipattern:Letter to *
+```properties
+nbt.display.Name=ipattern:Letter to *
+```
 
 匹配
 
@@ -331,11 +349,13 @@ nbt.<tag>=<值>
 
 
 
-**Java正则表达式**
+**4. Java正则表达式**
 
  （参考 [http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html](http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html)）
 
-> nbt.display.Name=regex:Letter (to|from) .*
+```properties
+nbt.display.Name=regex:Letter (to|from) .*
+```
 
 匹配
 
@@ -351,9 +371,11 @@ nbt.<tag>=<值>
 
 
 
-**Java正则表达式，不区分大小写**
+**5. Java正则表达式，不区分大小写**
 
-> nbt.display.Name=iregex:Letter (to|from) .*
+```properties
+nbt.display.Name=iregex:Letter (to|from) .*
+```
 
 匹配
 
@@ -366,24 +388,41 @@ nbt.<tag>=<值>
 不匹配
 
 > A Letter to Herobrine
+
+**6. List of integer values**
+
+```properties
+nbt.display.count=range:1 5 7-9 12-15
+nbt.Age=range:(-25) (-10)-10 15 17
+```
+
+Negative values have to be put in brackets.
+
+**7. Raw string**
+
+```properties
+nbt.display.Name=raw:'{"text":"Chopper"}'
+```
+
+Can be used to match text colors or a whole branch at once 
 
 注: 任何反斜杠都必须写两遍。在正则表达式或通配符中的反斜杠必须写四遍。
 
 正确：
 
-> nbt.display.name=regex:\\\\d+
->
-> nbt.display.name=regex:\\\\\\\\
->
-> nbt.display.name=/\\\/\\\
+```properties
+nbt.display.name=regex:\\\\d+
+nbt.display.name=regex:\\\\\\\\
+nbt.display.name=/\\\/\\\
+```
 
 错误：
 
-> nbt.display.name=regex:\d+
->
-> nbt.display.name=regex:\\\
->
-> nbt.display.name=/\\/\\
+```properties
+nbt.display.name=regex:\d+
+nbt.display.name=regex:\\\
+nbt.display.name=/\\/\\
+```
 
 你可以用 "damage=0" 和NBT规则匹配有自定义效果的药水：
 
