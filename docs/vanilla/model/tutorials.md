@@ -11,6 +11,7 @@
 
 ### 原版模型
 
+- **[资源包模型JSON文件详细解释](https://www.mcbbs.net/thread-1312159-1-1.html)**
 - **[【教程】【1.9Snap+】资源包模型教程及1.9新特性研究](https://www.mcbbs.net/thread-491597-1-1.html)**
 - **[Minecraft中文wiki：模型](https://minecraft-zh.gamepedia.com/%E6%A8%A1%E5%9E%8B)**
 - **[[教程]物品手持/背包显示不同纹理](https://www.mcbbs.net/thread-831718-1-1.html)**
