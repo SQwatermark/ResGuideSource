@@ -16,7 +16,7 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: '教程', link: '/' },b
+      { text: '教程', link: '/' },
       { text: 'OptiFine文档', link: '/optifinedoc/' },
       { text: 'Blockbench文档', link: '/blockbench/' },
       { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
