@@ -16,13 +16,19 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: '教程', link: '/' },
+      { text: '教程', link: '/' },b
       { text: 'OptiFine文档', link: '/optifinedoc/' },
-      { text: '新闻', link: '/news/' },
+      { text: 'Blockbench文档', link: '/blockbench/' },
       { text: '论坛版', link: 'https://www.mcbbs.net/thread-1079039-1-1.html' },
       { text: '下载示例', link: 'https://github.com/SQwatermark/ResGuideSource' },
     ],
     sidebar: {
+      '/blockbench/': [
+        ['0.1-Blockbench QuickStart', 'Blockbench快速上手'],
+        ['0.2-Blockbench WIKI GUIDES', 'Minecraft风格建模和纹理绘制的小技巧'],
+        ['0.3-Blockbench Format Features', 'Blockbench支持的格式的特性'],
+        ['0.4-Particles and Sounds in Minecraft Bedrock Edition', 'MC基岩版粒子和声音效果'],
+      ],
       '/optifinedoc/': [
         ['properties_files', '属性文件说明'],
         ['ctm', '连接纹理'],
